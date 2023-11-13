@@ -43,6 +43,7 @@ namespace CapaDatos
                                 IdCliente = Convert.ToInt32(dr["IdCliente"]),
                                 Documento = dr["Documento"].ToString(),
                                 NombreCompleto = dr["NombreCompleto"].ToString(),
+                                Email = dr["email"].ToString(),
                                 Telefono = dr["Telefono"].ToString(),
                                 Estado = Convert.ToBoolean(dr["Estado"])
 
@@ -119,6 +120,7 @@ namespace CapaDatos
 
                     //Conectamos a la base de datos
                     SqlCommand cmd = new SqlCommand("SP_EDITARCLIENTE", oconexion);
+                    cmd.Parameters.AddWithValue("IdCliente", obj.IdCliente);
                     cmd.Parameters.AddWithValue("Documento", obj.Documento);
                     cmd.Parameters.AddWithValue("NombreCompleto", obj.NombreCompleto);
                     cmd.Parameters.AddWithValue("Email", obj.Email);
