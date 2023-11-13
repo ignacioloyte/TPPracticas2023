@@ -129,6 +129,11 @@ namespace SistemaVentas
         {
             AbrirFormulario(MenuConfiguracion, new frmProveedor());
         }
+
+        private void btnMantenedor_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(MenuConfiguracion, new frmNegocio());
+        }
         // Menu reportes
 
         //Menu configuración

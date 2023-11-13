@@ -55,6 +55,7 @@ namespace SistemaVentas
             panel1 = new Panel();
             lblUsuario = new Label();
             txtNUsuario = new Label();
+            btnMantenedor = new FontAwesome.Sharp.IconMenuItem();
             Menu.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -63,10 +64,10 @@ namespace SistemaVentas
             // 
             Menu.Dock = DockStyle.None;
             Menu.ImageScalingSize = new Size(20, 20);
-            Menu.Items.AddRange(new ToolStripItem[] { MenuUsuario, MenuVentas, MenuCompras, MenuClientes, MenuProveedores, MenuReportes, MenuConfiguracion, MenuAcercaDe });
+            Menu.Items.AddRange(new ToolStripItem[] { MenuUsuario, MenuVentas, MenuCompras, MenuClientes, MenuProveedores, MenuReportes, MenuConfiguracion, btnMantenedor, MenuAcercaDe });
             Menu.Location = new Point(0, 52);
             Menu.Name = "Menu";
-            Menu.Size = new Size(918, 68);
+            Menu.Size = new Size(1008, 68);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
             // 
@@ -97,7 +98,23 @@ namespace SistemaVentas
             MenuVentas.Size = new Size(100, 64);
             MenuVentas.Text = "Ventas";
             MenuVentas.TextImageRelation = TextImageRelation.ImageAboveText;
-          
+            // 
+            // btnRegistrarVenta
+            // 
+            btnRegistrarVenta.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnRegistrarVenta.IconColor = Color.Black;
+            btnRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnRegistrarVenta.Name = "btnRegistrarVenta";
+            btnRegistrarVenta.Size = new Size(83, 26);
+            // 
+            // btnVerDetalleVenta
+            // 
+            btnVerDetalleVenta.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnVerDetalleVenta.IconColor = Color.Black;
+            btnVerDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnVerDetalleVenta.Name = "btnVerDetalleVenta";
+            btnVerDetalleVenta.Size = new Size(83, 26);
+            // 
             // MenuCompras
             // 
             MenuCompras.AutoSize = false;
@@ -111,7 +128,22 @@ namespace SistemaVentas
             MenuCompras.Size = new Size(100, 64);
             MenuCompras.Text = "Compras";
             MenuCompras.TextImageRelation = TextImageRelation.ImageAboveText;
-          
+            // 
+            // btnRegistrarCompra
+            // 
+            btnRegistrarCompra.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnRegistrarCompra.IconColor = Color.Black;
+            btnRegistrarCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnRegistrarCompra.Name = "btnRegistrarCompra";
+            btnRegistrarCompra.Size = new Size(83, 26);
+            // 
+            // btnVerDetalleCompra
+            // 
+            btnVerDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnVerDetalleCompra.IconColor = Color.Black;
+            btnVerDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnVerDetalleCompra.Name = "btnVerDetalleCompra";
+            btnVerDetalleCompra.Size = new Size(83, 26);
             // 
             // MenuClientes
             // 
@@ -175,7 +207,7 @@ namespace SistemaVentas
             subCategoria.IconColor = Color.Black;
             subCategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             subCategoria.Name = "subCategoria";
-            subCategoria.Size = new Size(158, 26);
+            subCategoria.Size = new Size(224, 26);
             subCategoria.Text = "Categoria";
             subCategoria.Click += subCategoria_Click;
             // 
@@ -185,7 +217,7 @@ namespace SistemaVentas
             iconMenuItem2.IconColor = Color.Black;
             iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem2.Name = "iconMenuItem2";
-            iconMenuItem2.Size = new Size(158, 26);
+            iconMenuItem2.Size = new Size(224, 26);
             iconMenuItem2.Text = "Productos";
             iconMenuItem2.Click += iconMenuItem2_Click;
             // 
@@ -274,6 +306,20 @@ namespace SistemaVentas
             txtNUsuario.TabIndex = 2;
             txtNUsuario.Text = "Usuario:";
             // 
+            // btnMantenedor
+            // 
+            btnMantenedor.AutoSize = false;
+            btnMantenedor.IconChar = FontAwesome.Sharp.IconChar.Toolbox;
+            btnMantenedor.IconColor = Color.Black;
+            btnMantenedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnMantenedor.IconSize = 40;
+            btnMantenedor.ImageScaling = ToolStripItemImageScaling.None;
+            btnMantenedor.Name = "btnMantenedor";
+            btnMantenedor.Size = new Size(90, 64);
+            btnMantenedor.Text = "Mantenedor";
+            btnMantenedor.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnMantenedor.Click += btnMantenedor_Click;
+            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -319,5 +365,6 @@ namespace SistemaVentas
         private FontAwesome.Sharp.IconMenuItem btnVerDetalleVenta;
         private FontAwesome.Sharp.IconMenuItem btnRegistrarCompra;
         private FontAwesome.Sharp.IconMenuItem btnVerDetalleCompra;
+        private FontAwesome.Sharp.IconMenuItem btnMantenedor;
     }
 }
