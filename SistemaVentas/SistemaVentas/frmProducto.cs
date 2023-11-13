@@ -59,9 +59,11 @@ namespace CapaPresentacion
 
             foreach (Producto item in lista)
             {
-                dgvData.Rows.Add(new object[] { "",
+                dgvData.Rows.Add(new object[] {
+                    "",
                     item.IdProducto,
                     item.Codigo,
+                    item.Nombre,
                     item.Descripcion,
                     item.oCategoria.IdCategoria,
                     item.oCategoria.Descripcion,
@@ -99,7 +101,7 @@ namespace CapaPresentacion
                 {
 
                     dgvData.Rows.Add(new object[] { "",
-                    idgenerado,
+                    idgenerado,                   
                     txtCodigo.Text,
                     txtNombre.Text,
                     txtDescripcion.Text,

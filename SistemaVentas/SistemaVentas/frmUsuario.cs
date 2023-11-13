@@ -101,12 +101,12 @@ namespace CapaPresentacion
                 if (idusuariogenerado != 0)
                 {
 
-                    dgvData.Rows.Add(new object[] { "", 
-                        txtId.Text, 
-                        txtNUsuario.Text, 
-                        txtNroDoc.Text, 
-                        txtEmail.Text, 
-                        txtClave.Text, 
+                    dgvData.Rows.Add(new object[] { "",
+                        txtId.Text,
+                        txtNUsuario.Text,
+                        txtNroDoc.Text,
+                        txtEmail.Text,
+                        txtClave.Text,
                         txtConfClave.Text,
                         ((OpcionCombo)cbRol.SelectedItem).Valor.ToString(),
                         ((OpcionCombo)cbRol.SelectedItem).Texto.ToString(),
@@ -264,6 +264,7 @@ namespace CapaPresentacion
                     if (respuesta)
                     {
                         dgvData.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+                        Limpiar();
                     }
                     else
                     {
@@ -306,6 +307,11 @@ namespace CapaPresentacion
         private void btnLimpiarForm_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void txtIndice_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
