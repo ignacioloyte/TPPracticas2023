@@ -124,7 +124,7 @@ namespace SistemaVentas
         //Clientes: Submenu: Registrar clientes, modificar cliente, desactivar cliente, consultar cliente
         private void btnRegistrarCliente_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(MenuClientes, new frmAgregarCliente());
+            AbrirFormulario(MenuClientes, new frmProducto());
         }
 
 
@@ -162,6 +162,11 @@ namespace SistemaVentas
         private void MenuConfiguracion_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconMenuItem2_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(MenuConfiguracion, new frmProducto());
         }
         // Menu reportes
 

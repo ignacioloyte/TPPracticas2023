@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using CapaPresentacion.Utilidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,26 +11,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using CapaPresentacion.Utilidades;
-using CapaEntidad;
-using CapaNegocio;
-using CapaDatos;
-
 namespace CapaPresentacion
 {
-    public partial class frmUsuario : Form
+    public partial class frmProducto : Form
     {
-        public frmUsuario()
+        public frmProducto()
         {
             InitializeComponent();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmUsuario_Load(object sender, EventArgs e)
+        private void frmProducto_Load(object sender, EventArgs e)
         {
             //Para darle los valores al ComboBox del estado
             cbEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
@@ -37,15 +30,15 @@ namespace CapaPresentacion
             cbEstado.SelectedIndex = 0;
 
 
-            List<Rol> listaRol = new CN_Rol().Listar();
+            List<Categoria> listaCategoria = new CN_Categoria().Listar();
 
-            foreach (Rol item in listaRol)
+            foreach (Categoria item in listaCategoria)
             {
-                cbRol.Items.Add(new OpcionCombo() { Valor = item.IdRol, Texto = item.Descripcion });
+                cbCategoria.Items.Add(new OpcionCombo() { Valor = item.IdCategoria, Texto = item.Descripcion });
             }
-            cbRol.DisplayMember = "Texto";
-            cbRol.ValueMember = "Valor";
-            cbRol.SelectedIndex = 0;
+            cbCategoria.DisplayMember = "Texto";
+            cbCategoria.ValueMember = "Valor";
+            cbCategoria.SelectedIndex = 0;
 
             foreach (DataGridViewColumn columna in dgvData.Columns)
             {
@@ -60,52 +53,61 @@ namespace CapaPresentacion
 
             // Mostrar todos los usuario
 
-            List<Usuario> listaUsuario = new CN_Usuario().Listar();
+            List<Producto> lista = new CN_Producto().Listar();
 
-            foreach (Usuario item in listaUsuario)
+            foreach (Producto item in lista)
             {
-                dgvData.Rows.Add(new object[] { "", item.IdUsuario, item.NUsuario, item.Documento, item.NombreCompleto, item.Email, item.Clave,
-                item.oRol.IdRol,
-                item.oRol.Descripcion,
-                item.Estado == true ?1 : 0,
-                item.Estado == true ? "Activo" : "No Activo"
-
+                dgvData.Rows.Add(new object[] { "",
+                    item.IdProducto,
+                    item.Codigo,
+                    item.Descripcion,
+                    item.oCategoria.IdCategoria,
+                    item.oCategoria.Descripcion,
+                    item.Stock,
+                    item.PrecioCompra,
+                    item.PrecioVenta,
+                    item.Estado == true ? 1 : 0,
+                    item.Estado == true ? "Activo" : "No Activo"
 
             });
             }
 
         }
 
-        //Boton de Guardar
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string mensaje = string.Empty;
 
-            Usuario objusuario = new Usuario()
+            Producto obj = new Producto()
             {
-                IdUsuario = Convert.ToInt32(txtId.Text),
-                NUsuario = txtNUsuario.Text,
-                Documento = txtNroDoc.Text,
-                NombreCompleto = txtNombreCompleto.Text,
-                Email = txtEmail.Text,
-                Clave = txtClave.Text,
-                oRol = new Rol() { IdRol = Convert.ToInt32(((OpcionCombo)cbRol.SelectedItem).Valor) },
+                IdProducto = Convert.ToInt32(txtId.Text),
+                Codigo = txtCodigo.Text,
+                Nombre = txtNombre.Text,
+                Descripcion = txtDescripcion.Text,
+                oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(((OpcionCombo)cbCategoria.SelectedItem).Valor) },
                 Estado = Convert.ToInt32(((OpcionCombo)cbEstado.SelectedItem).Valor) == 1 ? true : false
             };
 
-            if (objusuario.IdUsuario == 0)
+            if (obj.IdProducto == 0)
             {
                 //Nos ejecuta el metodo RE
-                int idusuariogenerado = new CN_Usuario().Registrar(objusuario, out mensaje);
+                int idgenerado = new CN_Producto().Registrar(obj, out mensaje);
 
-                if (idusuariogenerado != 0)
+                if (idgenerado != 0)
                 {
 
-                    dgvData.Rows.Add(new object[] { "", txtId.Text, txtNroDoc.Text, txtNUsuario.Text, txtEmail.Text, txtClave.Text, txtConfClave.Text,
-                ((OpcionCombo)cbRol.SelectedItem).Valor.ToString(),
-                ((OpcionCombo)cbRol.SelectedItem).Texto.ToString(),
-                ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString(),
-                ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString()
+                    dgvData.Rows.Add(new object[] { "",
+                    idgenerado,
+                    txtCodigo.Text,
+                    txtNombre.Text,
+                    txtDescripcion.Text,
+                    ((OpcionCombo)cbCategoria.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cbCategoria.SelectedItem).Texto.ToString(),
+                    "0",
+                    "0.00",
+                    "0.00",
+                    ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString()
             });
 
                     Limpiar();
@@ -119,18 +121,17 @@ namespace CapaPresentacion
             }
             else
             {
-                bool resultado = new CN_Usuario().Editar(objusuario, out mensaje);
+                bool resultado = new CN_Producto().Editar(obj, out mensaje);
+
                 if (resultado)
                 {
                     DataGridViewRow row = dgvData.Rows[Convert.ToInt32(txtIndice.Text)];
                     row.Cells["Id"].Value = txtId.Text;
-                    row.Cells["NombreUsuario"].Value = txtNUsuario.Text;
-                    row.Cells["Documento"].Value = txtNroDoc.Text;
-                    row.Cells["NombreCompleto"].Value = txtNombreCompleto.Text;
-                    row.Cells["Email"].Value = txtEmail.Text;
-                    row.Cells["Clave"].Value = txtClave.Text;
-                    row.Cells["IdRol"].Value = ((OpcionCombo)cbRol.SelectedItem).Valor.ToString();
-                    row.Cells["Rol"].Value = ((OpcionCombo)cbRol.SelectedItem).Texto.ToString();
+                    row.Cells["Codigo"].Value = txtCodigo.Text;
+                    row.Cells["Nombre"].Value = txtNombre.Text;
+                    row.Cells["Descripcion"].Value = txtDescripcion.Text;
+                    row.Cells["IdCategoria"].Value = ((OpcionCombo)cbCategoria.SelectedItem).Valor.ToString();
+                    row.Cells["Categoria"].Value = ((OpcionCombo)cbCategoria.SelectedItem).Texto.ToString();
                     row.Cells["EstadoValor"].Value = ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString();
                     row.Cells["Estado"].Value = ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString();
 
@@ -153,16 +154,14 @@ namespace CapaPresentacion
         {
             txtIndice.Text = "-1";
             txtId.Text = "0";
-            txtNUsuario.Text = "";
-            txtNroDoc.Text = "";
-            txtNombreCompleto.Text = "";
-            txtEmail.Text = "";
-            txtClave.Text = "";
-            txtConfClave.Text = "";
-            cbRol.SelectedIndex = 0;
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtDescripcion.Text = "";
+            cbCategoria.SelectedIndex = 0;
             cbEstado.SelectedIndex = 0;
 
-            txtNroDoc.Select();
+
+            txtCodigo.Select();
 
         }
 
@@ -188,11 +187,6 @@ namespace CapaPresentacion
 
         }
 
-        private void dgvData_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-
-        }
-
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvData.Columns[e.ColumnIndex].Name == "btnSeleccionar")
@@ -204,21 +198,16 @@ namespace CapaPresentacion
 
                     txtIndice.Text = indice.ToString();
                     txtId.Text = dgvData.Rows[indice].Cells["Id"].Value.ToString();
-                    txtNUsuario.Text = dgvData.Rows[indice].Cells["NombreUsuario"].Value.ToString();
-                    txtNroDoc.Text = dgvData.Rows[indice].Cells["Documento"].Value.ToString();
-                    txtNombreCompleto.Text = dgvData.Rows[indice].Cells["NombreCompleto"].Value.ToString();
-                    txtEmail.Text = dgvData.Rows[indice].Cells["Email"].Value.ToString();
-                    txtClave.Text = dgvData.Rows[indice].Cells["Clave"].Value.ToString();
-                    txtConfClave.Text = dgvData.Rows[indice].Cells["Clave"].Value.ToString();
+                    txtCodigo.Text = dgvData.Rows[indice].Cells["Codigo"].Value.ToString();
+                    txtNombre.Text = dgvData.Rows[indice].Cells["Nombre"].Value.ToString();
+                    txtDescripcion.Text = dgvData.Rows[indice].Cells["Descripcion"].Value.ToString();
 
-                    //Para modificar al combo correspondiente
-
-                    foreach (OpcionCombo oc in cbRol.Items)
+                    foreach (OpcionCombo oc in cbCategoria.Items)
                     {
-                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgvData.Rows[indice].Cells["IdRol"].Value))
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgvData.Rows[indice].Cells["IdCategoria"].Value))
                         {
-                            int indice_combo = cbRol.Items.IndexOf(oc);
-                            cbRol.SelectedIndex = indice_combo;
+                            int indice_combo = cbCategoria.Items.IndexOf(oc);
+                            cbCategoria.SelectedIndex = indice_combo;
                             break;
 
                         }
@@ -235,6 +224,7 @@ namespace CapaPresentacion
                         }
                     }
 
+
                 }
             }
 
@@ -245,19 +235,20 @@ namespace CapaPresentacion
         {
             if (Convert.ToInt32(txtId.Text) != 0)
             {
-                if (MessageBox.Show("¿Desea eliminar el usuario", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("¿Desea eliminar el producto", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string mensaje = string.Empty;
-                    Usuario objusuario = new Usuario()
+                    Producto obj = new Producto()
                     {
-                        IdUsuario = Convert.ToInt32(txtId.Text)
+                        IdProducto = Convert.ToInt32(txtId.Text)
 
                     };
-                    bool respuesta = new CN_Usuario().Eliminar(objusuario, out mensaje);
+                    bool respuesta = new CN_Producto().Eliminar(obj, out mensaje);
 
                     if (respuesta)
                     {
                         dgvData.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+                        Limpiar();
                     }
                     else
                     {
@@ -267,8 +258,6 @@ namespace CapaPresentacion
             }
         }
 
-
-        //Para realizar busqueda por el combo box
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
             string columnaFiltro = ((OpcionCombo)cbBusqueda.SelectedItem).Valor.ToString();
@@ -297,7 +286,7 @@ namespace CapaPresentacion
 
         }
 
-        private void btnLimpiarForm_Click(object sender, EventArgs e)
+        private void btnLimpiarF_Click(object sender, EventArgs e)
         {
             Limpiar();
         }

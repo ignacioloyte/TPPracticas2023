@@ -74,7 +74,7 @@ namespace SistemaVentas
             Menu.Items.AddRange(new ToolStripItem[] { MenuUsuario, MenuVentas, MenuCompras, MenuClientes, MenuProveedores, MenuReportes, MenuConfiguracion, MenuAcercaDe });
             Menu.Location = new Point(0, 52);
             Menu.Name = "Menu";
-            Menu.Size = new Size(938, 68);
+            Menu.Size = new Size(990, 68);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
             // 
@@ -290,8 +290,8 @@ namespace SistemaVentas
             MenuConfiguracion.IconSize = 40;
             MenuConfiguracion.ImageScaling = ToolStripItemImageScaling.None;
             MenuConfiguracion.Name = "MenuConfiguracion";
-            MenuConfiguracion.Size = new Size(100, 64);
-            MenuConfiguracion.Text = "Configuracion";
+            MenuConfiguracion.Size = new Size(152, 64);
+            MenuConfiguracion.Text = "Stock";
             MenuConfiguracion.TextImageRelation = TextImageRelation.ImageAboveText;
             MenuConfiguracion.Click += MenuConfiguracion_Click;
             // 
@@ -312,7 +312,8 @@ namespace SistemaVentas
             iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem2.Name = "iconMenuItem2";
             iconMenuItem2.Size = new Size(224, 26);
-            iconMenuItem2.Text = "iconMenuItem2";
+            iconMenuItem2.Text = "Productos";
+            iconMenuItem2.Click += iconMenuItem2_Click;
             // 
             // MenuAcercaDe
             // 
