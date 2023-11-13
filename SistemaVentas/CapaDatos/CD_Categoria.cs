@@ -20,7 +20,7 @@ namespace CapaDatos
 
                 try
                 {
-
+                    //-query de la categoria
                     StringBuilder query = new StringBuilder();
                     query.AppendLine("select IdCategoria, Descripcion, Estado from Categoria");
                     

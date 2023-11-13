@@ -95,17 +95,23 @@ namespace CapaPresentacion
 
             if (objusuario.IdUsuario == 0)
             {
-                //Nos ejecuta el metodo RE
+                //Nos ejecuta el metodo RE- Muestra en el datagrid los datos
                 int idusuariogenerado = new CN_Usuario().Registrar(objusuario, out mensaje);
 
                 if (idusuariogenerado != 0)
                 {
 
-                    dgvData.Rows.Add(new object[] { "", txtId.Text, txtNroDoc.Text, txtNUsuario.Text, txtEmail.Text, txtClave.Text, txtConfClave.Text,
-                ((OpcionCombo)cbRol.SelectedItem).Valor.ToString(),
-                ((OpcionCombo)cbRol.SelectedItem).Texto.ToString(),
-                ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString(),
-                ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString()
+                    dgvData.Rows.Add(new object[] { "", 
+                        txtId.Text, 
+                        txtNUsuario.Text, 
+                        txtNroDoc.Text, 
+                        txtEmail.Text, 
+                        txtClave.Text, 
+                        txtConfClave.Text,
+                        ((OpcionCombo)cbRol.SelectedItem).Valor.ToString(),
+                        ((OpcionCombo)cbRol.SelectedItem).Texto.ToString(),
+                        ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString(),
+                        ((OpcionCombo)cbEstado.SelectedItem).Texto.ToString()
             });
 
                     Limpiar();
