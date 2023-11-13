@@ -74,7 +74,7 @@ namespace SistemaVentas
             Menu.Items.AddRange(new ToolStripItem[] { MenuUsuario, MenuVentas, MenuCompras, MenuClientes, MenuProveedores, MenuReportes, MenuConfiguracion, MenuAcercaDe });
             Menu.Location = new Point(0, 52);
             Menu.Name = "Menu";
-            Menu.Size = new Size(990, 68);
+            Menu.Size = new Size(840, 68);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
             // 
@@ -301,7 +301,7 @@ namespace SistemaVentas
             subCategoria.IconColor = Color.Black;
             subCategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             subCategoria.Name = "subCategoria";
-            subCategoria.Size = new Size(224, 26);
+            subCategoria.Size = new Size(158, 26);
             subCategoria.Text = "Categoria";
             subCategoria.Click += subCategoria_Click;
             // 
@@ -311,7 +311,7 @@ namespace SistemaVentas
             iconMenuItem2.IconColor = Color.Black;
             iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem2.Name = "iconMenuItem2";
-            iconMenuItem2.Size = new Size(224, 26);
+            iconMenuItem2.Size = new Size(158, 26);
             iconMenuItem2.Text = "Productos";
             iconMenuItem2.Click += iconMenuItem2_Click;
             // 
@@ -337,7 +337,7 @@ namespace SistemaVentas
             MenuTitulo.Location = new Point(0, 0);
             MenuTitulo.Name = "MenuTitulo";
             MenuTitulo.RightToLeft = RightToLeft.Yes;
-            MenuTitulo.Size = new Size(1370, 31);
+            MenuTitulo.Size = new Size(1561, 31);
             MenuTitulo.TabIndex = 1;
             MenuTitulo.Text = "SistemaVentas";
             // 
@@ -345,7 +345,7 @@ namespace SistemaVentas
             // 
             Contenedor.Location = new Point(0, 123);
             Contenedor.Name = "Contenedor";
-            Contenedor.Size = new Size(1358, 687);
+            Contenedor.Size = new Size(1549, 687);
             Contenedor.TabIndex = 2;
             // 
             // label1
@@ -375,7 +375,7 @@ namespace SistemaVentas
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1370, 49);
+            panel1.Size = new Size(1561, 49);
             panel1.TabIndex = 4;
             // 
             // lblUsuario
@@ -404,7 +404,7 @@ namespace SistemaVentas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1370, 822);
+            ClientSize = new Size(1561, 822);
             Controls.Add(panel1);
             Controls.Add(Contenedor);
             Controls.Add(Menu);

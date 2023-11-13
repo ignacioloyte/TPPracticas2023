@@ -4,6 +4,7 @@ using CapaPresentacion.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -289,6 +290,42 @@ namespace CapaPresentacion
         private void btnLimpiarF_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            if(dgvData.Rows.Count < 1)
+            {
+                MessageBox.Show("No hay datos para exportar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+
+                foreach(DataGridViewColumn columna in dgvData.Columns)
+                {
+                    if(columna.HeaderText != "" && columna.Visible)
+                       dt.Columns.Add(columna.HeaderText, typeof(string));
+                }
+
+                foreach(DataGridViewRow row in dgvData.Rows)
+                {
+                    if (row.Visible)
+                        dt.Rows.Add(new object[]
+                        {
+                            row.Cells[2].Value.ToString(),
+                            row.Cells[3].Value.ToString(),
+                            row.Cells[4].Value.ToString(),
+                            row.Cells[6].Value.ToString(),
+                            row.Cells[7].Value.ToString(),
+                            row.Cells[8].Value.ToString(),
+                            row.Cells[9].Value.ToString(),
+                            row.Cells[11].Value.ToString()
+                        });
+
+                }
+                string text = "";
+            }
         }
     }
 }
