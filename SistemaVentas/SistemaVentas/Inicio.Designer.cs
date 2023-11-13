@@ -43,10 +43,6 @@ namespace SistemaVentas
             btnVerDetalleCompra = new FontAwesome.Sharp.IconMenuItem();
             MenuClientes = new FontAwesome.Sharp.IconMenuItem();
             MenuProveedores = new FontAwesome.Sharp.IconMenuItem();
-            btnAgregarProveedor = new FontAwesome.Sharp.IconMenuItem();
-            btnModificarProveedor = new FontAwesome.Sharp.IconMenuItem();
-            btnDesactivarProveedor = new FontAwesome.Sharp.IconMenuItem();
-            btnConsultarProveedores = new FontAwesome.Sharp.IconMenuItem();
             MenuReportes = new FontAwesome.Sharp.IconMenuItem();
             MenuConfiguracion = new FontAwesome.Sharp.IconMenuItem();
             subCategoria = new FontAwesome.Sharp.IconMenuItem();
@@ -101,27 +97,7 @@ namespace SistemaVentas
             MenuVentas.Size = new Size(100, 64);
             MenuVentas.Text = "Ventas";
             MenuVentas.TextImageRelation = TextImageRelation.ImageAboveText;
-            // 
-            // btnRegistrarVenta
-            // 
-            btnRegistrarVenta.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnRegistrarVenta.IconColor = Color.Black;
-            btnRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnRegistrarVenta.Name = "btnRegistrarVenta";
-            btnRegistrarVenta.Size = new Size(206, 26);
-            btnRegistrarVenta.Text = "Registrar Venta";
-            btnRegistrarVenta.Click += btnRegistrarVenta_Click;
-            // 
-            // btnVerDetalleVenta
-            // 
-            btnVerDetalleVenta.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnVerDetalleVenta.IconColor = Color.Black;
-            btnVerDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnVerDetalleVenta.Name = "btnVerDetalleVenta";
-            btnVerDetalleVenta.Size = new Size(206, 26);
-            btnVerDetalleVenta.Text = "Ver Detalle Venta";
-            btnVerDetalleVenta.Click += btnVerDetalleVenta_Click;
-            // 
+          
             // MenuCompras
             // 
             MenuCompras.AutoSize = false;
@@ -135,26 +111,7 @@ namespace SistemaVentas
             MenuCompras.Size = new Size(100, 64);
             MenuCompras.Text = "Compras";
             MenuCompras.TextImageRelation = TextImageRelation.ImageAboveText;
-            // 
-            // btnRegistrarCompra
-            // 
-            btnRegistrarCompra.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnRegistrarCompra.IconColor = Color.Black;
-            btnRegistrarCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnRegistrarCompra.Name = "btnRegistrarCompra";
-            btnRegistrarCompra.Size = new Size(218, 26);
-            btnRegistrarCompra.Text = "Registrar Compra";
-            btnRegistrarCompra.Click += btnRegistrarCompra_Click;
-            // 
-            // btnVerDetalleCompra
-            // 
-            btnVerDetalleCompra.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnVerDetalleCompra.IconColor = Color.Black;
-            btnVerDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnVerDetalleCompra.Name = "btnVerDetalleCompra";
-            btnVerDetalleCompra.Size = new Size(218, 26);
-            btnVerDetalleCompra.Text = "Ver detalle compra";
-            btnVerDetalleCompra.Click += btnVerDetalleCompra_Click;
+          
             // 
             // MenuClientes
             // 
@@ -173,7 +130,6 @@ namespace SistemaVentas
             // MenuProveedores
             // 
             MenuProveedores.AutoSize = false;
-            MenuProveedores.DropDownItems.AddRange(new ToolStripItem[] { btnAgregarProveedor, btnModificarProveedor, btnDesactivarProveedor, btnConsultarProveedores });
             MenuProveedores.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             MenuProveedores.IconColor = Color.Black;
             MenuProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -183,46 +139,7 @@ namespace SistemaVentas
             MenuProveedores.Size = new Size(100, 64);
             MenuProveedores.Text = "Proveedores";
             MenuProveedores.TextImageRelation = TextImageRelation.ImageAboveText;
-            // 
-            // btnAgregarProveedor
-            // 
-            btnAgregarProveedor.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnAgregarProveedor.IconColor = Color.Black;
-            btnAgregarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnAgregarProveedor.Name = "btnAgregarProveedor";
-            btnAgregarProveedor.Size = new Size(240, 26);
-            btnAgregarProveedor.Text = "Agregar Proveedor";
-            btnAgregarProveedor.Click += btnAgregarProveedor_Click;
-            // 
-            // btnModificarProveedor
-            // 
-            btnModificarProveedor.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnModificarProveedor.IconColor = Color.Black;
-            btnModificarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnModificarProveedor.Name = "btnModificarProveedor";
-            btnModificarProveedor.Size = new Size(240, 26);
-            btnModificarProveedor.Text = "Modificar Proveedor";
-            btnModificarProveedor.Click += btnModificarProveedor_Click;
-            // 
-            // btnDesactivarProveedor
-            // 
-            btnDesactivarProveedor.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnDesactivarProveedor.IconColor = Color.Black;
-            btnDesactivarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnDesactivarProveedor.Name = "btnDesactivarProveedor";
-            btnDesactivarProveedor.Size = new Size(240, 26);
-            btnDesactivarProveedor.Text = "Desactivar Proveedor";
-            btnDesactivarProveedor.Click += btnDesactivarProveedor_Click;
-            // 
-            // btnConsultarProveedores
-            // 
-            btnConsultarProveedores.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnConsultarProveedores.IconColor = Color.Black;
-            btnConsultarProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnConsultarProveedores.Name = "btnConsultarProveedores";
-            btnConsultarProveedores.Size = new Size(240, 26);
-            btnConsultarProveedores.Text = "Consultar Proveedores";
-            btnConsultarProveedores.Click += btnConsultarProveedores_Click;
+            MenuProveedores.Click += MenuProveedores_Click;
             // 
             // MenuReportes
             // 
@@ -402,9 +319,5 @@ namespace SistemaVentas
         private FontAwesome.Sharp.IconMenuItem btnVerDetalleVenta;
         private FontAwesome.Sharp.IconMenuItem btnRegistrarCompra;
         private FontAwesome.Sharp.IconMenuItem btnVerDetalleCompra;
-        private FontAwesome.Sharp.IconMenuItem btnAgregarProveedor;
-        private FontAwesome.Sharp.IconMenuItem btnModificarProveedor;
-        private FontAwesome.Sharp.IconMenuItem btnDesactivarProveedor;
-        private FontAwesome.Sharp.IconMenuItem btnConsultarProveedores;
     }
 }

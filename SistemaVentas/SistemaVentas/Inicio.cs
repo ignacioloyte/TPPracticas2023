@@ -98,27 +98,6 @@ namespace SistemaVentas
 
 
 
-        //Venta, Submenu: Registrar venta, detalle de venta 
-        private void btnRegistrarVenta_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(MenuVentas, new frmRegistrarVenta());
-        }
-
-        private void btnVerDetalleVenta_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(MenuVentas, new frmVerDetalleVenta());
-        }
-
-        //Compra: submenu: Registrar compra, Ver Detalle compra
-        private void btnRegistrarCompra_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(MenuCompras, new frmRegistrarCompra());
-        }
-
-        private void btnVerDetalleCompra_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(MenuCompras, new frmVerDetalleCompra());
-        }
 
 
         //Clientes: Submenu: Registrar clientes, modificar cliente, desactivar cliente, consultar cliente
@@ -130,25 +109,6 @@ namespace SistemaVentas
 
 
         //Menu proveedores
-        private void btnAgregarProveedor_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(MenuProveedores, new frmAgregarProveedor());
-        }
-
-        private void btnModificarProveedor_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(MenuProveedores, new frmModificarProveedor());
-        }
-
-        private void btnDesactivarProveedor_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(MenuProveedores, new frmDesactivarProveedor());
-        }
-
-        private void btnConsultarProveedores_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(MenuProveedores, new frmConsultarProveedores());
-        }
 
         private void MenuConfiguracion_Click(object sender, EventArgs e)
         {
@@ -163,6 +123,11 @@ namespace SistemaVentas
         private void MenuClientes_Click(object sender, EventArgs e)
         {
             AbrirFormulario(MenuConfiguracion, new frmCliente());
+        }
+
+        private void MenuProveedores_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(MenuConfiguracion, new frmProveedor());
         }
         // Menu reportes
 

@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class frmCliente
+    partial class frmProveedor
     {
         /// <summary>
         /// Required designer variable.
@@ -47,7 +47,7 @@
             btnSeleccionar = new DataGridViewButtonColumn();
             Id = new DataGridViewTextBoxColumn();
             Documento = new DataGridViewTextBoxColumn();
-            NombreCompleto = new DataGridViewTextBoxColumn();
+            RazonSocial = new DataGridViewTextBoxColumn();
             Email = new DataGridViewTextBoxColumn();
             Telefono = new DataGridViewTextBoxColumn();
             EstadoValor = new DataGridViewTextBoxColumn();
@@ -60,7 +60,7 @@
             txtBusqueda = new TextBox();
             btnBusqueda = new FontAwesome.Sharp.IconButton();
             btnLimpiar = new FontAwesome.Sharp.IconButton();
-            txtNombreCompleto = new TextBox();
+            txtRazonSocial = new TextBox();
             label10 = new Label();
             iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -225,7 +225,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Columns.AddRange(new DataGridViewColumn[] { btnSeleccionar, Id, Documento, NombreCompleto, Email, Telefono, EstadoValor, Estado });
+            dgvData.Columns.AddRange(new DataGridViewColumn[] { btnSeleccionar, Id, Documento, RazonSocial, Email, Telefono, EstadoValor, Estado });
             dgvData.Location = new Point(292, 94);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
@@ -271,13 +271,13 @@
             Documento.ReadOnly = true;
             Documento.Width = 150;
             // 
-            // NombreCompleto
+            // RazonSocial
             // 
-            NombreCompleto.HeaderText = "Nombre Completo";
-            NombreCompleto.MinimumWidth = 6;
-            NombreCompleto.Name = "NombreCompleto";
-            NombreCompleto.ReadOnly = true;
-            NombreCompleto.Width = 180;
+            RazonSocial.HeaderText = "Razón Social";
+            RazonSocial.MinimumWidth = 6;
+            RazonSocial.Name = "RazonSocial";
+            RazonSocial.ReadOnly = true;
+            RazonSocial.Width = 180;
             // 
             // Email
             // 
@@ -322,7 +322,7 @@
             label9.Padding = new Padding(8);
             label9.Size = new Size(945, 49);
             label9.TabIndex = 21;
-            label9.Text = "Lista Clientes:";
+            label9.Text = "Lista Proveedores:";
             // 
             // txtId
             // 
@@ -400,12 +400,12 @@
             btnLimpiar.UseVisualStyleBackColor = false;
             btnLimpiar.Click += btnLimpiar_Click;
             // 
-            // txtNombreCompleto
+            // txtRazonSocial
             // 
-            txtNombreCompleto.Location = new Point(22, 258);
-            txtNombreCompleto.Name = "txtNombreCompleto";
-            txtNombreCompleto.Size = new Size(201, 27);
-            txtNombreCompleto.TabIndex = 29;
+            txtRazonSocial.Location = new Point(22, 258);
+            txtRazonSocial.Name = "txtRazonSocial";
+            txtRazonSocial.Size = new Size(201, 27);
+            txtRazonSocial.TabIndex = 29;
             // 
             // label10
             // 
@@ -413,9 +413,9 @@
             label10.BackColor = Color.White;
             label10.Location = new Point(18, 235);
             label10.Name = "label10";
-            label10.Size = new Size(135, 20);
+            label10.Size = new Size(97, 20);
             label10.TabIndex = 28;
-            label10.Text = "Nombre completo:";
+            label10.Text = "Razón Social:";
             // 
             // iconMenuItem1
             // 
@@ -449,9 +449,9 @@
             label11.Font = new Font("Segoe UI", 14.2F, FontStyle.Bold, GraphicsUnit.Point);
             label11.Location = new Point(64, 28);
             label11.Name = "label11";
-            label11.Size = new Size(104, 32);
+            label11.Size = new Size(133, 32);
             label11.TabIndex = 31;
-            label11.Text = "Clientes";
+            label11.Text = "Proveedor";
             // 
             // iconButton1
             // 
@@ -485,7 +485,7 @@
             label1.TabIndex = 0;
             label1.Text = "label1";
             // 
-            // frmCliente
+            // frmProveedor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -495,7 +495,7 @@
             Controls.Add(iconButton1);
             Controls.Add(label11);
             Controls.Add(iconPictureBox1);
-            Controls.Add(txtNombreCompleto);
+            Controls.Add(txtRazonSocial);
             Controls.Add(label10);
             Controls.Add(btnLimpiar);
             Controls.Add(btnBusqueda);
@@ -518,9 +518,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "frmCliente";
+            Name = "frmProveedor";
             Text = "frmUsuario";
-            Load += frmCliente_Load;
+            Load += frmProveedor_Load;
             ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
@@ -554,7 +554,7 @@
         private TextBox txtBusqueda;
         private FontAwesome.Sharp.IconButton btnBusqueda;
         private FontAwesome.Sharp.IconButton btnLimpiar;
-        private TextBox txtNombreCompleto;
+        private TextBox txtRazonSocial;
         private Label label10;
         private DataGridViewTextBoxColumn NombreUsuario;
         private DataGridViewTextBoxColumn Clave;
@@ -569,7 +569,7 @@
         private DataGridViewButtonColumn btnSeleccionar;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn Documento;
-        private DataGridViewTextBoxColumn NombreCompleto;
+        private DataGridViewTextBoxColumn RazonSocial;
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn Telefono;
         private DataGridViewTextBoxColumn EstadoValor;
