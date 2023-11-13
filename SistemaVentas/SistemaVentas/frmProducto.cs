@@ -293,23 +293,23 @@ namespace CapaPresentacion
         }
 
         private void btnExcel_Click(object sender, EventArgs e)
-        {
-            if(dgvData.Rows.Count < 1)
+        {// Chequeamos que tenga filas mi tabla
+            if (dgvData.Rows.Count < 1)
             {
                 MessageBox.Show("No hay datos para exportar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 DataTable dt = new DataTable();
-
-                foreach(DataGridViewColumn columna in dgvData.Columns)
+                //Accedenis a todas las columas del datagrid
+                foreach (DataGridViewColumn columna in dgvData.Columns)
                 {
-                    if(columna.HeaderText != "" && columna.Visible)
-                       dt.Columns.Add(columna.HeaderText, typeof(string));
-                }
+                    if (columna.HeaderText != "" && columna.Visible)
+                        dt.Columns.Add(columna.HeaderText, typeof(string));
+                }// Carga ok las columnas
 
-                foreach(DataGridViewRow row in dgvData.Rows)
-                {
+                foreach (DataGridViewRow row in dgvData.Rows)
+                {// Que solo me exporte las filas visibles
                     if (row.Visible)
                         dt.Rows.Add(new object[]
                         {
