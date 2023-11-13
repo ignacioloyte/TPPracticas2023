@@ -128,15 +128,6 @@ namespace SistemaVentas
         }
 
 
-        private void btnDesactivarCliente_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(MenuClientes, new frmDesactivarCliente());
-        }
-
-        private void btnConsultarClientes_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(MenuClientes, new frmConsultarClientes());
-        }
 
         //Menu proveedores
         private void btnAgregarProveedor_Click(object sender, EventArgs e)
@@ -167,6 +158,11 @@ namespace SistemaVentas
         private void iconMenuItem2_Click(object sender, EventArgs e)
         {
             AbrirFormulario(MenuConfiguracion, new frmProducto());
+        }
+
+        private void MenuClientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(MenuConfiguracion, new frmCliente());
         }
         // Menu reportes
 
