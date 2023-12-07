@@ -47,6 +47,8 @@ namespace SistemaVentas
             MenuConfiguracion = new FontAwesome.Sharp.IconMenuItem();
             subCategoria = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
+            MenuMantenedor = new FontAwesome.Sharp.IconMenuItem();
+            subNegocio = new ToolStripMenuItem();
             MenuAcercaDe = new FontAwesome.Sharp.IconMenuItem();
             MenuTitulo = new MenuStrip();
             Contenedor = new Panel();
@@ -55,7 +57,6 @@ namespace SistemaVentas
             panel1 = new Panel();
             lblUsuario = new Label();
             txtNUsuario = new Label();
-            btnMantenedor = new FontAwesome.Sharp.IconMenuItem();
             Menu.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -64,10 +65,10 @@ namespace SistemaVentas
             // 
             Menu.Dock = DockStyle.None;
             Menu.ImageScalingSize = new Size(20, 20);
-            Menu.Items.AddRange(new ToolStripItem[] { MenuUsuario, MenuVentas, MenuCompras, MenuClientes, MenuProveedores, MenuReportes, MenuConfiguracion, btnMantenedor, MenuAcercaDe });
+            Menu.Items.AddRange(new ToolStripItem[] { MenuUsuario, MenuVentas, MenuCompras, MenuClientes, MenuProveedores, MenuReportes, MenuConfiguracion, MenuMantenedor, MenuAcercaDe });
             Menu.Location = new Point(0, 52);
             Menu.Name = "Menu";
-            Menu.Size = new Size(1008, 68);
+            Menu.Size = new Size(858, 68);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
             // 
@@ -221,6 +222,28 @@ namespace SistemaVentas
             iconMenuItem2.Text = "Productos";
             iconMenuItem2.Click += iconMenuItem2_Click;
             // 
+            // MenuMantenedor
+            // 
+            MenuMantenedor.AutoSize = false;
+            MenuMantenedor.DropDownItems.AddRange(new ToolStripItem[] { subNegocio });
+            MenuMantenedor.IconChar = FontAwesome.Sharp.IconChar.Toolbox;
+            MenuMantenedor.IconColor = Color.Black;
+            MenuMantenedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            MenuMantenedor.IconSize = 40;
+            MenuMantenedor.ImageScaling = ToolStripItemImageScaling.None;
+            MenuMantenedor.Name = "MenuMantenedor";
+            MenuMantenedor.Size = new Size(90, 64);
+            MenuMantenedor.Text = "Mantenedor";
+            MenuMantenedor.TextImageRelation = TextImageRelation.ImageAboveText;
+            MenuMantenedor.Click += btnMantenedor_Click;
+            // 
+            // subNegocio
+            // 
+            subNegocio.Name = "subNegocio";
+            subNegocio.Size = new Size(224, 26);
+            subNegocio.Text = "Negocio";
+            subNegocio.Click += subNegocio_Click;
+            // 
             // MenuAcercaDe
             // 
             MenuAcercaDe.AutoSize = false;
@@ -306,20 +329,6 @@ namespace SistemaVentas
             txtNUsuario.TabIndex = 2;
             txtNUsuario.Text = "Usuario:";
             // 
-            // btnMantenedor
-            // 
-            btnMantenedor.AutoSize = false;
-            btnMantenedor.IconChar = FontAwesome.Sharp.IconChar.Toolbox;
-            btnMantenedor.IconColor = Color.Black;
-            btnMantenedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnMantenedor.IconSize = 40;
-            btnMantenedor.ImageScaling = ToolStripItemImageScaling.None;
-            btnMantenedor.Name = "btnMantenedor";
-            btnMantenedor.Size = new Size(90, 64);
-            btnMantenedor.Text = "Mantenedor";
-            btnMantenedor.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnMantenedor.Click += btnMantenedor_Click;
-            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -365,6 +374,7 @@ namespace SistemaVentas
         private FontAwesome.Sharp.IconMenuItem btnVerDetalleVenta;
         private FontAwesome.Sharp.IconMenuItem btnRegistrarCompra;
         private FontAwesome.Sharp.IconMenuItem btnVerDetalleCompra;
-        private FontAwesome.Sharp.IconMenuItem btnMantenedor;
+        private FontAwesome.Sharp.IconMenuItem MenuMantenedor;
+        private ToolStripMenuItem subNegocio;
     }
 }

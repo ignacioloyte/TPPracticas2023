@@ -132,6 +132,11 @@ namespace SistemaVentas
 
         private void btnMantenedor_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void subNegocio_Click(object sender, EventArgs e)
+        {
             AbrirFormulario(MenuConfiguracion, new frmNegocio());
         }
         // Menu reportes

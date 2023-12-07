@@ -39,7 +39,7 @@ namespace CapaDatos
                             lista.Add(new Proveedor()
                             {
                                 IdProveedor = Convert.ToInt32(dr["IdProveedor"]),
-                                Documento = dr["NroDocumento"].ToString(),
+                                Documento = dr["Documento"].ToString(),
                                 RazonSocial = dr["RazonSocial"].ToString(),
                                 Email = dr["Email"] != DBNull.Value ? dr["Email"].ToString() : null,
                                 Telefono = dr["Telefono"].ToString(),

@@ -32,16 +32,16 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             groupBox1 = new GroupBox();
-            picLogo = new PictureBox();
-            Logo = new Label();
-            btnSubir = new FontAwesome.Sharp.IconButton();
-            label2 = new Label();
-            txtNombreNegocio = new TextBox();
-            txtCuit = new TextBox();
-            label3 = new Label();
+            btnGuardarCambios = new FontAwesome.Sharp.IconButton();
             txtDireccion = new TextBox();
             label4 = new Label();
-            btnGuardarCambios = new FontAwesome.Sharp.IconButton();
+            txtCuit = new TextBox();
+            label3 = new Label();
+            txtNombreNegocio = new TextBox();
+            label2 = new Label();
+            btnSubir = new FontAwesome.Sharp.IconButton();
+            Logo = new Label();
+            picLogo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
@@ -105,70 +105,21 @@
             groupBox1.TabIndex = 35;
             groupBox1.TabStop = false;
             // 
-            // picLogo
+            // btnGuardarCambios
             // 
-            picLogo.BorderStyle = BorderStyle.FixedSingle;
-            picLogo.Location = new Point(16, 73);
-            picLogo.Name = "picLogo";
-            picLogo.Size = new Size(158, 148);
-            picLogo.TabIndex = 0;
-            picLogo.TabStop = false;
-            // 
-            // Logo
-            // 
-            Logo.AutoSize = true;
-            Logo.Location = new Point(16, 50);
-            Logo.Name = "Logo";
-            Logo.Size = new Size(43, 20);
-            Logo.TabIndex = 1;
-            Logo.Text = "Logo";
-            // 
-            // btnSubir
-            // 
-            btnSubir.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            btnSubir.IconColor = Color.Black;
-            btnSubir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnSubir.IconSize = 25;
-            btnSubir.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSubir.Location = new Point(16, 236);
-            btnSubir.Name = "btnSubir";
-            btnSubir.Padding = new Padding(2);
-            btnSubir.Size = new Size(158, 29);
-            btnSubir.TabIndex = 2;
-            btnSubir.Text = "Subir";
-            btnSubir.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(184, 50);
-            label2.Name = "label2";
-            label2.Size = new Size(128, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Nombre Negocio:";
-            // 
-            // txtNombreNegocio
-            // 
-            txtNombreNegocio.Location = new Point(187, 73);
-            txtNombreNegocio.Name = "txtNombreNegocio";
-            txtNombreNegocio.Size = new Size(219, 27);
-            txtNombreNegocio.TabIndex = 4;
-            // 
-            // txtCuit
-            // 
-            txtCuit.Location = new Point(187, 134);
-            txtCuit.Name = "txtCuit";
-            txtCuit.Size = new Size(219, 27);
-            txtCuit.TabIndex = 6;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(184, 111);
-            label3.Name = "label3";
-            label3.Size = new Size(43, 20);
-            label3.TabIndex = 5;
-            label3.Text = "CUIT:";
+            btnGuardarCambios.IconChar = FontAwesome.Sharp.IconChar.HardDrive;
+            btnGuardarCambios.IconColor = Color.Black;
+            btnGuardarCambios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnGuardarCambios.IconSize = 25;
+            btnGuardarCambios.ImageAlign = ContentAlignment.MiddleLeft;
+            btnGuardarCambios.Location = new Point(187, 236);
+            btnGuardarCambios.Name = "btnGuardarCambios";
+            btnGuardarCambios.Padding = new Padding(2);
+            btnGuardarCambios.Size = new Size(219, 29);
+            btnGuardarCambios.TabIndex = 9;
+            btnGuardarCambios.Text = "Guardar Cambios";
+            btnGuardarCambios.UseVisualStyleBackColor = true;
+            btnGuardarCambios.Click += btnGuardarCambios_Click;
             // 
             // txtDireccion
             // 
@@ -186,20 +137,72 @@
             label4.TabIndex = 7;
             label4.Text = "Dirección:";
             // 
-            // btnGuardarCambios
+            // txtCuit
             // 
-            btnGuardarCambios.IconChar = FontAwesome.Sharp.IconChar.HardDrive;
-            btnGuardarCambios.IconColor = Color.Black;
-            btnGuardarCambios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnGuardarCambios.IconSize = 25;
-            btnGuardarCambios.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGuardarCambios.Location = new Point(187, 236);
-            btnGuardarCambios.Name = "btnGuardarCambios";
-            btnGuardarCambios.Padding = new Padding(2);
-            btnGuardarCambios.Size = new Size(219, 29);
-            btnGuardarCambios.TabIndex = 9;
-            btnGuardarCambios.Text = "Guardar Cambios";
-            btnGuardarCambios.UseVisualStyleBackColor = true;
+            txtCuit.Location = new Point(187, 134);
+            txtCuit.Name = "txtCuit";
+            txtCuit.Size = new Size(219, 27);
+            txtCuit.TabIndex = 6;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(184, 111);
+            label3.Name = "label3";
+            label3.Size = new Size(43, 20);
+            label3.TabIndex = 5;
+            label3.Text = "CUIT:";
+            // 
+            // txtNombreNegocio
+            // 
+            txtNombreNegocio.Location = new Point(187, 73);
+            txtNombreNegocio.Name = "txtNombreNegocio";
+            txtNombreNegocio.Size = new Size(219, 27);
+            txtNombreNegocio.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(184, 50);
+            label2.Name = "label2";
+            label2.Size = new Size(128, 20);
+            label2.TabIndex = 3;
+            label2.Text = "Nombre Negocio:";
+            // 
+            // btnSubir
+            // 
+            btnSubir.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            btnSubir.IconColor = Color.Black;
+            btnSubir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnSubir.IconSize = 25;
+            btnSubir.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSubir.Location = new Point(16, 236);
+            btnSubir.Name = "btnSubir";
+            btnSubir.Padding = new Padding(2);
+            btnSubir.Size = new Size(158, 29);
+            btnSubir.TabIndex = 2;
+            btnSubir.Text = "Subir";
+            btnSubir.UseVisualStyleBackColor = true;
+            btnSubir.Click += btnSubir_Click;
+            // 
+            // Logo
+            // 
+            Logo.AutoSize = true;
+            Logo.Location = new Point(16, 50);
+            Logo.Name = "Logo";
+            Logo.Size = new Size(43, 20);
+            Logo.TabIndex = 1;
+            Logo.Text = "Logo";
+            // 
+            // picLogo
+            // 
+            picLogo.BorderStyle = BorderStyle.FixedSingle;
+            picLogo.Location = new Point(16, 73);
+            picLogo.Name = "picLogo";
+            picLogo.Size = new Size(158, 148);
+            picLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            picLogo.TabIndex = 0;
+            picLogo.TabStop = false;
             // 
             // frmNegocio
             // 
