@@ -101,7 +101,7 @@ namespace CapaPresentacion
                 {
 
                     dgvData.Rows.Add(new object[] { "",
-                    idgenerado,                   
+                    idgenerado,
                     txtCodigo.Text,
                     txtNombre.Text,
                     txtDescripcion.Text,
@@ -333,7 +333,7 @@ namespace CapaPresentacion
                 savefile.Filter = "Excel Files | *.xlsx";
 
                 //Evento que dispara cada vez que aceptamos en la ventana de dialogo para configurar la ruta
-                if(savefile.ShowDialog() == DialogResult.OK)
+                if (savefile.ShowDialog() == DialogResult.OK)
                 {
                     try
                     {
@@ -351,6 +351,11 @@ namespace CapaPresentacion
                     }
                 }
             }
+        }
+
+        private void cbBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
