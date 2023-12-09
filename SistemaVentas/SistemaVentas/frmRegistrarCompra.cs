@@ -337,7 +337,7 @@ namespace CapaPresentacion
             //Registra en la bd en Compra y en detalle de compra, en 1 compra se pueden comprar muchos productos
             Compra oCompra = new Compra()
             {
-                oUsuario = new Usuario() {IdUsuario = _Usuario.IdUsuario},
+                oUsuario = new Usuario() { IdUsuario = _Usuario.IdUsuario },
                 oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(txtIdProveedor.Text) },
                 TipoDocumento = ((OpcionCombo)cbDoc.SelectedItem).Texto,
                 NumeroDocumento = numeroDocumento,

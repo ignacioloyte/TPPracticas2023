@@ -148,6 +148,8 @@ namespace SistemaVentas
             btnVerDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnVerDetalleCompra.Name = "btnVerDetalleCompra";
             btnVerDetalleCompra.Size = new Size(184, 26);
+            btnVerDetalleCompra.Text = "Ver Detalle";
+            btnVerDetalleCompra.Click += btnVerDetalleCompra_Click;
             // 
             // MenuClientes
             // 
