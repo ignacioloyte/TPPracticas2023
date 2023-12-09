@@ -8,8 +8,14 @@ namespace CapaEntidad
 {
     public class Rol
     {
+        public object IdUsuario;
+
         public int IdRol { get; set; }
         public string Descripcion { get; set; }
         public string FechaRegistro { get; set; }
+        public object IdProveedor { get; set; }
+       
+
     }
 }
+

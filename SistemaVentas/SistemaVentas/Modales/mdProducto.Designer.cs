@@ -253,6 +253,7 @@
             Controls.Add(label9);
             Controls.Add(dgvData);
             Name = "mdProducto";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "mdProducto";
             Load += mdProducto_Load;
             ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();

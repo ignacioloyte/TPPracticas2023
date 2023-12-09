@@ -88,7 +88,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(271, 694);
+            label1.Size = new Size(237, 520);
             label1.TabIndex = 0;
             label1.Text = "label1";
             // 
@@ -96,9 +96,9 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.White;
-            label2.Location = new Point(18, 174);
+            label2.Location = new Point(16, 130);
             label2.Name = "label2";
-            label2.Size = new Size(122, 20);
+            label2.Size = new Size(99, 15);
             label2.TabIndex = 1;
             label2.Text = "Nro. Documento:";
             // 
@@ -106,9 +106,9 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.White;
-            label3.Location = new Point(21, 298);
+            label3.Location = new Point(18, 224);
             label3.Name = "label3";
-            label3.Size = new Size(49, 20);
+            label3.Size = new Size(39, 15);
             label3.TabIndex = 2;
             label3.Text = "Email:";
             // 
@@ -116,9 +116,9 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.White;
-            label4.Location = new Point(24, 355);
+            label4.Location = new Point(21, 266);
             label4.Name = "label4";
-            label4.Size = new Size(86, 20);
+            label4.Size = new Size(70, 15);
             label4.TabIndex = 3;
             label4.Text = "Contraseña:";
             // 
@@ -126,56 +126,61 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.White;
-            label5.Location = new Point(21, 113);
+            label5.Location = new Point(18, 85);
             label5.Name = "label5";
-            label5.Size = new Size(140, 20);
+            label5.Size = new Size(112, 15);
             label5.TabIndex = 4;
             label5.Text = "Nombre de usuario:";
             // 
             // txtNroDoc
             // 
-            txtNroDoc.Location = new Point(19, 197);
+            txtNroDoc.Location = new Point(17, 148);
+            txtNroDoc.Margin = new Padding(3, 2, 3, 2);
             txtNroDoc.Name = "txtNroDoc";
-            txtNroDoc.Size = new Size(204, 27);
+            txtNroDoc.Size = new Size(179, 23);
             txtNroDoc.TabIndex = 5;
             // 
             // txtNUsuario
             // 
-            txtNUsuario.Location = new Point(21, 137);
+            txtNUsuario.Location = new Point(18, 103);
+            txtNUsuario.Margin = new Padding(3, 2, 3, 2);
             txtNUsuario.Name = "txtNUsuario";
-            txtNUsuario.Size = new Size(201, 27);
+            txtNUsuario.Size = new Size(176, 23);
             txtNUsuario.TabIndex = 6;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(24, 321);
+            txtEmail.Location = new Point(21, 241);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(201, 27);
+            txtEmail.Size = new Size(176, 23);
             txtEmail.TabIndex = 7;
             // 
             // txtClave
             // 
-            txtClave.Location = new Point(24, 378);
+            txtClave.Location = new Point(21, 284);
+            txtClave.Margin = new Padding(3, 2, 3, 2);
             txtClave.Name = "txtClave";
             txtClave.PasswordChar = '*';
-            txtClave.Size = new Size(201, 27);
+            txtClave.Size = new Size(176, 23);
             txtClave.TabIndex = 8;
             // 
             // txtConfClave
             // 
-            txtConfClave.Location = new Point(26, 437);
+            txtConfClave.Location = new Point(23, 328);
+            txtConfClave.Margin = new Padding(3, 2, 3, 2);
             txtConfClave.Name = "txtConfClave";
             txtConfClave.PasswordChar = '*';
-            txtConfClave.Size = new Size(199, 27);
+            txtConfClave.Size = new Size(175, 23);
             txtConfClave.TabIndex = 12;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.White;
-            label7.Location = new Point(26, 414);
+            label7.Location = new Point(23, 310);
             label7.Name = "label7";
-            label7.Size = new Size(154, 20);
+            label7.Size = new Size(125, 15);
             label7.TabIndex = 11;
             label7.Text = "Confirmar contraseña:";
             // 
@@ -183,9 +188,9 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.White;
-            label6.Location = new Point(27, 474);
+            label6.Location = new Point(24, 356);
             label6.Name = "label6";
-            label6.Size = new Size(34, 20);
+            label6.Size = new Size(27, 15);
             label6.TabIndex = 13;
             label6.Text = "Rol:";
             // 
@@ -193,27 +198,29 @@
             // 
             cbRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cbRol.FormattingEnabled = true;
-            cbRol.Location = new Point(29, 497);
+            cbRol.Location = new Point(25, 373);
+            cbRol.Margin = new Padding(3, 2, 3, 2);
             cbRol.Name = "cbRol";
-            cbRol.Size = new Size(196, 28);
+            cbRol.Size = new Size(172, 23);
             cbRol.TabIndex = 14;
             // 
             // cbEstado
             // 
             cbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
             cbEstado.FormattingEnabled = true;
-            cbEstado.Location = new Point(31, 557);
+            cbEstado.Location = new Point(27, 418);
+            cbEstado.Margin = new Padding(3, 2, 3, 2);
             cbEstado.Name = "cbEstado";
-            cbEstado.Size = new Size(194, 28);
+            cbEstado.Size = new Size(170, 23);
             cbEstado.TabIndex = 16;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.White;
-            label8.Location = new Point(31, 534);
+            label8.Location = new Point(27, 400);
             label8.Name = "label8";
-            label8.Size = new Size(57, 20);
+            label8.Size = new Size(45, 15);
             label8.TabIndex = 15;
             label8.Text = "Estado:";
             label8.Click += label8_Click;
@@ -229,9 +236,10 @@
             btnEliminar.IconColor = Color.White;
             btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnEliminar.IconSize = 20;
-            btnEliminar.Location = new Point(133, 640);
+            btnEliminar.Location = new Point(116, 480);
+            btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(94, 29);
+            btnEliminar.Size = new Size(82, 22);
             btnEliminar.TabIndex = 17;
             btnEliminar.Text = "Eliminar";
             btnEliminar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -249,9 +257,10 @@
             btnGuardar.IconColor = Color.White;
             btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnGuardar.IconSize = 20;
-            btnGuardar.Location = new Point(31, 605);
+            btnGuardar.Location = new Point(27, 454);
+            btnGuardar.Margin = new Padding(3, 2, 3, 2);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(196, 29);
+            btnGuardar.Size = new Size(172, 22);
             btnGuardar.TabIndex = 18;
             btnGuardar.Text = "Guardar/Editar";
             btnGuardar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -269,9 +278,10 @@
             btnLimpiarForm.IconColor = Color.White;
             btnLimpiarForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnLimpiarForm.IconSize = 20;
-            btnLimpiarForm.Location = new Point(33, 640);
+            btnLimpiarForm.Location = new Point(29, 480);
+            btnLimpiarForm.Margin = new Padding(3, 2, 3, 2);
             btnLimpiarForm.Name = "btnLimpiarForm";
-            btnLimpiarForm.Size = new Size(94, 29);
+            btnLimpiarForm.Size = new Size(82, 22);
             btnLimpiarForm.TabIndex = 19;
             btnLimpiarForm.Text = "Limpiar";
             btnLimpiarForm.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -282,6 +292,7 @@
             // dgvData
             // 
             dgvData.AllowUserToAddRows = false;
+            dgvData.BackgroundColor = Color.White;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -293,7 +304,8 @@
             dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvData.Columns.AddRange(new DataGridViewColumn[] { btnSeleccionar, Id, NombreUsuario, Documento, NombreCompleto, Email, Clave, IdRol, Rol, EstadoValor, Estado });
-            dgvData.Location = new Point(292, 94);
+            dgvData.Location = new Point(256, 70);
+            dgvData.Margin = new Padding(3, 2, 3, 2);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
@@ -307,7 +319,7 @@
             dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvData.RowHeadersWidth = 51;
             dgvData.RowTemplate.Height = 28;
-            dgvData.Size = new Size(945, 641);
+            dgvData.Size = new Size(827, 481);
             dgvData.TabIndex = 20;
             dgvData.CellContentClick += dgvData_CellContentClick;
             dgvData.CellFormatting += dgvData_CellFormatting;
@@ -411,18 +423,19 @@
             label9.BackColor = Color.White;
             label9.BorderStyle = BorderStyle.FixedSingle;
             label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(292, 35);
+            label9.Location = new Point(256, 26);
             label9.Name = "label9";
-            label9.Padding = new Padding(8);
-            label9.Size = new Size(945, 49);
+            label9.Padding = new Padding(7, 6, 7, 6);
+            label9.Size = new Size(827, 37);
             label9.TabIndex = 21;
             label9.Text = "Lista Usuario:";
             // 
             // txtId
             // 
-            txtId.Location = new Point(183, 83);
+            txtId.Location = new Point(160, 62);
+            txtId.Margin = new Padding(3, 2, 3, 2);
             txtId.Name = "txtId";
-            txtId.Size = new Size(40, 27);
+            txtId.Size = new Size(36, 23);
             txtId.TabIndex = 22;
             txtId.Text = "0";
             // 
@@ -436,9 +449,9 @@
             // 
             lblBuscar.AutoSize = true;
             lblBuscar.BackColor = Color.White;
-            lblBuscar.Location = new Point(624, 50);
+            lblBuscar.Location = new Point(546, 38);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(82, 20);
+            lblBuscar.Size = new Size(66, 15);
             lblBuscar.TabIndex = 23;
             lblBuscar.Text = "Buscar por:";
             // 
@@ -446,16 +459,18 @@
             // 
             cbBusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
             cbBusqueda.FormattingEnabled = true;
-            cbBusqueda.Location = new Point(712, 47);
+            cbBusqueda.Location = new Point(623, 35);
+            cbBusqueda.Margin = new Padding(3, 2, 3, 2);
             cbBusqueda.Name = "cbBusqueda";
-            cbBusqueda.Size = new Size(196, 28);
+            cbBusqueda.Size = new Size(172, 23);
             cbBusqueda.TabIndex = 24;
             // 
             // txtBusqueda
             // 
-            txtBusqueda.Location = new Point(914, 47);
+            txtBusqueda.Location = new Point(800, 35);
+            txtBusqueda.Margin = new Padding(3, 2, 3, 2);
             txtBusqueda.Name = "txtBusqueda";
-            txtBusqueda.Size = new Size(201, 27);
+            txtBusqueda.Size = new Size(176, 23);
             txtBusqueda.TabIndex = 25;
             // 
             // btnBusqueda
@@ -469,9 +484,10 @@
             btnBusqueda.IconColor = Color.Black;
             btnBusqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnBusqueda.IconSize = 27;
-            btnBusqueda.Location = new Point(1121, 45);
+            btnBusqueda.Location = new Point(981, 34);
+            btnBusqueda.Margin = new Padding(3, 2, 3, 2);
             btnBusqueda.Name = "btnBusqueda";
-            btnBusqueda.Size = new Size(49, 29);
+            btnBusqueda.Size = new Size(43, 22);
             btnBusqueda.TabIndex = 26;
             btnBusqueda.UseVisualStyleBackColor = false;
             btnBusqueda.Click += btnBusqueda_Click;
@@ -487,27 +503,29 @@
             btnLimpiar.IconColor = Color.Black;
             btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnLimpiar.IconSize = 27;
-            btnLimpiar.Location = new Point(1177, 45);
+            btnLimpiar.Location = new Point(1030, 34);
+            btnLimpiar.Margin = new Padding(3, 2, 3, 2);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(44, 29);
+            btnLimpiar.Size = new Size(38, 22);
             btnLimpiar.TabIndex = 27;
             btnLimpiar.UseVisualStyleBackColor = false;
             btnLimpiar.Click += btnLimpiar_Click;
             // 
             // txtNombreCompleto
             // 
-            txtNombreCompleto.Location = new Point(22, 258);
+            txtNombreCompleto.Location = new Point(19, 194);
+            txtNombreCompleto.Margin = new Padding(3, 2, 3, 2);
             txtNombreCompleto.Name = "txtNombreCompleto";
-            txtNombreCompleto.Size = new Size(201, 27);
+            txtNombreCompleto.Size = new Size(176, 23);
             txtNombreCompleto.TabIndex = 29;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.BackColor = Color.White;
-            label10.Location = new Point(18, 235);
+            label10.Location = new Point(16, 176);
             label10.Name = "label10";
-            label10.Size = new Size(135, 20);
+            label10.Size = new Size(108, 15);
             label10.TabIndex = 28;
             label10.Text = "Nombre completo:";
             // 
@@ -529,10 +547,11 @@
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Users;
             iconPictureBox1.IconColor = Color.DarkOrange;
             iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 40;
-            iconPictureBox1.Location = new Point(21, 23);
+            iconPictureBox1.IconSize = 30;
+            iconPictureBox1.Location = new Point(18, 17);
+            iconPictureBox1.Margin = new Padding(3, 2, 3, 2);
             iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(40, 40);
+            iconPictureBox1.Size = new Size(35, 30);
             iconPictureBox1.TabIndex = 30;
             iconPictureBox1.TabStop = false;
             // 
@@ -541,9 +560,9 @@
             label11.AutoSize = true;
             label11.BackColor = Color.White;
             label11.Font = new Font("Segoe UI", 14.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(64, 28);
+            label11.Location = new Point(56, 21);
             label11.Name = "label11";
-            label11.Size = new Size(113, 32);
+            label11.Size = new Size(89, 25);
             label11.TabIndex = 31;
             label11.Text = "Usuarios";
             // 
@@ -552,28 +571,30 @@
             iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             iconButton1.IconColor = Color.Black;
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(381, 753);
+            iconButton1.Location = new Point(333, 565);
+            iconButton1.Margin = new Padding(3, 2, 3, 2);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(94, 29);
+            iconButton1.Size = new Size(82, 22);
             iconButton1.TabIndex = 32;
             iconButton1.Text = "iconButton1";
             iconButton1.UseVisualStyleBackColor = true;
             // 
             // txtIndice
             // 
-            txtIndice.Location = new Point(133, 83);
+            txtIndice.Location = new Point(116, 62);
+            txtIndice.Margin = new Padding(3, 2, 3, 2);
             txtIndice.Name = "txtIndice";
-            txtIndice.Size = new Size(40, 27);
+            txtIndice.Size = new Size(36, 23);
             txtIndice.TabIndex = 33;
             txtIndice.Text = "-1";
             txtIndice.TextChanged += txtIndice_TextChanged;
             // 
             // frmUsuario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1570, 694);
+            ClientSize = new Size(1374, 520);
             Controls.Add(txtIndice);
             Controls.Add(iconButton1);
             Controls.Add(label11);
@@ -606,6 +627,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmUsuario";
             Text = "frmUsuario";
             Load += frmUsuario_Load;
