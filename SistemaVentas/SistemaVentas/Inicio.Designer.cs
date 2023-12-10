@@ -69,7 +69,7 @@ namespace SistemaVentas
             Menu.Location = new Point(0, 39);
             Menu.Name = "Menu";
             Menu.Padding = new Padding(5, 2, 0, 2);
-            Menu.Size = new Size(857, 68);
+            Menu.Size = new Size(999, 68);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
             // 
@@ -97,7 +97,7 @@ namespace SistemaVentas
             MenuVentas.IconSize = 40;
             MenuVentas.ImageScaling = ToolStripItemImageScaling.None;
             MenuVentas.Name = "MenuVentas";
-            MenuVentas.Size = new Size(100, 64);
+            MenuVentas.Size = new Size(122, 64);
             MenuVentas.Text = "Ventas";
             MenuVentas.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
@@ -107,7 +107,9 @@ namespace SistemaVentas
             btnRegistrarVenta.IconColor = Color.Black;
             btnRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnRegistrarVenta.Name = "btnRegistrarVenta";
-            btnRegistrarVenta.Size = new Size(67, 22);
+            btnRegistrarVenta.Size = new Size(184, 26);
+            btnRegistrarVenta.Text = "Registrar Venta";
+            btnRegistrarVenta.Click += btnRegistrarVenta_Click;
             // 
             // btnVerDetalleVenta
             // 
@@ -115,7 +117,7 @@ namespace SistemaVentas
             btnVerDetalleVenta.IconColor = Color.Black;
             btnVerDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnVerDetalleVenta.Name = "btnVerDetalleVenta";
-            btnVerDetalleVenta.Size = new Size(67, 22);
+            btnVerDetalleVenta.Size = new Size(184, 26);
             // 
             // MenuCompras
             // 
