@@ -69,7 +69,7 @@ namespace SistemaVentas
             Menu.Location = new Point(0, 39);
             Menu.Name = "Menu";
             Menu.Padding = new Padding(5, 2, 0, 2);
-            Menu.Size = new Size(977, 68);
+            Menu.Size = new Size(857, 68);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
             // 
@@ -137,7 +137,7 @@ namespace SistemaVentas
             btnRegistrarCompra.IconColor = Color.Black;
             btnRegistrarCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnRegistrarCompra.Name = "btnRegistrarCompra";
-            btnRegistrarCompra.Size = new Size(184, 26);
+            btnRegistrarCompra.Size = new Size(129, 22);
             btnRegistrarCompra.Text = "Registrar";
             btnRegistrarCompra.Click += btnRegistrarCompra_Click;
             // 
@@ -147,7 +147,7 @@ namespace SistemaVentas
             btnVerDetalleCompra.IconColor = Color.Black;
             btnVerDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnVerDetalleCompra.Name = "btnVerDetalleCompra";
-            btnVerDetalleCompra.Size = new Size(184, 26);
+            btnVerDetalleCompra.Size = new Size(129, 22);
             btnVerDetalleCompra.Text = "Ver Detalle";
             btnVerDetalleCompra.Click += btnVerDetalleCompra_Click;
             // 
@@ -281,7 +281,7 @@ namespace SistemaVentas
             Contenedor.Location = new Point(0, 109);
             Contenedor.Margin = new Padding(3, 2, 3, 2);
             Contenedor.Name = "Contenedor";
-            Contenedor.Size = new Size(1355, 498);
+            Contenedor.Size = new Size(1355, 597);
             Contenedor.TabIndex = 2;
             // 
             // label1
@@ -341,7 +341,7 @@ namespace SistemaVentas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1366, 616);
+            ClientSize = new Size(1366, 717);
             Controls.Add(panel1);
             Controls.Add(Contenedor);
             Controls.Add(Menu);

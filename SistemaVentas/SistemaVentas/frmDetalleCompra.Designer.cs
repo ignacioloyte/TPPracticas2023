@@ -50,13 +50,13 @@
             txtRazonSocial = new Label();
             label7 = new Label();
             dgvData = new DataGridView();
-            txtMontoTotal = new TextBox();
-            label5 = new Label();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
             Producto = new DataGridViewTextBoxColumn();
             PrecioCompra = new DataGridViewTextBoxColumn();
             Cantidad = new DataGridViewTextBoxColumn();
             Subtotal = new DataGridViewTextBoxColumn();
+            txtMontoTotal = new TextBox();
+            label5 = new Label();
+            btnDescargarPdf = new FontAwesome.Sharp.IconButton();
             gbInfo.SuspendLayout();
             gbInfoProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
@@ -138,6 +138,7 @@
             btnLimpiarCompra.Text = "Limpiar";
             btnLimpiarCompra.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLimpiarCompra.UseVisualStyleBackColor = false;
+            btnLimpiarCompra.Click += btnLimpiarCompra_Click;
             // 
             // gbInfo
             // 
@@ -301,44 +302,6 @@
             dgvData.Size = new Size(650, 256);
             dgvData.TabIndex = 41;
             // 
-            // txtMontoTotal
-            // 
-            txtMontoTotal.Location = new Point(140, 558);
-            txtMontoTotal.Margin = new Padding(3, 2, 3, 2);
-            txtMontoTotal.Name = "txtMontoTotal";
-            txtMontoTotal.Size = new Size(137, 23);
-            txtMontoTotal.TabIndex = 40;
-            txtMontoTotal.Text = "0";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(57, 561);
-            label5.Name = "label5";
-            label5.Size = new Size(77, 15);
-            label5.TabIndex = 39;
-            label5.Text = "Monto Total: ";
-            // 
-            // iconButton1
-            // 
-            iconButton1.BackColor = Color.White;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Black;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.Black;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 15;
-            iconButton1.Location = new Point(562, 556);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(145, 25);
-            iconButton1.TabIndex = 42;
-            iconButton1.Text = "Descargar PDF";
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            // 
             // Producto
             // 
             Producto.HeaderText = "Producto";
@@ -371,12 +334,51 @@
             Subtotal.ReadOnly = true;
             Subtotal.Width = 125;
             // 
+            // txtMontoTotal
+            // 
+            txtMontoTotal.Location = new Point(140, 558);
+            txtMontoTotal.Margin = new Padding(3, 2, 3, 2);
+            txtMontoTotal.Name = "txtMontoTotal";
+            txtMontoTotal.Size = new Size(137, 23);
+            txtMontoTotal.TabIndex = 40;
+            txtMontoTotal.Text = "0";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(57, 561);
+            label5.Name = "label5";
+            label5.Size = new Size(77, 15);
+            label5.TabIndex = 39;
+            label5.Text = "Monto Total: ";
+            // 
+            // btnDescargarPdf
+            // 
+            btnDescargarPdf.BackColor = Color.White;
+            btnDescargarPdf.Cursor = Cursors.Hand;
+            btnDescargarPdf.FlatAppearance.BorderColor = Color.Black;
+            btnDescargarPdf.FlatStyle = FlatStyle.Flat;
+            btnDescargarPdf.ForeColor = Color.Black;
+            btnDescargarPdf.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            btnDescargarPdf.IconColor = Color.Black;
+            btnDescargarPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnDescargarPdf.IconSize = 15;
+            btnDescargarPdf.Location = new Point(562, 556);
+            btnDescargarPdf.Margin = new Padding(3, 2, 3, 2);
+            btnDescargarPdf.Name = "btnDescargarPdf";
+            btnDescargarPdf.Size = new Size(145, 25);
+            btnDescargarPdf.TabIndex = 42;
+            btnDescargarPdf.Text = "Descargar PDF";
+            btnDescargarPdf.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnDescargarPdf.UseVisualStyleBackColor = false;
+            btnDescargarPdf.Click += btnDescargarPdf_Click;
+            // 
             // frmDetalleCompra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1051, 597);
-            Controls.Add(iconButton1);
+            ClientSize = new Size(1051, 634);
+            Controls.Add(btnDescargarPdf);
             Controls.Add(txtMontoTotal);
             Controls.Add(label5);
             Controls.Add(dgvData);
@@ -424,7 +426,7 @@
         private DataGridView dgvData;
         private TextBox txtMontoTotal;
         private Label label5;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnDescargarPdf;
         private DataGridViewTextBoxColumn Producto;
         private DataGridViewTextBoxColumn PrecioCompra;
         private DataGridViewTextBoxColumn Cantidad;

@@ -17,10 +17,11 @@ namespace CapaEntidad
             public string NumeroDocumento { get; set; }
             public decimal MontoTotal { get; set; }
             public DateTime FechaCreacion { get; set; }
-         
+
+            public List<DetalleCompra> oDetalleCompra { get; set; }
 
 
-        
+
     }
     
 }

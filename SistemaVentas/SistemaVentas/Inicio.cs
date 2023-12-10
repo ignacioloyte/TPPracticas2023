@@ -142,7 +142,7 @@ namespace SistemaVentas
 
         private void btnRegistrarCompra_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(MenuCompras, new frmRegistrarCompra(usuarioActual));
+            AbrirFormulario(MenuCompras, new frmCompra(usuarioActual));
         }
 
         private void btnVerDetalleCompra_Click(object sender, EventArgs e)

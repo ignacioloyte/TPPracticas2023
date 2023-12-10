@@ -17,13 +17,13 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class frmRegistrarCompra : Form
+    public partial class frmCompra : Form
     {
 
         private Usuario _Usuario;
 
 
-        public frmRegistrarCompra(Usuario oUsuario = null)
+        public frmCompra(Usuario oUsuario = null)
         {
             _Usuario = oUsuario;
             InitializeComponent();

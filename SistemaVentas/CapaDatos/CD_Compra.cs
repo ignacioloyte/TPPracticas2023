@@ -137,7 +137,7 @@ namespace CapaDatos
                                 TipoDocumento = dr["TipoDocumento"].ToString(),
                                 NumeroDocumento = dr["NumeroDocumento"].ToString(),
                                 MontoTotal = Convert.ToDecimal(dr["MontoTotal"].ToString()),
-                                FechaCreacion = Convert.ToDateTime(dr["FechaCreacion"].ToString())
+                                FechaCreacion = Convert.ToDateTime(dr["FechaRegistro"].ToString())
                             };
                             
 

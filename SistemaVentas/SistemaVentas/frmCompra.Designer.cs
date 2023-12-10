@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class frmRegistrarCompra
+    partial class frmCompra
     {
         /// <summary>
         /// Required designer variable.
@@ -84,7 +84,7 @@
             label9.Location = new Point(131, 4);
             label9.Name = "label9";
             label9.Padding = new Padding(7, 6, 7, 6);
-            label9.Size = new Size(837, 480);
+            label9.Size = new Size(837, 503);
             label9.TabIndex = 22;
             // 
             // lblRegistrar
@@ -515,11 +515,11 @@
             btnRegistrarCompra.UseVisualStyleBackColor = true;
             btnRegistrarCompra.Click += btnRegistrarCompra_Click;
             // 
-            // frmRegistrarCompra
+            // frmCompra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1060, 493);
+            ClientSize = new Size(1060, 590);
             Controls.Add(btnRegistrarCompra);
             Controls.Add(txtTotalPagar);
             Controls.Add(label8);
@@ -531,7 +531,7 @@
             Controls.Add(lblRegistrar);
             Controls.Add(label9);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "frmRegistrarCompra";
+            Name = "frmCompra";
             Text = "Form1";
             Load += frmRegistrarCompra_Load;
             gbInfo.ResumeLayout(false);
