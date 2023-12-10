@@ -2,17 +2,22 @@
 using CapaNegocio;
 using DocumentFormat.OpenXml.Office2013.Drawing.Chart;
 using iTextSharp.text;
+using iTextSharp.text.html.simpleparser;
 using iTextSharp.text.pdf;
 using iTextSharp.tool.xml;
+using System.IO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.tool.xml.parser;
+using AngleSharp.Html.Parser;
 
 namespace CapaPresentacion
 {
@@ -77,6 +82,7 @@ namespace CapaPresentacion
             string Texto_Html = Properties.Resources.PlantillaCompra.ToString();
             Negocio odatos = new CN_Negocio().ObtenerDatos();
 
+            //Reemplazamos los textos de la plantilla html por las variables que ingresamos del negocio
             Texto_Html = Texto_Html.Replace("@nombrenegocio", odatos.Nombre.ToUpper());
             Texto_Html = Texto_Html.Replace("@docnegocio", odatos.CUIT);
             Texto_Html = Texto_Html.Replace("@direcnegocio", odatos.Direccion);
@@ -87,17 +93,17 @@ namespace CapaPresentacion
             Texto_Html = Texto_Html.Replace("@docproveedor", txtNroDocProveedor.Text);
             Texto_Html = Texto_Html.Replace("@nombreproveedor", txtNombreProveedor.Text);
             Texto_Html = Texto_Html.Replace("@fecharegistro", txtFecha.Text);
-            Texto_Html = Texto_Html.Replace("@usuariogenerado", txtUsuario.Text);
+            Texto_Html = Texto_Html.Replace("@usuarioregistro",txtUsuario.Text);
 
             string filas = string.Empty;
             foreach (DataGridViewRow row in dgvData.Rows)
             {
                 filas += "<tr>";
-                filas += "<tr>" + row.Cells["Producto"].Value.ToString() + "</td>";
-                filas += "<tr>" + row.Cells["PrecioCompra"].Value.ToString() + "</td>";
-                filas += "<tr>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
-                filas += "<tr>" + row.Cells["SubTotal"].Value.ToString() + "</td>";
-                filas += "<tr>";
+                filas += "<td>" + row.Cells["Producto"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["PrecioCompra"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["SubTotal"].Value.ToString() + "</td>";
+                filas += "</tr>";
 
 
             }
@@ -108,7 +114,7 @@ namespace CapaPresentacion
             savefile.FileName = string.Format("Compra_{0}.pdf", txtNroDoc.Text);
             savefile.Filter = "Pdf Files | *.pdf";
 
-
+            //Validar si elegimos una ruta correcta
             if (savefile.ShowDialog() == DialogResult.OK)
             {
                 using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
@@ -133,13 +139,14 @@ namespace CapaPresentacion
                     using (StringReader sr = new StringReader(Texto_Html))
                     {
                         //Prblema
-                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer,pdfDoc,sr);
+                        
                     }
 
                     pdfDoc.Close();
                     stream.Close();
                     MessageBox.Show("Documento Generado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    
                 }
             }
         }
