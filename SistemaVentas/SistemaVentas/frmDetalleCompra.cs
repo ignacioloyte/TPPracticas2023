@@ -55,10 +55,7 @@ namespace CapaPresentacion
 
         }
 
-        private void frmDetalleCompra_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnLimpiarCompra_Click(object sender, EventArgs e)
         {

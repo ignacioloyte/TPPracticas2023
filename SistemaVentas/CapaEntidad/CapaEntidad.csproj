@@ -50,7 +50,7 @@
     <Compile Include="Permiso.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Proveedor.cs" />
-    <Compile Include="ReporteCompras.cs" />
+    <Compile Include="ReporteCompra.cs" />
     <Compile Include="ReporteVenta.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

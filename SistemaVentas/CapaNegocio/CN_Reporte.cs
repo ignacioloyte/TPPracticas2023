@@ -14,7 +14,7 @@ namespace CapaNegocio
 
         private CD_Reporte objcd_reporte = new CD_Reporte();
          
-        public List<ReporteCompras> Compras(string fechainicio, string fechafin, int idproveedor)
+        public List<ReporteCompra> Compra(string fechainicio, string fechafin, int idproveedor)
         {
             return objcd_reporte.Compra(fechainicio, fechafin, idproveedor);
         }

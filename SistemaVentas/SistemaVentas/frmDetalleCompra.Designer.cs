@@ -392,7 +392,7 @@
             Controls.Add(label1);
             Name = "frmDetalleCompra";
             Text = "frmDetalleCompra";
-            Load += frmDetalleCompra_Load;
+           
             gbInfo.ResumeLayout(false);
             gbInfo.PerformLayout();
             gbInfoProveedor.ResumeLayout(false);
