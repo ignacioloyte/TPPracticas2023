@@ -12,6 +12,7 @@ using FontAwesome.Sharp;
 
 using CapaEntidad;
 using CapaNegocio;
+using CapaPresentacion.Modales;
 
 namespace SistemaVentas
 {
@@ -168,6 +169,20 @@ namespace SistemaVentas
         private void SubMenuReporteCompras_Click(object sender, EventArgs e)
         {
             AbrirFormulario(MenuReportes, new frmReporteCompras());
+        }
+
+        private void MenuAcercaDe_Click(object sender, EventArgs e)
+        {
+            mdAcercaDe md = new mdAcercaDe();
+            md.ShowDialog();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("¿Desea Salir?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
 

@@ -48,7 +48,7 @@ namespace SistemaVentas
             SubMenuReporteVentas = new ToolStripMenuItem();
             MenuConfiguracion = new FontAwesome.Sharp.IconMenuItem();
             subCategoria = new FontAwesome.Sharp.IconMenuItem();
-            iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
+            btnSalir = new FontAwesome.Sharp.IconMenuItem();
             MenuMantenedor = new FontAwesome.Sharp.IconMenuItem();
             subNegocio = new ToolStripMenuItem();
             MenuAcercaDe = new FontAwesome.Sharp.IconMenuItem();
@@ -59,6 +59,7 @@ namespace SistemaVentas
             panel1 = new Panel();
             lblUsuario = new Label();
             txtNUsuario = new Label();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             Menu.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -68,10 +69,10 @@ namespace SistemaVentas
             Menu.Dock = DockStyle.None;
             Menu.ImageScalingSize = new Size(20, 20);
             Menu.Items.AddRange(new ToolStripItem[] { MenuUsuario, MenuVentas, MenuCompras, MenuClientes, MenuProveedores, MenuReportes, MenuConfiguracion, MenuMantenedor, MenuAcercaDe });
-            Menu.Location = new Point(0, 52);
+            Menu.Location = new Point(0, 39);
             Menu.Name = "Menu";
-            Menu.Padding = new Padding(6, 3, 0, 3);
-            Menu.Size = new Size(1030, 70);
+            Menu.Padding = new Padding(5, 2, 0, 2);
+            Menu.Size = new Size(921, 68);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
             // 
@@ -109,7 +110,7 @@ namespace SistemaVentas
             btnRegistrarVenta.IconColor = Color.Black;
             btnRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnRegistrarVenta.Name = "btnRegistrarVenta";
-            btnRegistrarVenta.Size = new Size(192, 26);
+            btnRegistrarVenta.Size = new Size(152, 22);
             btnRegistrarVenta.Text = "Registrar Venta";
             btnRegistrarVenta.Click += btnRegistrarVenta_Click;
             // 
@@ -119,7 +120,7 @@ namespace SistemaVentas
             btnVerDetalleVenta.IconColor = Color.Black;
             btnVerDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnVerDetalleVenta.Name = "btnVerDetalleVenta";
-            btnVerDetalleVenta.Size = new Size(192, 26);
+            btnVerDetalleVenta.Size = new Size(152, 22);
             btnVerDetalleVenta.Text = "Ver Detalle";
             btnVerDetalleVenta.Click += btnVerDetalleVenta_Click;
             // 
@@ -143,7 +144,7 @@ namespace SistemaVentas
             btnRegistrarCompra.IconColor = Color.Black;
             btnRegistrarCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnRegistrarCompra.Name = "btnRegistrarCompra";
-            btnRegistrarCompra.Size = new Size(165, 26);
+            btnRegistrarCompra.Size = new Size(129, 22);
             btnRegistrarCompra.Text = "Registrar";
             btnRegistrarCompra.Click += btnRegistrarCompra_Click;
             // 
@@ -153,7 +154,7 @@ namespace SistemaVentas
             btnVerDetalleCompra.IconColor = Color.Black;
             btnVerDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnVerDetalleCompra.Name = "btnVerDetalleCompra";
-            btnVerDetalleCompra.Size = new Size(165, 26);
+            btnVerDetalleCompra.Size = new Size(129, 22);
             btnVerDetalleCompra.Text = "Ver Detalle";
             btnVerDetalleCompra.Click += btnVerDetalleCompra_Click;
             // 
@@ -202,21 +203,21 @@ namespace SistemaVentas
             // SubMenuReporteCompras
             // 
             SubMenuReporteCompras.Name = "SubMenuReporteCompras";
-            SubMenuReporteCompras.Size = new Size(224, 26);
+            SubMenuReporteCompras.Size = new Size(166, 22);
             SubMenuReporteCompras.Text = "Reporte Compras";
             SubMenuReporteCompras.Click += SubMenuReporteCompras_Click;
             // 
             // SubMenuReporteVentas
             // 
             SubMenuReporteVentas.Name = "SubMenuReporteVentas";
-            SubMenuReporteVentas.Size = new Size(224, 26);
+            SubMenuReporteVentas.Size = new Size(166, 22);
             SubMenuReporteVentas.Text = "Reporte Ventas";
             SubMenuReporteVentas.Click += SubMenuReporteVentas_Click;
             // 
             // MenuConfiguracion
             // 
             MenuConfiguracion.AutoSize = false;
-            MenuConfiguracion.DropDownItems.AddRange(new ToolStripItem[] { subCategoria, iconMenuItem2 });
+            MenuConfiguracion.DropDownItems.AddRange(new ToolStripItem[] { subCategoria, btnSalir });
             MenuConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Tools;
             MenuConfiguracion.IconColor = Color.Black;
             MenuConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -234,19 +235,19 @@ namespace SistemaVentas
             subCategoria.IconColor = Color.Black;
             subCategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             subCategoria.Name = "subCategoria";
-            subCategoria.Size = new Size(158, 26);
+            subCategoria.Size = new Size(184, 26);
             subCategoria.Text = "Categoria";
             subCategoria.Click += subCategoria_Click;
             // 
-            // iconMenuItem2
+            // btnSalir
             // 
-            iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconMenuItem2.IconColor = Color.Black;
-            iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem2.Name = "iconMenuItem2";
-            iconMenuItem2.Size = new Size(158, 26);
-            iconMenuItem2.Text = "Productos";
-            iconMenuItem2.Click += iconMenuItem2_Click;
+            btnSalir.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnSalir.IconColor = Color.Black;
+            btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(184, 26);
+            btnSalir.Text = "Productos";
+            btnSalir.Click += iconMenuItem2_Click;
             // 
             // MenuMantenedor
             // 
@@ -266,7 +267,7 @@ namespace SistemaVentas
             // subNegocio
             // 
             subNegocio.Name = "subNegocio";
-            subNegocio.Size = new Size(149, 26);
+            subNegocio.Size = new Size(119, 22);
             subNegocio.Text = "Negocio";
             subNegocio.Click += subNegocio_Click;
             // 
@@ -279,9 +280,10 @@ namespace SistemaVentas
             MenuAcercaDe.IconSize = 40;
             MenuAcercaDe.ImageScaling = ToolStripItemImageScaling.None;
             MenuAcercaDe.Name = "MenuAcercaDe";
-            MenuAcercaDe.Size = new Size(80, 64);
+            MenuAcercaDe.Size = new Size(122, 64);
             MenuAcercaDe.Text = "Acerca de";
             MenuAcercaDe.TextImageRelation = TextImageRelation.ImageAboveText;
+            MenuAcercaDe.Click += MenuAcercaDe_Click;
             // 
             // MenuTitulo
             // 
@@ -291,17 +293,18 @@ namespace SistemaVentas
             MenuTitulo.ImageScalingSize = new Size(20, 20);
             MenuTitulo.Location = new Point(0, 0);
             MenuTitulo.Name = "MenuTitulo";
-            MenuTitulo.Padding = new Padding(6, 3, 0, 3);
+            MenuTitulo.Padding = new Padding(5, 2, 0, 2);
             MenuTitulo.RightToLeft = RightToLeft.Yes;
-            MenuTitulo.Size = new Size(1561, 31);
+            MenuTitulo.Size = new Size(1366, 23);
             MenuTitulo.TabIndex = 1;
             MenuTitulo.Text = "SistemaVentas";
             // 
             // Contenedor
             // 
-            Contenedor.Location = new Point(0, 145);
+            Contenedor.Location = new Point(0, 109);
+            Contenedor.Margin = new Padding(3, 2, 3, 2);
             Contenedor.Name = "Contenedor";
-            Contenedor.Size = new Size(1549, 796);
+            Contenedor.Size = new Size(1355, 597);
             Contenedor.TabIndex = 2;
             // 
             // label1
@@ -309,9 +312,9 @@ namespace SistemaVentas
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(11, 12);
+            label1.Location = new Point(10, 9);
             label1.Name = "label1";
-            label1.Size = new Size(167, 28);
+            label1.Size = new Size(133, 21);
             label1.TabIndex = 0;
             label1.Text = "Ferreteria Neyte";
             // 
@@ -324,14 +327,16 @@ namespace SistemaVentas
             // panel1
             // 
             panel1.BackColor = Color.DarkOrange;
+            panel1.Controls.Add(iconButton1);
             panel1.Controls.Add(lblUsuario);
             panel1.Controls.Add(txtNUsuario);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(MenuTitulo);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1561, 49);
+            panel1.Size = new Size(1366, 37);
             panel1.TabIndex = 4;
             // 
             // lblUsuario
@@ -339,9 +344,9 @@ namespace SistemaVentas
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             lblUsuario.ForeColor = Color.White;
-            lblUsuario.Location = new Point(665, 12);
+            lblUsuario.Location = new Point(582, 9);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(98, 25);
+            lblUsuario.Size = new Size(80, 20);
             lblUsuario.TabIndex = 3;
             lblUsuario.Text = "lblUsuario";
             // 
@@ -350,21 +355,38 @@ namespace SistemaVentas
             txtNUsuario.AutoSize = true;
             txtNUsuario.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             txtNUsuario.ForeColor = Color.White;
-            txtNUsuario.Location = new Point(586, 12);
+            txtNUsuario.Location = new Point(513, 9);
             txtNUsuario.Name = "txtNUsuario";
-            txtNUsuario.Size = new Size(82, 25);
+            txtNUsuario.Size = new Size(67, 20);
             txtNUsuario.TabIndex = 2;
             txtNUsuario.Text = "Usuario:";
             // 
+            // iconButton1
+            // 
+            iconButton1.BackColor = Color.FromArgb(255, 128, 0);
+            iconButton1.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
+            iconButton1.FlatStyle = FlatStyle.Popup;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            iconButton1.IconColor = Color.Snow;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 30;
+            iconButton1.Location = new Point(1300, 3);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Size = new Size(54, 31);
+            iconButton1.TabIndex = 4;
+            iconButton1.UseVisualStyleBackColor = false;
+            iconButton1.Click += iconButton1_Click;
+            // 
             // Inicio
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1561, 956);
+            ClientSize = new Size(1366, 714);
             Controls.Add(panel1);
             Controls.Add(Contenedor);
             Controls.Add(Menu);
             MainMenuStrip = Menu;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Inicio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -396,7 +418,7 @@ namespace SistemaVentas
         private Label txtNUsuario;
         private Label lblUsuario;
         private FontAwesome.Sharp.IconMenuItem subCategoria;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem2;
+        private FontAwesome.Sharp.IconMenuItem btnSalir;
         private FontAwesome.Sharp.IconMenuItem btnRegistrarVenta;
         private FontAwesome.Sharp.IconMenuItem btnVerDetalleVenta;
         private FontAwesome.Sharp.IconMenuItem btnRegistrarCompra;
@@ -405,5 +427,6 @@ namespace SistemaVentas
         private ToolStripMenuItem subNegocio;
         private ToolStripMenuItem SubMenuReporteCompras;
         private ToolStripMenuItem SubMenuReporteVentas;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
