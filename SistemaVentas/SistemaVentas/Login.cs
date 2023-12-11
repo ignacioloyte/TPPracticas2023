@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using CapaNegocio;
 using CapaEntidad;
 using CapaDatos;
+using CapaPresentacion.Idioma;
 
 namespace CapaPresentacion
 {
@@ -64,6 +65,22 @@ namespace CapaPresentacion
             txtUsuario.Text = "";
             txtClave.Text = "";
             this.Show();
+        }
+
+        public void CargarIdioma()
+        {
+            lblUsuario.Text = Textos.lblUsuario;
+            lblContraseña.Text = Textos.lblContraseña;
+            lbltitulo.Text = Textos.lbltitulo;
+            lbltitulo2.Text = Textos.lbltitulo2;
+            btnIngresar.Text = Textos.btnIngresar;
+            btnCancelar.Text = Textos.btnCancelar;
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

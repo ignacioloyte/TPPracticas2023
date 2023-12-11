@@ -35,10 +35,10 @@
             lblContraseña = new Label();
             btnIngresar = new FontAwesome.Sharp.IconButton();
             btnCancelar = new FontAwesome.Sharp.IconButton();
-            label3 = new Label();
+            lbltitulo = new Label();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             pictureBox1 = new PictureBox();
-            label2 = new Label();
+            lbltitulo2 = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -49,7 +49,7 @@
             label1.Dock = DockStyle.Left;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(167, 189);
+            label1.Size = new Size(167, 244);
             label1.TabIndex = 0;
             // 
             // txtUsuario
@@ -129,17 +129,17 @@
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // label3
+            // lbltitulo
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.DarkOrange;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.Snow;
-            label3.Location = new Point(12, 69);
-            label3.Name = "label3";
-            label3.Size = new Size(121, 20);
-            label3.TabIndex = 9;
-            label3.Text = "Ingreso Sistema";
+            lbltitulo.AutoSize = true;
+            lbltitulo.BackColor = Color.DarkOrange;
+            lbltitulo.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbltitulo.ForeColor = Color.Snow;
+            lbltitulo.Location = new Point(12, 69);
+            lbltitulo.Name = "lbltitulo";
+            lbltitulo.Size = new Size(121, 20);
+            lbltitulo.TabIndex = 9;
+            lbltitulo.Text = "Ingreso Sistema";
             // 
             // iconPictureBox1
             // 
@@ -165,27 +165,27 @@
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
-            // label2
+            // lbltitulo2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.DarkOrange;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.Snow;
-            label2.Location = new Point(12, 89);
-            label2.Name = "label2";
-            label2.Size = new Size(76, 20);
-            label2.TabIndex = 11;
-            label2.Text = "de ventas";
+            lbltitulo2.AutoSize = true;
+            lbltitulo2.BackColor = Color.DarkOrange;
+            lbltitulo2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbltitulo2.ForeColor = Color.Snow;
+            lbltitulo2.Location = new Point(12, 89);
+            lbltitulo2.Name = "lbltitulo2";
+            lbltitulo2.Size = new Size(76, 20);
+            lbltitulo2.TabIndex = 11;
+            lbltitulo2.Text = "de ventas";
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(456, 189);
-            Controls.Add(label2);
+            ClientSize = new Size(456, 244);
+            Controls.Add(lbltitulo2);
             Controls.Add(pictureBox1);
-            Controls.Add(label3);
+            Controls.Add(lbltitulo);
             Controls.Add(btnCancelar);
             Controls.Add(btnIngresar);
             Controls.Add(lblContraseña);
@@ -199,6 +199,7 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -214,9 +215,11 @@
         private Label lblContraseña;
         private FontAwesome.Sharp.IconButton btnIngresar;
         private FontAwesome.Sharp.IconButton btnCancelar;
-        private Label label3;
+        private Label lbltitulo;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private PictureBox pictureBox1;
-        private Label label2;
+        private Label lbltitulo2;
+
+
     }
 }
