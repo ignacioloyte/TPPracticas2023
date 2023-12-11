@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidad;
 using CapaNegocio;
+using CapaPresentacion.Idioma;
 
 namespace CapaPresentacion
 {
@@ -29,8 +30,20 @@ namespace CapaPresentacion
 
             return image;
         }
+
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CapaPresentacion.Properties.Settings.Default.Idioma);
+            lblMantenedor.Text = Textos.Mantenedor;
+            lblLogo.Text = Textos.lblLogo;
+            lblNombreNegocio.Text = Textos.lblNombreNegocio;
+            lblCuit.Text = Textos.lblCuit;
+            lblDireccion.Text = Textos.lblDireccion;
+        }
+
         private void frmNegocio_Load(object sender, EventArgs e)
         {
+            CargarIdioma();
             bool obtenido = true;
             //verifica la correcta obtencion de la imagen
             byte[] byteimage = new CN_Negocio().ObtenerLogo(out obtenido);

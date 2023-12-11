@@ -1,5 +1,6 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
+using CapaPresentacion.Idioma;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using iTextSharp.tool.xml;
@@ -22,8 +23,29 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CapaPresentacion.Properties.Settings.Default.Idioma);
+            lblDetalleVenta.Text = Textos.lblDetalleVenta;
+            lblNroDoc.Text = Textos.lblNroDoc;
+            btnBuscarS.Text = Textos.btnBuscarS;
+            btnLimpiarForm.Text = Textos.btnLimpiarForm;
+            gbInfo.Text = Textos.gbInfo;
+            lblFecha.Text = Textos.lblFecha;
+            lblDoc.Text = Textos.lblDoc;
+            lblUsuario.Text = Textos.lblUsuario;
+            gbInfoProveedor.Text = Textos.gbInfoProveedor;
+            lblDoc2.Text = Textos.lblDoc;
+            lblNombreCliente.Text = Textos.lblNombreCliente;
+            lblMontoTotal.Text = Textos.lblMontoTotal;
+            lblMontoPago.Text = Textos.lblMontoPago;
+            lblMontoCambio.Text = Textos.lblMontoCambio;
+            btnDescargarPdf.Text = Textos.btnDescargarPdf;
+        }
+
         private void frmDetalleVenta_Load(object sender, EventArgs e)
         {
+            CargarIdioma();
             txtBusquedaDoc.Select();
         }
 
@@ -39,7 +61,7 @@ namespace CapaPresentacion
                 txtTipoDocumento.Text = oVenta.TipoDocumento;
 
                 txtNroDocCliente.Text = oVenta.DocumentoCliente;
-                txtNombreCliente.Text = oVenta.NombreCliente;
+                lblNombreCliente.Text = oVenta.NombreCliente;
 
 
                 dgvData.Rows.Clear();
@@ -62,7 +84,7 @@ namespace CapaPresentacion
             txtTipoDocumento.Text = "";
             txtUsuario.Text = "";
             txtNroDocCliente.Text = "";
-            txtNombreCliente.Text = "";
+            lblNombreCliente.Text = "";
 
             dgvData.Rows.Clear();
             txtMontoTotal.Text = "0.00";
@@ -91,7 +113,7 @@ namespace CapaPresentacion
             Texto_Html = Texto_Html.Replace("@numerodocumento", txtNroDoc.Text);
 
             Texto_Html = Texto_Html.Replace("@doccliente", txtNroDocCliente.Text);
-            Texto_Html = Texto_Html.Replace("@nombrecliente", txtNombreCliente.Text);
+            Texto_Html = Texto_Html.Replace("@nombrecliente", lblNombreCliente.Text);
             Texto_Html = Texto_Html.Replace("@fecharegistro", txtFecha.Text);
             Texto_Html = Texto_Html.Replace("@usuarioregistro", txtUsuario.Text);
 
@@ -153,6 +175,6 @@ namespace CapaPresentacion
             }
         }
     }
-    
+
 }
 

@@ -11,6 +11,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaPresentacion.Idioma;
+using CapaPresentacion.Modales;
+using CapaPresentacion.Utilidades;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace CapaPresentacion
 {
@@ -21,8 +25,22 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CapaPresentacion.Properties.Settings.Default.Idioma);
+            lblRegistrar.Text = Textos.lblRegistrar;
+            lblFechaInicio.Text = Textos.lblFechaInicio;
+            lblFechaFin.Text = Textos.lblFechaFin;
+            btnBuscarS.Text = Textos.btnBuscarS;
+            btnExcel.Text = Textos.btnExcel;
+            lblBuscar.Text = Textos.lblBuscar;
+
+
+        }
+
         private void frmReporteVentas_Load(object sender, EventArgs e)
         {
+            CargarIdioma();
             foreach (DataGridViewColumn columna in dgvData.Columns)
             {
                 cbBusqueda.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });

@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             label1 = new Label();
-            lblRegistrar = new Label();
-            btnBuscarDoc = new FontAwesome.Sharp.IconButton();
+            lblDetalleCompra = new Label();
+            btnBuscarS = new FontAwesome.Sharp.IconButton();
             txtBusquedaDoc = new TextBox();
-            label2 = new Label();
-            btnLimpiarCompra = new FontAwesome.Sharp.IconButton();
-            gbInfo = new GroupBox();
+            lblNroDoc = new Label();
+            btnLimpiarForm = new FontAwesome.Sharp.IconButton();
+            gboInfoCompra = new GroupBox();
             txtTipoDocumento = new TextBox();
             txtUsuario = new TextBox();
-            label4 = new Label();
+            lblUsuario = new Label();
             txtFecha = new TextBox();
             lblDoc = new Label();
-            label3 = new Label();
+            lblFecha = new Label();
             gbInfoProveedor = new GroupBox();
             txtNombreProveedor = new TextBox();
             txtNroDoc = new TextBox();
             txtNroDocProveedor = new TextBox();
-            txtRazonSocial = new Label();
-            label7 = new Label();
+            lblRazonSocial = new Label();
+            lblDoc2 = new Label();
             dgvData = new DataGridView();
             Producto = new DataGridViewTextBoxColumn();
             PrecioCompra = new DataGridViewTextBoxColumn();
             Cantidad = new DataGridViewTextBoxColumn();
             Subtotal = new DataGridViewTextBoxColumn();
             txtMontoTotal = new TextBox();
-            label5 = new Label();
+            lblMontoTotal = new Label();
             btnDescargarPdf = new FontAwesome.Sharp.IconButton();
-            gbInfo.SuspendLayout();
+            gboInfoCompra.SuspendLayout();
             gbInfoProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
@@ -65,149 +65,142 @@
             // label1
             // 
             label1.BackColor = Color.White;
-            label1.Location = new Point(42, 23);
+            label1.Location = new Point(48, 31);
             label1.Name = "label1";
-            label1.Size = new Size(676, 565);
+            label1.Size = new Size(773, 753);
             label1.TabIndex = 0;
             // 
-            // lblRegistrar
+            // lblDetalleCompra
             // 
-            lblRegistrar.AutoSize = true;
-            lblRegistrar.BackColor = SystemColors.Window;
-            lblRegistrar.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lblRegistrar.Location = new Point(57, 37);
-            lblRegistrar.Name = "lblRegistrar";
-            lblRegistrar.Size = new Size(176, 25);
-            lblRegistrar.TabIndex = 24;
-            lblRegistrar.Text = "Detalle de Compra";
+            lblDetalleCompra.AutoSize = true;
+            lblDetalleCompra.BackColor = SystemColors.Window;
+            lblDetalleCompra.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDetalleCompra.Location = new Point(65, 49);
+            lblDetalleCompra.Name = "lblDetalleCompra";
+            lblDetalleCompra.Size = new Size(212, 31);
+            lblDetalleCompra.TabIndex = 24;
+            lblDetalleCompra.Text = "Detalle de Compra";
             // 
-            // btnBuscarDoc
+            // btnBuscarS
             // 
-            btnBuscarDoc.BackColor = Color.White;
-            btnBuscarDoc.Cursor = Cursors.Hand;
-            btnBuscarDoc.FlatAppearance.BorderColor = Color.Black;
-            btnBuscarDoc.FlatStyle = FlatStyle.Flat;
-            btnBuscarDoc.ForeColor = Color.Black;
-            btnBuscarDoc.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            btnBuscarDoc.IconColor = Color.Black;
-            btnBuscarDoc.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnBuscarDoc.IconSize = 15;
-            btnBuscarDoc.Location = new Point(329, 79);
-            btnBuscarDoc.Margin = new Padding(3, 2, 3, 2);
-            btnBuscarDoc.Name = "btnBuscarDoc";
-            btnBuscarDoc.Size = new Size(77, 24);
-            btnBuscarDoc.TabIndex = 29;
-            btnBuscarDoc.Text = "Buscar ";
-            btnBuscarDoc.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBuscarDoc.UseVisualStyleBackColor = false;
-            btnBuscarDoc.Click += btnBuscarDoc_Click;
+            btnBuscarS.BackColor = Color.White;
+            btnBuscarS.Cursor = Cursors.Hand;
+            btnBuscarS.FlatAppearance.BorderColor = Color.Black;
+            btnBuscarS.FlatStyle = FlatStyle.Flat;
+            btnBuscarS.ForeColor = Color.Black;
+            btnBuscarS.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            btnBuscarS.IconColor = Color.Black;
+            btnBuscarS.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnBuscarS.IconSize = 15;
+            btnBuscarS.Location = new Point(376, 105);
+            btnBuscarS.Name = "btnBuscarS";
+            btnBuscarS.Size = new Size(88, 32);
+            btnBuscarS.TabIndex = 29;
+            btnBuscarS.Text = "Buscar ";
+            btnBuscarS.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnBuscarS.UseVisualStyleBackColor = false;
+            btnBuscarS.UseWaitCursor = true;
+            btnBuscarS.Click += btnBuscarDoc_Click;
             // 
             // txtBusquedaDoc
             // 
-            txtBusquedaDoc.Location = new Point(186, 80);
-            txtBusquedaDoc.Margin = new Padding(3, 2, 3, 2);
+            txtBusquedaDoc.Location = new Point(213, 107);
             txtBusquedaDoc.Name = "txtBusquedaDoc";
-            txtBusquedaDoc.Size = new Size(137, 23);
+            txtBusquedaDoc.Size = new Size(156, 27);
             txtBusquedaDoc.TabIndex = 37;
             // 
-            // label2
+            // lblNroDoc
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(57, 81);
-            label2.Name = "label2";
-            label2.Size = new Size(123, 15);
-            label2.TabIndex = 36;
-            label2.Text = "Número Documento: ";
+            lblNroDoc.AutoSize = true;
+            lblNroDoc.Location = new Point(65, 108);
+            lblNroDoc.Name = "lblNroDoc";
+            lblNroDoc.Size = new Size(152, 20);
+            lblNroDoc.TabIndex = 36;
+            lblNroDoc.Text = "Número Documento: ";
             // 
-            // btnLimpiarCompra
+            // btnLimpiarForm
             // 
-            btnLimpiarCompra.BackColor = Color.White;
-            btnLimpiarCompra.Cursor = Cursors.Hand;
-            btnLimpiarCompra.FlatAppearance.BorderColor = Color.Black;
-            btnLimpiarCompra.FlatStyle = FlatStyle.Flat;
-            btnLimpiarCompra.ForeColor = Color.Black;
-            btnLimpiarCompra.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            btnLimpiarCompra.IconColor = Color.Black;
-            btnLimpiarCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnLimpiarCompra.IconSize = 15;
-            btnLimpiarCompra.Location = new Point(412, 79);
-            btnLimpiarCompra.Margin = new Padding(3, 2, 3, 2);
-            btnLimpiarCompra.Name = "btnLimpiarCompra";
-            btnLimpiarCompra.Size = new Size(77, 24);
-            btnLimpiarCompra.TabIndex = 38;
-            btnLimpiarCompra.Text = "Limpiar";
-            btnLimpiarCompra.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnLimpiarCompra.UseVisualStyleBackColor = false;
-            btnLimpiarCompra.Click += btnLimpiarCompra_Click;
+            btnLimpiarForm.BackColor = Color.White;
+            btnLimpiarForm.Cursor = Cursors.Hand;
+            btnLimpiarForm.FlatAppearance.BorderColor = Color.Black;
+            btnLimpiarForm.FlatStyle = FlatStyle.Flat;
+            btnLimpiarForm.ForeColor = Color.Black;
+            btnLimpiarForm.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            btnLimpiarForm.IconColor = Color.Black;
+            btnLimpiarForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnLimpiarForm.IconSize = 15;
+            btnLimpiarForm.Location = new Point(471, 105);
+            btnLimpiarForm.Name = "btnLimpiarForm";
+            btnLimpiarForm.Size = new Size(88, 32);
+            btnLimpiarForm.TabIndex = 38;
+            btnLimpiarForm.Text = "Limpiar";
+            btnLimpiarForm.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnLimpiarForm.UseVisualStyleBackColor = false;
+            btnLimpiarForm.Click += btnLimpiarCompra_Click;
             // 
-            // gbInfo
+            // gboInfoCompra
             // 
-            gbInfo.BackColor = Color.White;
-            gbInfo.Controls.Add(txtTipoDocumento);
-            gbInfo.Controls.Add(txtUsuario);
-            gbInfo.Controls.Add(label4);
-            gbInfo.Controls.Add(txtFecha);
-            gbInfo.Controls.Add(lblDoc);
-            gbInfo.Controls.Add(label3);
-            gbInfo.Location = new Point(57, 118);
-            gbInfo.Margin = new Padding(3, 2, 3, 2);
-            gbInfo.Name = "gbInfo";
-            gbInfo.Padding = new Padding(3, 2, 3, 2);
-            gbInfo.Size = new Size(650, 82);
-            gbInfo.TabIndex = 39;
-            gbInfo.TabStop = false;
-            gbInfo.Text = "Información Compra";
+            gboInfoCompra.BackColor = Color.White;
+            gboInfoCompra.Controls.Add(txtTipoDocumento);
+            gboInfoCompra.Controls.Add(txtUsuario);
+            gboInfoCompra.Controls.Add(lblUsuario);
+            gboInfoCompra.Controls.Add(txtFecha);
+            gboInfoCompra.Controls.Add(lblDoc);
+            gboInfoCompra.Controls.Add(lblFecha);
+            gboInfoCompra.Location = new Point(65, 157);
+            gboInfoCompra.Name = "gboInfoCompra";
+            gboInfoCompra.Size = new Size(743, 109);
+            gboInfoCompra.TabIndex = 39;
+            gboInfoCompra.TabStop = false;
+            gboInfoCompra.Text = "Información Compra";
             // 
             // txtTipoDocumento
             // 
-            txtTipoDocumento.Location = new Point(159, 45);
-            txtTipoDocumento.Margin = new Padding(3, 2, 3, 2);
+            txtTipoDocumento.Location = new Point(182, 60);
             txtTipoDocumento.Name = "txtTipoDocumento";
-            txtTipoDocumento.Size = new Size(181, 23);
+            txtTipoDocumento.Size = new Size(206, 27);
             txtTipoDocumento.TabIndex = 38;
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(346, 45);
-            txtUsuario.Margin = new Padding(3, 2, 3, 2);
+            txtUsuario.Location = new Point(395, 60);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(184, 23);
+            txtUsuario.Size = new Size(210, 27);
             txtUsuario.TabIndex = 37;
             // 
-            // label4
+            // lblUsuario
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(343, 26);
-            label4.Name = "label4";
-            label4.Size = new Size(50, 15);
-            label4.TabIndex = 36;
-            label4.Text = "Usuario:";
+            lblUsuario.AutoSize = true;
+            lblUsuario.Location = new Point(392, 35);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(62, 20);
+            lblUsuario.TabIndex = 36;
+            lblUsuario.Text = "Usuario:";
             // 
             // txtFecha
             // 
-            txtFecha.Location = new Point(16, 45);
-            txtFecha.Margin = new Padding(3, 2, 3, 2);
+            txtFecha.Location = new Point(18, 60);
             txtFecha.Name = "txtFecha";
-            txtFecha.Size = new Size(137, 23);
+            txtFecha.Size = new Size(156, 27);
             txtFecha.TabIndex = 35;
             // 
             // lblDoc
             // 
             lblDoc.AutoSize = true;
-            lblDoc.Location = new Point(159, 27);
+            lblDoc.Location = new Point(182, 36);
             lblDoc.Name = "lblDoc";
-            lblDoc.Size = new Size(99, 15);
+            lblDoc.Size = new Size(124, 20);
             lblDoc.TabIndex = 2;
             lblDoc.Text = "Tipo Documento:";
             // 
-            // label3
+            // lblFecha
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(13, 26);
-            label3.Name = "label3";
-            label3.Size = new Size(41, 15);
-            label3.TabIndex = 0;
-            label3.Text = "Fecha:";
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(15, 35);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(50, 20);
+            lblFecha.TabIndex = 0;
+            lblFecha.Text = "Fecha:";
             // 
             // gbInfoProveedor
             // 
@@ -215,91 +208,85 @@
             gbInfoProveedor.Controls.Add(txtNombreProveedor);
             gbInfoProveedor.Controls.Add(txtNroDoc);
             gbInfoProveedor.Controls.Add(txtNroDocProveedor);
-            gbInfoProveedor.Controls.Add(txtRazonSocial);
-            gbInfoProveedor.Controls.Add(label7);
-            gbInfoProveedor.Location = new Point(57, 204);
-            gbInfoProveedor.Margin = new Padding(3, 2, 3, 2);
+            gbInfoProveedor.Controls.Add(lblRazonSocial);
+            gbInfoProveedor.Controls.Add(lblDoc2);
+            gbInfoProveedor.Location = new Point(65, 272);
             gbInfoProveedor.Name = "gbInfoProveedor";
-            gbInfoProveedor.Padding = new Padding(3, 2, 3, 2);
-            gbInfoProveedor.Size = new Size(650, 82);
+            gbInfoProveedor.Size = new Size(743, 109);
             gbInfoProveedor.TabIndex = 40;
             gbInfoProveedor.TabStop = false;
             gbInfoProveedor.Text = "Información Proveedor";
             // 
             // txtNombreProveedor
             // 
-            txtNombreProveedor.Location = new Point(159, 45);
-            txtNombreProveedor.Margin = new Padding(3, 2, 3, 2);
+            txtNombreProveedor.Location = new Point(182, 60);
             txtNombreProveedor.Name = "txtNombreProveedor";
-            txtNombreProveedor.Size = new Size(181, 23);
+            txtNombreProveedor.Size = new Size(206, 27);
             txtNombreProveedor.TabIndex = 38;
             // 
             // txtNroDoc
             // 
-            txtNroDoc.Location = new Point(346, 45);
-            txtNroDoc.Margin = new Padding(3, 2, 3, 2);
+            txtNroDoc.Location = new Point(395, 60);
             txtNroDoc.Name = "txtNroDoc";
-            txtNroDoc.Size = new Size(184, 23);
+            txtNroDoc.Size = new Size(210, 27);
             txtNroDoc.TabIndex = 37;
             // 
             // txtNroDocProveedor
             // 
-            txtNroDocProveedor.Location = new Point(16, 45);
-            txtNroDocProveedor.Margin = new Padding(3, 2, 3, 2);
+            txtNroDocProveedor.Location = new Point(18, 60);
             txtNroDocProveedor.Name = "txtNroDocProveedor";
-            txtNroDocProveedor.Size = new Size(137, 23);
+            txtNroDocProveedor.Size = new Size(156, 27);
             txtNroDocProveedor.TabIndex = 35;
             // 
-            // txtRazonSocial
+            // lblRazonSocial
             // 
-            txtRazonSocial.AutoSize = true;
-            txtRazonSocial.Location = new Point(159, 26);
-            txtRazonSocial.Name = "txtRazonSocial";
-            txtRazonSocial.Size = new Size(76, 15);
-            txtRazonSocial.TabIndex = 2;
-            txtRazonSocial.Text = "Razon Social:";
+            lblRazonSocial.AutoSize = true;
+            lblRazonSocial.Location = new Point(182, 35);
+            lblRazonSocial.Name = "lblRazonSocial";
+            lblRazonSocial.Size = new Size(97, 20);
+            lblRazonSocial.TabIndex = 2;
+            lblRazonSocial.Text = "Razon Social:";
             // 
-            // label7
+            // lblDoc2
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(13, 25);
-            label7.Name = "label7";
-            label7.Size = new Size(120, 15);
-            label7.TabIndex = 0;
-            label7.Text = "Número Documento:";
+            lblDoc2.AutoSize = true;
+            lblDoc2.Location = new Point(15, 33);
+            lblDoc2.Name = "lblDoc2";
+            lblDoc2.Size = new Size(148, 20);
+            lblDoc2.TabIndex = 0;
+            lblDoc2.Text = "Número Documento:";
             // 
             // dgvData
             // 
             dgvData.AllowUserToAddRows = false;
             dgvData.BackgroundColor = Color.White;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvData.Columns.AddRange(new DataGridViewColumn[] { Producto, PrecioCompra, Cantidad, Subtotal });
             dgvData.GridColor = Color.White;
-            dgvData.Location = new Point(57, 293);
-            dgvData.Margin = new Padding(3, 2, 3, 2);
+            dgvData.Location = new Point(65, 391);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvData.RowHeadersWidth = 51;
             dgvData.RowTemplate.Height = 28;
-            dgvData.Size = new Size(650, 256);
+            dgvData.Size = new Size(743, 341);
             dgvData.TabIndex = 41;
             // 
             // Producto
@@ -336,21 +323,20 @@
             // 
             // txtMontoTotal
             // 
-            txtMontoTotal.Location = new Point(140, 558);
-            txtMontoTotal.Margin = new Padding(3, 2, 3, 2);
+            txtMontoTotal.Location = new Point(160, 744);
             txtMontoTotal.Name = "txtMontoTotal";
-            txtMontoTotal.Size = new Size(137, 23);
+            txtMontoTotal.Size = new Size(156, 27);
             txtMontoTotal.TabIndex = 40;
             txtMontoTotal.Text = "0";
             // 
-            // label5
+            // lblMontoTotal
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(57, 561);
-            label5.Name = "label5";
-            label5.Size = new Size(77, 15);
-            label5.TabIndex = 39;
-            label5.Text = "Monto Total: ";
+            lblMontoTotal.AutoSize = true;
+            lblMontoTotal.Location = new Point(65, 748);
+            lblMontoTotal.Name = "lblMontoTotal";
+            lblMontoTotal.Size = new Size(97, 20);
+            lblMontoTotal.TabIndex = 39;
+            lblMontoTotal.Text = "Monto Total: ";
             // 
             // btnDescargarPdf
             // 
@@ -363,10 +349,9 @@
             btnDescargarPdf.IconColor = Color.Black;
             btnDescargarPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnDescargarPdf.IconSize = 15;
-            btnDescargarPdf.Location = new Point(562, 556);
-            btnDescargarPdf.Margin = new Padding(3, 2, 3, 2);
+            btnDescargarPdf.Location = new Point(642, 741);
             btnDescargarPdf.Name = "btnDescargarPdf";
-            btnDescargarPdf.Size = new Size(145, 25);
+            btnDescargarPdf.Size = new Size(166, 33);
             btnDescargarPdf.TabIndex = 42;
             btnDescargarPdf.Text = "Descargar PDF";
             btnDescargarPdf.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -375,26 +360,27 @@
             // 
             // frmDetalleCompra
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1051, 634);
+            ClientSize = new Size(1201, 845);
             Controls.Add(btnDescargarPdf);
             Controls.Add(txtMontoTotal);
-            Controls.Add(label5);
+            Controls.Add(lblMontoTotal);
             Controls.Add(dgvData);
             Controls.Add(gbInfoProveedor);
-            Controls.Add(gbInfo);
-            Controls.Add(btnLimpiarCompra);
+            Controls.Add(gboInfoCompra);
+            Controls.Add(btnLimpiarForm);
             Controls.Add(txtBusquedaDoc);
-            Controls.Add(label2);
-            Controls.Add(btnBuscarDoc);
-            Controls.Add(lblRegistrar);
+            Controls.Add(lblNroDoc);
+            Controls.Add(btnBuscarS);
+            Controls.Add(lblDetalleCompra);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmDetalleCompra";
             Text = "frmDetalleCompra";
-           
-            gbInfo.ResumeLayout(false);
-            gbInfo.PerformLayout();
+            Load += frmDetalleCompra_Load;
+            gboInfoCompra.ResumeLayout(false);
+            gboInfoCompra.PerformLayout();
             gbInfoProveedor.ResumeLayout(false);
             gbInfoProveedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();
@@ -405,27 +391,27 @@
         #endregion
 
         private Label label1;
-        private Label lblRegistrar;
-        private FontAwesome.Sharp.IconButton btnBuscarDoc;
+        private Label lblDetalleCompra;
+        private FontAwesome.Sharp.IconButton btnBuscarS;
         private TextBox txtBusquedaDoc;
-        private Label label2;
-        private FontAwesome.Sharp.IconButton btnLimpiarCompra;
-        private GroupBox gbInfo;
+        private Label lblNroDoc;
+        private FontAwesome.Sharp.IconButton btnLimpiarForm;
+        private GroupBox gboInfoCompra;
         private TextBox txtTipoDocumento;
         private TextBox txtUsuario;
-        private Label label4;
+        private Label lblUsuario;
         private TextBox txtFecha;
         private Label lblDoc;
-        private Label label3;
+        private Label lblFecha;
         private GroupBox gbInfoProveedor;
         private TextBox txtNombreProveedor;
         private TextBox txtNroDoc;
         private TextBox txtNroDocProveedor;
-        private Label txtRazonSocial;
-        private Label label7;
+        private Label lblRazonSocial;
+        private Label lblDoc2;
         private DataGridView dgvData;
         private TextBox txtMontoTotal;
-        private Label label5;
+        private Label lblMontoTotal;
         private FontAwesome.Sharp.IconButton btnDescargarPdf;
         private DataGridViewTextBoxColumn Producto;
         private DataGridViewTextBoxColumn PrecioCompra;

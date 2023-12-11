@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             btnCrearVenta = new FontAwesome.Sharp.IconButton();
             txtTotalPagar = new TextBox();
             btnAgregar = new FontAwesome.Sharp.IconButton();
-            label8 = new Label();
+            lblTotalPagar = new Label();
             dgvData = new DataGridView();
             IdProducto = new DataGridViewTextBoxColumn();
             Producto = new DataGridViewTextBoxColumn();
@@ -42,40 +42,40 @@
             Subtotal = new DataGridViewTextBoxColumn();
             btnEliminar = new DataGridViewButtonColumn();
             txtCantidad = new NumericUpDown();
-            label7 = new Label();
+            lblCantidad = new Label();
             txtStock = new TextBox();
-            label6 = new Label();
+            lblStock = new Label();
             txtPrecio = new TextBox();
             label9 = new Label();
             gbInfo = new GroupBox();
             txtFecha = new TextBox();
             cbTipoDoc = new ComboBox();
             lblDoc = new Label();
-            label1 = new Label();
+            lblFecha = new Label();
             lblRegistrar = new Label();
             gbInfoProducto = new GroupBox();
-            label5 = new Label();
+            lblPrecio = new Label();
             txtProducto = new TextBox();
             txtIdProducto = new TextBox();
             txtCodProducto = new TextBox();
             btnBuscarProducto = new FontAwesome.Sharp.IconButton();
-            label4 = new Label();
+            lblProducto = new Label();
             lblCodProducto = new Label();
             btnBuscarProveedor = new FontAwesome.Sharp.IconButton();
-            label2 = new Label();
-            gbInfoProveedor = new GroupBox();
+            lblNombreCliente = new Label();
+            gbInfoCliente = new GroupBox();
             txtNombreCliente = new TextBox();
             txtDocCliente = new TextBox();
-            label3 = new Label();
+            lblNroDoc = new Label();
             txtPagaCon = new TextBox();
-            label10 = new Label();
+            lblPagaCon = new Label();
             txtCambio = new TextBox();
             lblCambio = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtCantidad).BeginInit();
             gbInfo.SuspendLayout();
             gbInfoProducto.SuspendLayout();
-            gbInfoProveedor.SuspendLayout();
+            gbInfoCliente.SuspendLayout();
             SuspendLayout();
             // 
             // btnCrearVenta
@@ -118,28 +118,28 @@
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
-            // label8
+            // lblTotalPagar
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(894, 391);
-            label8.Name = "label8";
-            label8.Size = new Size(98, 20);
-            label8.TabIndex = 43;
-            label8.Text = "Total a Pagar:";
+            lblTotalPagar.AutoSize = true;
+            lblTotalPagar.Location = new Point(894, 391);
+            lblTotalPagar.Name = "lblTotalPagar";
+            lblTotalPagar.Size = new Size(98, 20);
+            lblTotalPagar.TabIndex = 43;
+            lblTotalPagar.Text = "Total a Pagar:";
             // 
             // dgvData
             // 
             dgvData.AllowUserToAddRows = false;
             dgvData.BackgroundColor = Color.White;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvData.Columns.AddRange(new DataGridViewColumn[] { IdProducto, Producto, Precio, Cantidad, Subtotal, btnEliminar });
             dgvData.GridColor = Color.White;
@@ -147,14 +147,14 @@
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvData.RowHeadersWidth = 51;
             dgvData.RowTemplate.Height = 28;
             dgvData.Size = new Size(807, 341);
@@ -221,14 +221,14 @@
             txtCantidad.TabIndex = 29;
             txtCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // label7
+            // lblCantidad
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(699, 35);
-            label7.Name = "label7";
-            label7.Size = new Size(72, 20);
-            label7.TabIndex = 34;
-            label7.Text = "Cantidad:";
+            lblCantidad.AutoSize = true;
+            lblCantidad.Location = new Point(699, 35);
+            lblCantidad.Name = "lblCantidad";
+            lblCantidad.Size = new Size(72, 20);
+            lblCantidad.TabIndex = 34;
+            lblCantidad.Text = "Cantidad:";
             // 
             // txtStock
             // 
@@ -239,14 +239,14 @@
             txtStock.TabIndex = 33;
             txtStock.KeyPress += txtStock_KeyPress;
             // 
-            // label6
+            // lblStock
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(583, 33);
-            label6.Name = "label6";
-            label6.Size = new Size(48, 20);
-            label6.TabIndex = 32;
-            label6.Text = "Stock:";
+            lblStock.AutoSize = true;
+            lblStock.Location = new Point(583, 33);
+            lblStock.Name = "lblStock";
+            lblStock.Size = new Size(48, 20);
+            lblStock.TabIndex = 32;
+            lblStock.Text = "Stock:";
             // 
             // txtPrecio
             // 
@@ -273,7 +273,7 @@
             gbInfo.Controls.Add(txtFecha);
             gbInfo.Controls.Add(cbTipoDoc);
             gbInfo.Controls.Add(lblDoc);
-            gbInfo.Controls.Add(label1);
+            gbInfo.Controls.Add(lblFecha);
             gbInfo.Location = new Point(80, 75);
             gbInfo.Name = "gbInfo";
             gbInfo.Size = new Size(409, 109);
@@ -307,14 +307,14 @@
             lblDoc.TabIndex = 2;
             lblDoc.Text = "Tipo Documento:";
             // 
-            // label1
+            // lblFecha
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(15, 35);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Fecha:";
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(15, 35);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(50, 20);
+            lblFecha.TabIndex = 0;
+            lblFecha.Text = "Fecha:";
             // 
             // lblRegistrar
             // 
@@ -331,16 +331,16 @@
             // 
             gbInfoProducto.BackColor = Color.White;
             gbInfoProducto.Controls.Add(txtCantidad);
-            gbInfoProducto.Controls.Add(label7);
+            gbInfoProducto.Controls.Add(lblCantidad);
             gbInfoProducto.Controls.Add(txtStock);
-            gbInfoProducto.Controls.Add(label6);
+            gbInfoProducto.Controls.Add(lblStock);
             gbInfoProducto.Controls.Add(txtPrecio);
-            gbInfoProducto.Controls.Add(label5);
+            gbInfoProducto.Controls.Add(lblPrecio);
             gbInfoProducto.Controls.Add(txtProducto);
             gbInfoProducto.Controls.Add(txtIdProducto);
             gbInfoProducto.Controls.Add(txtCodProducto);
             gbInfoProducto.Controls.Add(btnBuscarProducto);
-            gbInfoProducto.Controls.Add(label4);
+            gbInfoProducto.Controls.Add(lblProducto);
             gbInfoProducto.Controls.Add(lblCodProducto);
             gbInfoProducto.Location = new Point(80, 191);
             gbInfoProducto.Name = "gbInfoProducto";
@@ -349,14 +349,14 @@
             gbInfoProducto.TabStop = false;
             gbInfoProducto.Text = "Información Producto";
             // 
-            // label5
+            // lblPrecio
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(463, 35);
-            label5.Name = "label5";
-            label5.Size = new Size(53, 20);
-            label5.TabIndex = 30;
-            label5.Text = "Precio:";
+            lblPrecio.AutoSize = true;
+            lblPrecio.Location = new Point(463, 35);
+            lblPrecio.Name = "lblPrecio";
+            lblPrecio.Size = new Size(53, 20);
+            lblPrecio.TabIndex = 30;
+            lblPrecio.Text = "Precio:";
             // 
             // txtProducto
             // 
@@ -399,14 +399,14 @@
             btnBuscarProducto.UseVisualStyleBackColor = false;
             btnBuscarProducto.Click += btnBuscarProducto_Click;
             // 
-            // label4
+            // lblProducto
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(251, 36);
-            label4.Name = "label4";
-            label4.Size = new Size(72, 20);
-            label4.TabIndex = 2;
-            label4.Text = "Producto:";
+            lblProducto.AutoSize = true;
+            lblProducto.Location = new Point(251, 36);
+            lblProducto.Name = "lblProducto";
+            lblProducto.Size = new Size(72, 20);
+            lblProducto.TabIndex = 2;
+            lblProducto.Text = "Producto:";
             // 
             // lblCodProducto
             // 
@@ -435,29 +435,29 @@
             btnBuscarProveedor.UseVisualStyleBackColor = false;
             btnBuscarProveedor.Click += btnBuscarProveedor_Click;
             // 
-            // label2
+            // lblNombreCliente
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(251, 36);
-            label2.Name = "label2";
-            label2.Size = new Size(137, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Nombre Completo:";
+            lblNombreCliente.AutoSize = true;
+            lblNombreCliente.Location = new Point(251, 36);
+            lblNombreCliente.Name = "lblNombreCliente";
+            lblNombreCliente.Size = new Size(137, 20);
+            lblNombreCliente.TabIndex = 2;
+            lblNombreCliente.Text = "Nombre Completo:";
             // 
-            // gbInfoProveedor
+            // gbInfoCliente
             // 
-            gbInfoProveedor.BackColor = Color.White;
-            gbInfoProveedor.Controls.Add(txtNombreCliente);
-            gbInfoProveedor.Controls.Add(txtDocCliente);
-            gbInfoProveedor.Controls.Add(btnBuscarProveedor);
-            gbInfoProveedor.Controls.Add(label2);
-            gbInfoProveedor.Controls.Add(label3);
-            gbInfoProveedor.Location = new Point(504, 75);
-            gbInfoProveedor.Name = "gbInfoProveedor";
-            gbInfoProveedor.Size = new Size(491, 109);
-            gbInfoProveedor.TabIndex = 41;
-            gbInfoProveedor.TabStop = false;
-            gbInfoProveedor.Text = "Información Cliente";
+            gbInfoCliente.BackColor = Color.White;
+            gbInfoCliente.Controls.Add(txtNombreCliente);
+            gbInfoCliente.Controls.Add(txtDocCliente);
+            gbInfoCliente.Controls.Add(btnBuscarProveedor);
+            gbInfoCliente.Controls.Add(lblNombreCliente);
+            gbInfoCliente.Controls.Add(lblNroDoc);
+            gbInfoCliente.Location = new Point(504, 75);
+            gbInfoCliente.Name = "gbInfoCliente";
+            gbInfoCliente.Size = new Size(491, 109);
+            gbInfoCliente.TabIndex = 41;
+            gbInfoCliente.TabStop = false;
+            gbInfoCliente.Text = "Información Cliente";
             // 
             // txtNombreCliente
             // 
@@ -473,14 +473,14 @@
             txtDocCliente.Size = new Size(185, 27);
             txtDocCliente.TabIndex = 36;
             // 
-            // label3
+            // lblNroDoc
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(15, 35);
-            label3.Name = "label3";
-            label3.Size = new Size(148, 20);
-            label3.TabIndex = 0;
-            label3.Text = "Número Documento:";
+            lblNroDoc.AutoSize = true;
+            lblNroDoc.Location = new Point(15, 35);
+            lblNroDoc.Name = "lblNroDoc";
+            lblNroDoc.Size = new Size(148, 20);
+            lblNroDoc.TabIndex = 0;
+            lblNroDoc.Text = "Número Documento:";
             // 
             // txtPagaCon
             // 
@@ -492,14 +492,14 @@
             txtPagaCon.KeyDown += txtPagaCon_KeyDown;
             txtPagaCon.KeyPress += txtPagaCon_KeyPress;
             // 
-            // label10
+            // lblPagaCon
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(894, 463);
-            label10.Name = "label10";
-            label10.Size = new Size(72, 20);
-            label10.TabIndex = 48;
-            label10.Text = "Paga con:";
+            lblPagaCon.AutoSize = true;
+            lblPagaCon.Location = new Point(894, 463);
+            lblPagaCon.Name = "lblPagaCon";
+            lblPagaCon.Size = new Size(72, 20);
+            lblPagaCon.TabIndex = 48;
+            lblPagaCon.Text = "Paga con:";
             // 
             // txtCambio
             // 
@@ -527,16 +527,16 @@
             Controls.Add(txtCambio);
             Controls.Add(lblCambio);
             Controls.Add(txtPagaCon);
-            Controls.Add(label10);
+            Controls.Add(lblPagaCon);
             Controls.Add(btnCrearVenta);
             Controls.Add(txtTotalPagar);
             Controls.Add(btnAgregar);
-            Controls.Add(label8);
+            Controls.Add(lblTotalPagar);
             Controls.Add(dgvData);
             Controls.Add(gbInfo);
             Controls.Add(lblRegistrar);
             Controls.Add(gbInfoProducto);
-            Controls.Add(gbInfoProveedor);
+            Controls.Add(gbInfoCliente);
             Controls.Add(label9);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmVentas";
@@ -548,8 +548,8 @@
             gbInfo.PerformLayout();
             gbInfoProducto.ResumeLayout(false);
             gbInfoProducto.PerformLayout();
-            gbInfoProveedor.ResumeLayout(false);
-            gbInfoProveedor.PerformLayout();
+            gbInfoCliente.ResumeLayout(false);
+            gbInfoCliente.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -559,7 +559,7 @@
         private FontAwesome.Sharp.IconButton btnCrearVenta;
         private TextBox txtTotalPagar;
         private FontAwesome.Sharp.IconButton btnAgregar;
-        private Label label8;
+        private Label lblTotalPagar;
         private DataGridView dgvData;
         private DataGridViewTextBoxColumn IdProducto;
         private DataGridViewTextBoxColumn Producto;
@@ -568,33 +568,33 @@
         private DataGridViewTextBoxColumn Subtotal;
         private DataGridViewButtonColumn btnEliminar;
         private NumericUpDown txtCantidad;
-        private Label label7;
+        private Label lblCantidad;
         private TextBox txtStock;
-        private Label label6;
+        private Label lblStock;
         private TextBox txtPrecio;
         private Label label9;
         private GroupBox gbInfo;
         private TextBox txtFecha;
         private ComboBox cbTipoDoc;
         private Label lblDoc;
-        private Label label1;
+        private Label lblFecha;
         private Label lblRegistrar;
         private GroupBox gbInfoProducto;
-        private Label label5;
+        private Label lblPrecio;
         private TextBox txtProducto;
         private TextBox txtIdProducto;
         private TextBox txtCodProducto;
         private FontAwesome.Sharp.IconButton btnBuscarProducto;
-        private Label label4;
+        private Label lblProducto;
         private Label lblCodProducto;
         private FontAwesome.Sharp.IconButton btnBuscarProveedor;
-        private Label label2;
-        private GroupBox gbInfoProveedor;
+        private Label lblNombreCliente;
+        private GroupBox gbInfoCliente;
         private TextBox txtNombreCliente;
         private TextBox txtDocCliente;
-        private Label label3;
+        private Label lblNroDoc;
         private TextBox txtPagaCon;
-        private Label label10;
+        private Label lblPagaCon;
         private TextBox txtCambio;
         private Label lblCambio;
     }

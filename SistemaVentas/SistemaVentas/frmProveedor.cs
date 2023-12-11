@@ -10,6 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DocumentFormat.OpenXml.Wordprocessing;
+using ClosedXML.Excel;
+using CapaPresentacion.Idioma;
 
 namespace CapaPresentacion
 {
@@ -20,8 +23,25 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CapaPresentacion.Properties.Settings.Default.Idioma);
+            lblProveedor.Text = Textos.lblProveedor;
+            lblNroDoc.Text = Textos.lblNroDoc;
+            lblRazonSocial.Text = Textos.lblRazonSocial;
+            lblEmail.Text = Textos.lblEmail;
+            lblTelefono.Text = Textos.lblTelefono;
+            lblEstado.Text = Textos.lblEstado;
+            btnGuardar.Text = Textos.btnGuardar;
+            btnLimpiarForm.Text = Textos.btnLimpiarForm;
+            btnEliminar.Text = Textos.btnEliminar;
+            lblListaProveedores.Text = Textos.lblListaProveedores;
+            lblBuscar.Text = Textos.lblBuscar;
+        }
+
         private void frmProveedor_Load(object sender, EventArgs e)
         {
+            CargarIdioma();
             //Para darle los valores al ComboBox del estado
             cbEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
             cbEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No Activo" });

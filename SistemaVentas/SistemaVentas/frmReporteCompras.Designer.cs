@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             dtInicio = new DateTimePicker();
-            lblRegistrar = new Label();
+            lblReporteCompra = new Label();
             label1 = new Label();
             lblFechaInicio = new Label();
             lblFechaFin = new Label();
             dtFechaFin = new DateTimePicker();
             lblProveedor = new Label();
-            btnBuscarProveedor = new FontAwesome.Sharp.IconButton();
+            btnBuscarS = new FontAwesome.Sharp.IconButton();
             cbProveedor = new ComboBox();
             label2 = new Label();
             dgvData = new DataGridView();
@@ -68,46 +68,47 @@
             // 
             dtInicio.CustomFormat = "dd/MM/yyyy";
             dtInicio.Format = DateTimePickerFormat.Short;
-            dtInicio.Location = new Point(106, 61);
+            dtInicio.Location = new Point(121, 81);
+            dtInicio.Margin = new Padding(3, 4, 3, 4);
             dtInicio.Name = "dtInicio";
-            dtInicio.Size = new Size(125, 23);
+            dtInicio.Size = new Size(142, 27);
             dtInicio.TabIndex = 0;
             dtInicio.ValueChanged += dateTimePicker1_ValueChanged;
             // 
-            // lblRegistrar
+            // lblReporteCompra
             // 
-            lblRegistrar.AutoSize = true;
-            lblRegistrar.BackColor = SystemColors.Window;
-            lblRegistrar.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lblRegistrar.Location = new Point(27, 22);
-            lblRegistrar.Name = "lblRegistrar";
-            lblRegistrar.Size = new Size(195, 25);
-            lblRegistrar.TabIndex = 46;
-            lblRegistrar.Text = "Reporte de Compras";
+            lblReporteCompra.AutoSize = true;
+            lblReporteCompra.BackColor = SystemColors.Window;
+            lblReporteCompra.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblReporteCompra.Location = new Point(31, 29);
+            lblReporteCompra.Name = "lblReporteCompra";
+            lblReporteCompra.Size = new Size(231, 31);
+            lblReporteCompra.TabIndex = 46;
+            lblReporteCompra.Text = "Reporte de Compras";
             // 
             // label1
             // 
             label1.BackColor = Color.White;
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(14, 12);
             label1.Name = "label1";
-            label1.Size = new Size(1019, 96);
+            label1.Size = new Size(1165, 128);
             label1.TabIndex = 45;
             // 
             // lblFechaInicio
             // 
             lblFechaInicio.AutoSize = true;
-            lblFechaInicio.Location = new Point(27, 67);
+            lblFechaInicio.Location = new Point(31, 89);
             lblFechaInicio.Name = "lblFechaInicio";
-            lblFechaInicio.Size = new Size(73, 15);
+            lblFechaInicio.Size = new Size(90, 20);
             lblFechaInicio.TabIndex = 47;
             lblFechaInicio.Text = "Fecha Inicio:";
             // 
             // lblFechaFin
             // 
             lblFechaFin.AutoSize = true;
-            lblFechaFin.Location = new Point(278, 65);
+            lblFechaFin.Location = new Point(318, 87);
             lblFechaFin.Name = "lblFechaFin";
-            lblFechaFin.Size = new Size(60, 15);
+            lblFechaFin.Size = new Size(73, 20);
             lblFechaFin.TabIndex = 49;
             lblFechaFin.Text = "Fecha Fin:";
             // 
@@ -115,89 +116,89 @@
             // 
             dtFechaFin.CustomFormat = "dd/MM/yyyy";
             dtFechaFin.Format = DateTimePickerFormat.Short;
-            dtFechaFin.Location = new Point(357, 59);
+            dtFechaFin.Location = new Point(408, 79);
+            dtFechaFin.Margin = new Padding(3, 4, 3, 4);
             dtFechaFin.Name = "dtFechaFin";
-            dtFechaFin.Size = new Size(125, 23);
+            dtFechaFin.Size = new Size(142, 27);
             dtFechaFin.TabIndex = 48;
             // 
             // lblProveedor
             // 
             lblProveedor.AutoSize = true;
-            lblProveedor.Location = new Point(505, 63);
+            lblProveedor.Location = new Point(577, 84);
             lblProveedor.Name = "lblProveedor";
-            lblProveedor.Size = new Size(64, 15);
+            lblProveedor.Size = new Size(80, 20);
             lblProveedor.TabIndex = 51;
             lblProveedor.Text = "Proveedor:";
             // 
-            // btnBuscarProveedor
+            // btnBuscarS
             // 
-            btnBuscarProveedor.BackColor = Color.White;
-            btnBuscarProveedor.Cursor = Cursors.Hand;
-            btnBuscarProveedor.FlatAppearance.BorderColor = Color.Black;
-            btnBuscarProveedor.FlatStyle = FlatStyle.Flat;
-            btnBuscarProveedor.ForeColor = Color.Black;
-            btnBuscarProveedor.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            btnBuscarProveedor.IconColor = Color.Black;
-            btnBuscarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnBuscarProveedor.IconSize = 15;
-            btnBuscarProveedor.Location = new Point(777, 61);
-            btnBuscarProveedor.Margin = new Padding(3, 2, 3, 2);
-            btnBuscarProveedor.Name = "btnBuscarProveedor";
-            btnBuscarProveedor.Size = new Size(77, 24);
-            btnBuscarProveedor.TabIndex = 50;
-            btnBuscarProveedor.Text = "Buscar ";
-            btnBuscarProveedor.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBuscarProveedor.UseVisualStyleBackColor = false;
-            btnBuscarProveedor.Click += btnBuscarProveedor_Click;
+            btnBuscarS.BackColor = Color.White;
+            btnBuscarS.Cursor = Cursors.Hand;
+            btnBuscarS.FlatAppearance.BorderColor = Color.Black;
+            btnBuscarS.FlatStyle = FlatStyle.Flat;
+            btnBuscarS.ForeColor = Color.Black;
+            btnBuscarS.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            btnBuscarS.IconColor = Color.Black;
+            btnBuscarS.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnBuscarS.IconSize = 15;
+            btnBuscarS.Location = new Point(888, 81);
+            btnBuscarS.Name = "btnBuscarS";
+            btnBuscarS.Size = new Size(88, 32);
+            btnBuscarS.TabIndex = 50;
+            btnBuscarS.Text = "Buscar ";
+            btnBuscarS.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnBuscarS.UseVisualStyleBackColor = false;
+            btnBuscarS.Click += btnBuscarProveedor_Click;
             // 
             // cbProveedor
             // 
             cbProveedor.FormattingEnabled = true;
-            cbProveedor.Location = new Point(575, 59);
+            cbProveedor.Location = new Point(657, 79);
+            cbProveedor.Margin = new Padding(3, 4, 3, 4);
             cbProveedor.Name = "cbProveedor";
-            cbProveedor.Size = new Size(196, 23);
+            cbProveedor.Size = new Size(223, 28);
             cbProveedor.TabIndex = 52;
             // 
             // label2
             // 
             label2.BackColor = Color.White;
-            label2.Location = new Point(12, 116);
+            label2.Location = new Point(14, 155);
             label2.Name = "label2";
-            label2.Size = new Size(1019, 502);
+            label2.Size = new Size(1165, 669);
             label2.TabIndex = 53;
             // 
             // dgvData
             // 
             dgvData.AllowUserToAddRows = false;
             dgvData.BackgroundColor = Color.White;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvData.Columns.AddRange(new DataGridViewColumn[] { FechaRegistro, TipoDocumento, NumeroDocumento, MontoTotal, UsuarioRegistrado, DocumentoProveedor, RazonSocial, CodigoProducto, NombreProducto, Categoria, PrecioCompra, PrecioVenta, Cantidad, SubTotal });
             dgvData.GridColor = Color.White;
-            dgvData.Location = new Point(27, 174);
-            dgvData.Margin = new Padding(3, 2, 3, 2);
+            dgvData.Location = new Point(31, 232);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvData.RowHeadersWidth = 51;
             dgvData.RowTemplate.Height = 28;
-            dgvData.Size = new Size(991, 409);
+            dgvData.Size = new Size(1133, 545);
             dgvData.TabIndex = 54;
             // 
             // FechaRegistro
@@ -235,62 +236,82 @@
             // UsuarioRegistrado
             // 
             UsuarioRegistrado.HeaderText = "Usuario Registrado";
+            UsuarioRegistrado.MinimumWidth = 6;
             UsuarioRegistrado.Name = "UsuarioRegistrado";
             UsuarioRegistrado.ReadOnly = true;
+            UsuarioRegistrado.Width = 125;
             // 
             // DocumentoProveedor
             // 
             DocumentoProveedor.HeaderText = "Documento Proveedor";
+            DocumentoProveedor.MinimumWidth = 6;
             DocumentoProveedor.Name = "DocumentoProveedor";
             DocumentoProveedor.ReadOnly = true;
+            DocumentoProveedor.Width = 125;
             // 
             // RazonSocial
             // 
             RazonSocial.HeaderText = "Razon Social";
+            RazonSocial.MinimumWidth = 6;
             RazonSocial.Name = "RazonSocial";
             RazonSocial.ReadOnly = true;
+            RazonSocial.Width = 125;
             // 
             // CodigoProducto
             // 
             CodigoProducto.HeaderText = "Codigo Producto";
+            CodigoProducto.MinimumWidth = 6;
             CodigoProducto.Name = "CodigoProducto";
             CodigoProducto.ReadOnly = true;
+            CodigoProducto.Width = 125;
             // 
             // NombreProducto
             // 
             NombreProducto.HeaderText = "Nombre Producto";
+            NombreProducto.MinimumWidth = 6;
             NombreProducto.Name = "NombreProducto";
             NombreProducto.ReadOnly = true;
+            NombreProducto.Width = 125;
             // 
             // Categoria
             // 
             Categoria.HeaderText = "Categoria";
+            Categoria.MinimumWidth = 6;
             Categoria.Name = "Categoria";
             Categoria.ReadOnly = true;
+            Categoria.Width = 125;
             // 
             // PrecioCompra
             // 
             PrecioCompra.HeaderText = "Precio Compra";
+            PrecioCompra.MinimumWidth = 6;
             PrecioCompra.Name = "PrecioCompra";
             PrecioCompra.ReadOnly = true;
+            PrecioCompra.Width = 125;
             // 
             // PrecioVenta
             // 
             PrecioVenta.HeaderText = "PrecioVenta";
+            PrecioVenta.MinimumWidth = 6;
             PrecioVenta.Name = "PrecioVenta";
             PrecioVenta.ReadOnly = true;
+            PrecioVenta.Width = 125;
             // 
             // Cantidad
             // 
             Cantidad.HeaderText = "Cantidad";
+            Cantidad.MinimumWidth = 6;
             Cantidad.Name = "Cantidad";
             Cantidad.ReadOnly = true;
+            Cantidad.Width = 125;
             // 
             // SubTotal
             // 
             SubTotal.HeaderText = "Sub Total";
+            SubTotal.MinimumWidth = 6;
             SubTotal.Name = "SubTotal";
             SubTotal.ReadOnly = true;
+            SubTotal.Width = 125;
             // 
             // btnExcel
             // 
@@ -305,10 +326,9 @@
             btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnExcel.IconSize = 27;
             btnExcel.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExcel.Location = new Point(27, 131);
-            btnExcel.Margin = new Padding(3, 2, 3, 2);
+            btnExcel.Location = new Point(31, 175);
             btnExcel.Name = "btnExcel";
-            btnExcel.Size = new Size(172, 22);
+            btnExcel.Size = new Size(197, 29);
             btnExcel.TabIndex = 60;
             btnExcel.Text = "Descargar Excel";
             btnExcel.UseVisualStyleBackColor = false;
@@ -325,10 +345,9 @@
             btnLimpiar.IconColor = Color.Black;
             btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnLimpiar.IconSize = 27;
-            btnLimpiar.Location = new Point(980, 131);
-            btnLimpiar.Margin = new Padding(3, 2, 3, 2);
+            btnLimpiar.Location = new Point(1120, 175);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(38, 22);
+            btnLimpiar.Size = new Size(43, 29);
             btnLimpiar.TabIndex = 59;
             btnLimpiar.UseVisualStyleBackColor = false;
             btnLimpiar.Click += btnLimpiar_Click;
@@ -344,47 +363,44 @@
             btnBusqueda.IconColor = Color.Black;
             btnBusqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnBusqueda.IconSize = 27;
-            btnBusqueda.Location = new Point(931, 131);
-            btnBusqueda.Margin = new Padding(3, 2, 3, 2);
+            btnBusqueda.Location = new Point(1064, 175);
             btnBusqueda.Name = "btnBusqueda";
-            btnBusqueda.Size = new Size(43, 22);
+            btnBusqueda.Size = new Size(49, 29);
             btnBusqueda.TabIndex = 58;
             btnBusqueda.UseVisualStyleBackColor = false;
             btnBusqueda.Click += btnBusqueda_Click;
             // 
             // txtBusqueda
             // 
-            txtBusqueda.Location = new Point(750, 133);
-            txtBusqueda.Margin = new Padding(3, 2, 3, 2);
+            txtBusqueda.Location = new Point(857, 177);
             txtBusqueda.Name = "txtBusqueda";
-            txtBusqueda.Size = new Size(176, 23);
+            txtBusqueda.Size = new Size(201, 27);
             txtBusqueda.TabIndex = 57;
             // 
             // cbBusqueda
             // 
             cbBusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
             cbBusqueda.FormattingEnabled = true;
-            cbBusqueda.Location = new Point(573, 133);
-            cbBusqueda.Margin = new Padding(3, 2, 3, 2);
+            cbBusqueda.Location = new Point(655, 177);
             cbBusqueda.Name = "cbBusqueda";
-            cbBusqueda.Size = new Size(172, 23);
+            cbBusqueda.Size = new Size(196, 28);
             cbBusqueda.TabIndex = 56;
             // 
             // lblBuscar
             // 
             lblBuscar.AutoSize = true;
             lblBuscar.BackColor = Color.White;
-            lblBuscar.Location = new Point(496, 135);
+            lblBuscar.Location = new Point(567, 180);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(66, 15);
+            lblBuscar.Size = new Size(82, 20);
             lblBuscar.TabIndex = 55;
             lblBuscar.Text = "Buscar por:";
             // 
             // frmReporteCompras
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1043, 644);
+            ClientSize = new Size(1192, 859);
             Controls.Add(btnExcel);
             Controls.Add(btnLimpiar);
             Controls.Add(btnBusqueda);
@@ -395,14 +411,13 @@
             Controls.Add(label2);
             Controls.Add(cbProveedor);
             Controls.Add(lblProveedor);
-            Controls.Add(btnBuscarProveedor);
+            Controls.Add(btnBuscarS);
             Controls.Add(lblFechaFin);
             Controls.Add(dtFechaFin);
             Controls.Add(lblFechaInicio);
-            Controls.Add(lblRegistrar);
+            Controls.Add(lblReporteCompra);
             Controls.Add(dtInicio);
             Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "frmReporteCompras";
             Text = "frmReporteCompras";
             Load += frmReporteCompras_Load;
@@ -414,13 +429,13 @@
         #endregion
 
         private DateTimePicker dtInicio;
-        private Label lblRegistrar;
+        private Label lblReporteCompra;
         private Label label1;
         private Label lblFechaInicio;
         private Label lblFechaFin;
         private DateTimePicker dtFechaFin;
         private Label lblProveedor;
-        private FontAwesome.Sharp.IconButton btnBuscarProveedor;
+        private FontAwesome.Sharp.IconButton btnBuscarS;
         private ComboBox cbProveedor;
         private Label label2;
         private DataGridView dgvData;

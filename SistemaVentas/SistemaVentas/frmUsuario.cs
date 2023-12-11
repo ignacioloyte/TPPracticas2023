@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using CapaPresentacion.Utilidades;
 using CapaEntidad;
 using CapaNegocio;
 using CapaDatos;
+using CapaPresentacion.Idioma;
+using CapaPresentacion.Modales;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace CapaPresentacion
 {
@@ -26,9 +28,29 @@ namespace CapaPresentacion
         {
 
         }
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CapaPresentacion.Properties.Settings.Default.Idioma);
+            lblNombreUsuario.Text = Textos.lblNombreUsuario;
+            lblNroDoc.Text = Textos.lblNroDoc;
+            lblNombreCliente.Text = Textos.lblNombreCliente;
+            lblEmail.Text = Textos.lblEmail;
+            lblContraseña.Text = Textos.lblContraseña;
+            lblConfContraseña.Text = Textos.lblConfContraseña;
+            lblRol.Text = Textos.lblRol;
+            lblEstado.Text = Textos.lblEstado;
+            btnGuardar.Text = Textos.btnGuardar;
+            btnLimpiarForm.Text = Textos.btnLimpiarForm;
+            btnEliminar.Text = Textos.btnEliminar;
+            lblTituloUsuario.Text = Textos.lblTituloUsuario;
+            lblBuscar.Text = Textos.lblBuscar;
+            lblUsuarios.Text = Textos.lblUsuarios;
+
+        }
 
         private void frmUsuario_Load(object sender, EventArgs e)
         {
+            CargarIdioma();
             //Para darle los valores al ComboBox del estado
             cbEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
             cbEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No Activo" });

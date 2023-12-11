@@ -1,10 +1,4 @@
-﻿using CapaDatos;
-using CapaEntidad;
-using CapaNegocio;
-using CapaPresentacion.Modales;
-using CapaPresentacion.Utilidades;
-using DocumentFormat.OpenXml.Wordprocessing;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +8,17 @@ using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using CapaPresentacion.Properties;
+using SistemaVentas;
+using CapaDatos;
+using CapaEntidad;
+using CapaNegocio;
+using CapaPresentacion;
+using CapaPresentacion.Idioma;
+using CapaPresentacion.Modales;
+using CapaPresentacion.Utilidades;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace CapaPresentacion
 {
@@ -25,10 +30,35 @@ namespace CapaPresentacion
         {
             _Usuario = oUsuario;
             InitializeComponent();
+        } 
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CapaPresentacion.Properties.Settings.Default.Idioma);
+            lblRegistrar.Text = Textos.lblRegistrar;
+            gbInfo.Text = Textos.gbInfo;
+            lblFecha.Text = Textos.lblFecha;
+            lblDoc.Text = Textos.lblDoc;
+            gbInfoCliente.Text = Textos.gbInfoCliente;
+            lblNroDoc.Text = Textos.lblNroDoc;
+            lblNombreCliente.Text = Textos.lblNombreCliente;
+            gbInfoProducto.Text = Textos.gbInfoProducto;
+            lblCodProducto.Text = Textos.lblCodProducto;
+            lblProducto.Text = Textos.lblProducto;
+            lblPrecio.Text = Textos.lblPrecio;
+            lblStock.Text = Textos.lblStock;
+            lblCantidad.Text = Textos.lblCantidad;
+            btnAgregar.Text = Textos.btnAgregar;
+            lblTotalPagar.Text = Textos.lblTotalPagar;
+            lblPagaCon.Text = Textos.lblPagaCon;
+            lblCambio.Text = Textos.lblCambio;
+            btnCrearVenta.Text = Textos.btnCrearVenta;
+
         }
+
 
         private void frmVentas_Load(object sender, EventArgs e)
         {
+            CargarIdioma();
 
             //Para darle los valores al ComboBox del estado
             cbTipoDoc.Items.Add(new OpcionCombo() { Valor = "Ticket", Texto = "Ticket" });
@@ -361,7 +391,7 @@ namespace CapaPresentacion
 
         private void btnCrearVenta_Click(object sender, EventArgs e)
         {
-            if(txtDocCliente.Text == "")
+            if (txtDocCliente.Text == "")
             {
                 MessageBox.Show("Debe ingresar el documento del cliente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -387,7 +417,7 @@ namespace CapaPresentacion
             DetalleVenta.Columns.Add("Stock", typeof(decimal));
 
 
-            foreach(DataGridViewRow row in dgvData.Rows)
+            foreach (DataGridViewRow row in dgvData.Rows)
             {
                 DetalleVenta.Rows.Add(new object[]{
                     row.Cells["IdProducto"].Value.ToString(),
@@ -424,7 +454,7 @@ namespace CapaPresentacion
                     "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
 
-                if(result == DialogResult.Yes)
+                if (result == DialogResult.Yes)
                     Clipboard.SetText(numeroDocumento);
 
                 txtDocCliente.Text = "";

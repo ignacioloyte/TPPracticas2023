@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using iTextSharp.tool.xml.parser;
 using AngleSharp.Html.Parser;
+using CapaPresentacion.Idioma;
 
 namespace CapaPresentacion
 {
@@ -26,6 +27,29 @@ namespace CapaPresentacion
         public frmDetalleCompra()
         {
             InitializeComponent();
+        }
+
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CapaPresentacion.Properties.Settings.Default.Idioma);
+            lblDetalleCompra.Text = Textos.lblDetalleCompra;
+            lblNroDoc.Text = Textos.lblNroDoc;
+            btnBuscarS.Text = Textos.btnBuscarS;
+            btnLimpiarForm.Text = Textos.btnLimpiarForm;
+            gboInfoCompra.Text = Textos.gboInfoCompra;
+            lblFecha.Text = Textos.lblFecha;
+            lblDoc.Text = Textos.lblDoc;
+            lblUsuario.Text = Textos.lblUsuario;
+            gbInfoProveedor.Text = Textos.gbInfoProveedor;
+            lblDoc2.Text = Textos.lblDoc;
+            lblRazonSocial.Text = Textos.lblRazonSocial;
+            lblMontoTotal.Text = Textos.lblMontoTotal;
+            btnDescargarPdf.Text = Textos.btnDescargarPdf;
+        }
+
+        private void frmDetalleCompra_Load(object sender, EventArgs e)
+        {
+            CargarIdioma();
         }
 
         private void btnBuscarDoc_Click(object sender, EventArgs e)
@@ -55,7 +79,7 @@ namespace CapaPresentacion
 
         }
 
-        
+
 
         private void btnLimpiarCompra_Click(object sender, EventArgs e)
         {
@@ -90,7 +114,7 @@ namespace CapaPresentacion
             Texto_Html = Texto_Html.Replace("@docproveedor", txtNroDocProveedor.Text);
             Texto_Html = Texto_Html.Replace("@nombreproveedor", txtNombreProveedor.Text);
             Texto_Html = Texto_Html.Replace("@fecharegistro", txtFecha.Text);
-            Texto_Html = Texto_Html.Replace("@usuarioregistro",txtUsuario.Text);
+            Texto_Html = Texto_Html.Replace("@usuarioregistro", txtUsuario.Text);
 
             string filas = string.Empty;
             foreach (DataGridViewRow row in dgvData.Rows)
@@ -136,14 +160,14 @@ namespace CapaPresentacion
                     using (StringReader sr = new StringReader(Texto_Html))
                     {
                         //Prblema
-                        XMLWorkerHelper.GetInstance().ParseXHtml(writer,pdfDoc,sr);
-                        
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+
                     }
 
                     pdfDoc.Close();
                     stream.Close();
                     MessageBox.Show("Documento Generado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
                 }
             }
         }

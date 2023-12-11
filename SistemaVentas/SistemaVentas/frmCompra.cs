@@ -1,6 +1,7 @@
 ﻿using CapaDatos;
 using CapaEntidad;
 using CapaNegocio;
+using CapaPresentacion.Idioma;
 using CapaPresentacion.Modales;
 using CapaPresentacion.Utilidades;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -28,9 +29,31 @@ namespace CapaPresentacion
             _Usuario = oUsuario;
             InitializeComponent();
         }
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CapaPresentacion.Properties.Settings.Default.Idioma);
+            lblRegistrar.Text = Textos.lblRegistrar;
+            gbInfoCompra.Text = Textos.gbInfoCompra;
+            lblFecha.Text = Textos.lblFecha;
+            lblDoc.Text = Textos.lblDoc;
+            gbInfoProveedor.Text = Textos.gbInfoProveedor;
+            lblNroDoc.Text = Textos.lblNroDoc;
+            lblRazonSocial.Text = Textos.lblRazonSocial;
+            gbInfoProducto.Text = Textos.gbInfoProducto;
+            lblCodProducto.Text = Textos.lblCodProducto;
+            lblProducto.Text = Textos.lblProducto;
+            lblPrecioCompra.Text = Textos.lblPrecioCompra;
+            lblPrecioVenta.Text = Textos.lblPrecioVenta;
+            lblCantidad.Text = Textos.lblCantidad;
+            btnAgregar.Text = Textos.btnAgregar;
+            lblTotalPagar.Text = Textos.lblTotalPagar;
+            btnRegistrar.Text = Textos.btnRegistrar;
+
+        }
 
         private void frmRegistrarCompra_Load(object sender, EventArgs e)
         {
+            CargarIdioma();
 
             //Para darle los valores al ComboBox del estado
             cbDoc.Items.Add(new OpcionCombo() { Valor = "Ticket", Texto = "Ticket" });

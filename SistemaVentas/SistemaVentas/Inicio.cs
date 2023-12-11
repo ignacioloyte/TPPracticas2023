@@ -9,10 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaPresentacion;
 using FontAwesome.Sharp;
-
+using CapaPresentacion.Idioma;
 using CapaEntidad;
 using CapaNegocio;
 using CapaPresentacion.Modales;
+using SistemaVentas;
+using System.Threading;
+using CapaPresentacion.Properties;
+
 
 namespace SistemaVentas
 {
@@ -33,10 +37,41 @@ namespace SistemaVentas
             InitializeComponent();
         }
 
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+            MenuUsuario.Text = Textos.Usuarios;
+            MenuVentas.Text = Textos.Ventas;
+            MenuCompras.Text = Textos.Compras;
+            MenuClientes.Text = Textos.Clientes;
+            MenuProveedores.Text = Textos.Proveedores;
+            MenuReportes.Text = Textos.Reportes;
+            MenuConfiguracion.Text = Textos.Stock;
+            MenuMantenedor.Text = Textos.Mantenedor;
+            MenuAcercaDe.Text = Textos.Acerca_De;
+            btnRegistrarVenta.Text = Textos.btnRegistrarVenta;
+            btnRegistrarCompra.Text = Textos.btnRegistrarCompra;
+            btnVerDetalleVenta.Text = Textos.btnVerDetalleVenta;
+            btnVerDetalleCompra.Text = Textos.btnVerDetalle;
+            SubMenuReporteCompras.Text = Textos.SubMenuReporteCompras;
+            SubMenuReporteVentas.Text = Textos.SubMenuReporteVentas;
+            btnCategoria.Text = Textos.btnCategoria;
+            btnProductos.Text = Textos.btnProductos;
+            btnNegocio.Text = Textos.btnNegocio;
+            txtNUsuario.Text = Textos.txtNUsuario;
+            btnBackup.Text = Textos.btnBackup;
+
+
+        }
+
+
 
         // Metodo de carga del formulario
         private void Inicio_Load(object sender, EventArgs e)
-        { //Chequear que no me devuelve los permisos
+        {
+            CargarIdioma();
+
+            //Chequear que no me devuelve los permisos
             List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);
 
             foreach (IconMenuItem iconmenu in Menu.Items)
@@ -179,7 +214,7 @@ namespace SistemaVentas
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Desea Salir?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea Salir?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }

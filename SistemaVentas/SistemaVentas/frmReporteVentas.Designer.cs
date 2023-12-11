@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             btnExcel = new FontAwesome.Sharp.IconButton();
             btnLimpiar = new FontAwesome.Sharp.IconButton();
             btnBusqueda = new FontAwesome.Sharp.IconButton();
@@ -51,7 +51,7 @@
             Cantidad = new DataGridViewTextBoxColumn();
             SubTotal = new DataGridViewTextBoxColumn();
             label2 = new Label();
-            btnBuscarProveedor = new FontAwesome.Sharp.IconButton();
+            btnBuscarS = new FontAwesome.Sharp.IconButton();
             lblFechaFin = new Label();
             dtFechaFin = new DateTimePicker();
             lblFechaInicio = new Label();
@@ -74,10 +74,9 @@
             btnExcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnExcel.IconSize = 27;
             btnExcel.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExcel.Location = new Point(27, 154);
-            btnExcel.Margin = new Padding(3, 2, 3, 2);
+            btnExcel.Location = new Point(31, 205);
             btnExcel.Name = "btnExcel";
-            btnExcel.Size = new Size(172, 22);
+            btnExcel.Size = new Size(197, 29);
             btnExcel.TabIndex = 77;
             btnExcel.Text = "Descargar Excel";
             btnExcel.UseVisualStyleBackColor = false;
@@ -94,10 +93,9 @@
             btnLimpiar.IconColor = Color.Black;
             btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnLimpiar.IconSize = 27;
-            btnLimpiar.Location = new Point(980, 154);
-            btnLimpiar.Margin = new Padding(3, 2, 3, 2);
+            btnLimpiar.Location = new Point(1120, 205);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(38, 22);
+            btnLimpiar.Size = new Size(43, 29);
             btnLimpiar.TabIndex = 76;
             btnLimpiar.UseVisualStyleBackColor = false;
             btnLimpiar.Click += btnLimpiar_Click;
@@ -113,29 +111,27 @@
             btnBusqueda.IconColor = Color.Black;
             btnBusqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnBusqueda.IconSize = 27;
-            btnBusqueda.Location = new Point(931, 154);
-            btnBusqueda.Margin = new Padding(3, 2, 3, 2);
+            btnBusqueda.Location = new Point(1064, 205);
             btnBusqueda.Name = "btnBusqueda";
-            btnBusqueda.Size = new Size(43, 22);
+            btnBusqueda.Size = new Size(49, 29);
             btnBusqueda.TabIndex = 75;
             btnBusqueda.UseVisualStyleBackColor = false;
             btnBusqueda.Click += btnBusqueda_Click;
             // 
             // txtBusqueda
             // 
-            txtBusqueda.Location = new Point(750, 156);
-            txtBusqueda.Margin = new Padding(3, 2, 3, 2);
+            txtBusqueda.Location = new Point(857, 208);
             txtBusqueda.Name = "txtBusqueda";
-            txtBusqueda.Size = new Size(176, 23);
+            txtBusqueda.Size = new Size(201, 27);
             txtBusqueda.TabIndex = 74;
             // 
             // lblBuscar
             // 
             lblBuscar.AutoSize = true;
             lblBuscar.BackColor = Color.White;
-            lblBuscar.Location = new Point(496, 158);
+            lblBuscar.Location = new Point(567, 211);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(66, 15);
+            lblBuscar.Size = new Size(82, 20);
             lblBuscar.TabIndex = 72;
             lblBuscar.Text = "Buscar por:";
             // 
@@ -143,44 +139,42 @@
             // 
             cbBusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
             cbBusqueda.FormattingEnabled = true;
-            cbBusqueda.Location = new Point(573, 156);
-            cbBusqueda.Margin = new Padding(3, 2, 3, 2);
+            cbBusqueda.Location = new Point(655, 208);
             cbBusqueda.Name = "cbBusqueda";
-            cbBusqueda.Size = new Size(172, 23);
+            cbBusqueda.Size = new Size(196, 28);
             cbBusqueda.TabIndex = 73;
             // 
             // dgvData
             // 
             dgvData.AllowUserToAddRows = false;
             dgvData.BackgroundColor = Color.White;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvData.Columns.AddRange(new DataGridViewColumn[] { FechaRegistro, TipoDocumento, NumeroDocumento, MontoTotal, UsuarioRegistro, DocumentoCliente, NombreCliente, CodigoProducto, NombreProducto, Categoria, PrecioVenta, Cantidad, SubTotal });
             dgvData.GridColor = Color.White;
-            dgvData.Location = new Point(27, 197);
-            dgvData.Margin = new Padding(3, 2, 3, 2);
+            dgvData.Location = new Point(31, 263);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvData.RowHeadersWidth = 51;
             dgvData.RowTemplate.Height = 28;
-            dgvData.Size = new Size(991, 409);
+            dgvData.Size = new Size(1133, 545);
             dgvData.TabIndex = 71;
             // 
             // FechaRegistro
@@ -218,92 +212,109 @@
             // UsuarioRegistro
             // 
             UsuarioRegistro.HeaderText = "Usuario Registro";
+            UsuarioRegistro.MinimumWidth = 6;
             UsuarioRegistro.Name = "UsuarioRegistro";
             UsuarioRegistro.ReadOnly = true;
+            UsuarioRegistro.Width = 125;
             // 
             // DocumentoCliente
             // 
             DocumentoCliente.HeaderText = "Documento Cliente";
+            DocumentoCliente.MinimumWidth = 6;
             DocumentoCliente.Name = "DocumentoCliente";
             DocumentoCliente.ReadOnly = true;
+            DocumentoCliente.Width = 125;
             // 
             // NombreCliente
             // 
             NombreCliente.HeaderText = "Nombre Cliente";
+            NombreCliente.MinimumWidth = 6;
             NombreCliente.Name = "NombreCliente";
             NombreCliente.ReadOnly = true;
+            NombreCliente.Width = 125;
             // 
             // CodigoProducto
             // 
             CodigoProducto.HeaderText = "Codigo Producto";
+            CodigoProducto.MinimumWidth = 6;
             CodigoProducto.Name = "CodigoProducto";
             CodigoProducto.ReadOnly = true;
+            CodigoProducto.Width = 125;
             // 
             // NombreProducto
             // 
             NombreProducto.HeaderText = "Nombre Producto";
+            NombreProducto.MinimumWidth = 6;
             NombreProducto.Name = "NombreProducto";
             NombreProducto.ReadOnly = true;
+            NombreProducto.Width = 125;
             // 
             // Categoria
             // 
             Categoria.HeaderText = "Categoria";
+            Categoria.MinimumWidth = 6;
             Categoria.Name = "Categoria";
             Categoria.ReadOnly = true;
+            Categoria.Width = 125;
             // 
             // PrecioVenta
             // 
             PrecioVenta.HeaderText = "PrecioVenta";
+            PrecioVenta.MinimumWidth = 6;
             PrecioVenta.Name = "PrecioVenta";
             PrecioVenta.ReadOnly = true;
+            PrecioVenta.Width = 125;
             // 
             // Cantidad
             // 
             Cantidad.HeaderText = "Cantidad";
+            Cantidad.MinimumWidth = 6;
             Cantidad.Name = "Cantidad";
             Cantidad.ReadOnly = true;
+            Cantidad.Width = 125;
             // 
             // SubTotal
             // 
             SubTotal.HeaderText = "Sub Total";
+            SubTotal.MinimumWidth = 6;
             SubTotal.Name = "SubTotal";
             SubTotal.ReadOnly = true;
+            SubTotal.Width = 125;
             // 
             // label2
             // 
             label2.BackColor = Color.White;
-            label2.Location = new Point(12, 139);
+            label2.Location = new Point(14, 185);
             label2.Name = "label2";
-            label2.Size = new Size(1019, 502);
+            label2.Size = new Size(1165, 669);
             label2.TabIndex = 70;
             // 
-            // btnBuscarProveedor
+            // btnBuscarS
             // 
-            btnBuscarProveedor.BackColor = Color.White;
-            btnBuscarProveedor.Cursor = Cursors.Hand;
-            btnBuscarProveedor.FlatAppearance.BorderColor = Color.Black;
-            btnBuscarProveedor.FlatStyle = FlatStyle.Flat;
-            btnBuscarProveedor.ForeColor = Color.Black;
-            btnBuscarProveedor.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            btnBuscarProveedor.IconColor = Color.Black;
-            btnBuscarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnBuscarProveedor.IconSize = 15;
-            btnBuscarProveedor.Location = new Point(496, 81);
-            btnBuscarProveedor.Margin = new Padding(3, 2, 3, 2);
-            btnBuscarProveedor.Name = "btnBuscarProveedor";
-            btnBuscarProveedor.Size = new Size(77, 24);
-            btnBuscarProveedor.TabIndex = 67;
-            btnBuscarProveedor.Text = "Buscar ";
-            btnBuscarProveedor.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBuscarProveedor.UseVisualStyleBackColor = false;
-            btnBuscarProveedor.Click += btnBuscarProveedor_Click;
+            btnBuscarS.BackColor = Color.White;
+            btnBuscarS.Cursor = Cursors.Hand;
+            btnBuscarS.FlatAppearance.BorderColor = Color.Black;
+            btnBuscarS.FlatStyle = FlatStyle.Flat;
+            btnBuscarS.ForeColor = Color.Black;
+            btnBuscarS.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            btnBuscarS.IconColor = Color.Black;
+            btnBuscarS.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnBuscarS.IconSize = 15;
+            btnBuscarS.Location = new Point(567, 108);
+            btnBuscarS.Name = "btnBuscarS";
+            btnBuscarS.Size = new Size(88, 32);
+            btnBuscarS.TabIndex = 67;
+            btnBuscarS.Text = "Buscar ";
+            btnBuscarS.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnBuscarS.UseVisualStyleBackColor = false;
+            btnBuscarS.Click += btnBuscarProveedor_Click;
             // 
             // lblFechaFin
             // 
             lblFechaFin.AutoSize = true;
-            lblFechaFin.Location = new Point(278, 88);
+            lblFechaFin.Location = new Point(318, 117);
             lblFechaFin.Name = "lblFechaFin";
-            lblFechaFin.Size = new Size(60, 15);
+            lblFechaFin.Size = new Size(73, 20);
             lblFechaFin.TabIndex = 66;
             lblFechaFin.Text = "Fecha Fin:";
             // 
@@ -311,17 +322,18 @@
             // 
             dtFechaFin.CustomFormat = "dd/MM/yyyy";
             dtFechaFin.Format = DateTimePickerFormat.Short;
-            dtFechaFin.Location = new Point(357, 82);
+            dtFechaFin.Location = new Point(408, 109);
+            dtFechaFin.Margin = new Padding(3, 4, 3, 4);
             dtFechaFin.Name = "dtFechaFin";
-            dtFechaFin.Size = new Size(125, 23);
+            dtFechaFin.Size = new Size(142, 27);
             dtFechaFin.TabIndex = 65;
             // 
             // lblFechaInicio
             // 
             lblFechaInicio.AutoSize = true;
-            lblFechaInicio.Location = new Point(27, 90);
+            lblFechaInicio.Location = new Point(31, 120);
             lblFechaInicio.Name = "lblFechaInicio";
-            lblFechaInicio.Size = new Size(73, 15);
+            lblFechaInicio.Size = new Size(90, 20);
             lblFechaInicio.TabIndex = 64;
             lblFechaInicio.Text = "Fecha Inicio:";
             // 
@@ -330,9 +342,9 @@
             lblRegistrar.AutoSize = true;
             lblRegistrar.BackColor = SystemColors.Window;
             lblRegistrar.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lblRegistrar.Location = new Point(27, 45);
+            lblRegistrar.Location = new Point(31, 60);
             lblRegistrar.Name = "lblRegistrar";
-            lblRegistrar.Size = new Size(175, 25);
+            lblRegistrar.Size = new Size(208, 31);
             lblRegistrar.TabIndex = 63;
             lblRegistrar.Text = "Reporte de Ventas";
             // 
@@ -340,24 +352,25 @@
             // 
             dtInicio.CustomFormat = "dd/MM/yyyy";
             dtInicio.Format = DateTimePickerFormat.Short;
-            dtInicio.Location = new Point(106, 84);
+            dtInicio.Location = new Point(121, 112);
+            dtInicio.Margin = new Padding(3, 4, 3, 4);
             dtInicio.Name = "dtInicio";
-            dtInicio.Size = new Size(125, 23);
+            dtInicio.Size = new Size(142, 27);
             dtInicio.TabIndex = 61;
             // 
             // label1
             // 
             label1.BackColor = Color.White;
-            label1.Location = new Point(12, 32);
+            label1.Location = new Point(14, 43);
             label1.Name = "label1";
-            label1.Size = new Size(1019, 96);
+            label1.Size = new Size(1165, 128);
             label1.TabIndex = 62;
             // 
             // frmReporteVentas
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1042, 672);
+            ClientSize = new Size(1191, 896);
             Controls.Add(btnExcel);
             Controls.Add(btnLimpiar);
             Controls.Add(btnBusqueda);
@@ -366,13 +379,14 @@
             Controls.Add(cbBusqueda);
             Controls.Add(dgvData);
             Controls.Add(label2);
-            Controls.Add(btnBuscarProveedor);
+            Controls.Add(btnBuscarS);
             Controls.Add(lblFechaFin);
             Controls.Add(dtFechaFin);
             Controls.Add(lblFechaInicio);
             Controls.Add(lblRegistrar);
             Controls.Add(dtInicio);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmReporteVentas";
             Text = "frmReporteVentas";
             Load += frmReporteVentas_Load;
@@ -404,7 +418,7 @@
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewTextBoxColumn SubTotal;
         private Label label2;
-        private FontAwesome.Sharp.IconButton btnBuscarProveedor;
+        private FontAwesome.Sharp.IconButton btnBuscarS;
         private Label lblFechaFin;
         private DateTimePicker dtFechaFin;
         private Label lblFechaInicio;

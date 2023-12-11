@@ -12,6 +12,10 @@ using CapaNegocio;
 using CapaEntidad;
 using CapaDatos;
 using CapaPresentacion.Idioma;
+using CapaEntidad;
+using CapaPresentacion.Modales;
+using System.Threading;
+using CapaPresentacion.Properties;
 
 namespace CapaPresentacion
 {
@@ -21,6 +25,35 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Settings.Default.Idioma);
+            lblUsuario.Text = Textos.lblUsuario;
+            lblContraseña.Text = Textos.lblContraseña;
+            lbltitulo.Text = Textos.lbltitulo;
+            lbltitulo2.Text = Textos.lbltitulo2;
+            btnIngresar.Text = Textos.btnIngresar;
+            btnCancelar.Text = Textos.btnCancelar;
+            btnSeleccionarIdioma.Text = Textos.btnSeleccionarIdioma;
+            lblIdioma.Text = Textos.lblIdioma;
+
+
+        }
+        public void LlenarIdiomaComboBox()
+        {
+            cbIdioma.DataSource = Idiomas.ObtenerIdiomas();
+            cbIdioma.DisplayMember = "NombrePais";
+            cbIdioma.ValueMember = "CultureInfo";
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            CargarIdioma();
+            LlenarIdiomaComboBox();
+        }
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -67,20 +100,10 @@ namespace CapaPresentacion
             this.Show();
         }
 
-        public void CargarIdioma()
+        private void btnSeleccionarIdioma_Click(object sender, EventArgs e)
         {
-            lblUsuario.Text = Textos.lblUsuario;
-            lblContraseña.Text = Textos.lblContraseña;
-            lbltitulo.Text = Textos.lbltitulo;
-            lbltitulo2.Text = Textos.lbltitulo2;
-            btnIngresar.Text = Textos.btnIngresar;
-            btnCancelar.Text = Textos.btnCancelar;
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
+            Settings.Default.Idioma = cbIdioma.SelectedValue.ToString();
+            CargarIdioma();
         }
     }
 }

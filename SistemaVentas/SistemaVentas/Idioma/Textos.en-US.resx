@@ -118,327 +118,290 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="btnCancelar" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Cancel</value>
     <comment>Login</comment>
   </data>
   <data name="btnIngresar" xml:space="preserve">
-    <value>Ingresar</value>
+    <value>LogIn</value>
     <comment>Login</comment>
   </data>
   <data name="btnSeleccionarIdioma" xml:space="preserve">
-    <value>Seleccionar</value>
+    <value>Select</value>
     <comment>Login</comment>
   </data>
   <data name="lblContraseña" xml:space="preserve">
-    <value>Contraseña:</value>
+    <value>Password:</value>
     <comment>Login</comment>
   </data>
   <data name="lblIdioma" xml:space="preserve">
-    <value>Idioma:</value>
+    <value>Language:</value>
     <comment>Login</comment>
   </data>
   <data name="lbltitulo" xml:space="preserve">
-    <value>Ingreso Sistema</value>
+    <value>Login Sales</value>
     <comment>Login</comment>
   </data>
   <data name="lbltitulo2" xml:space="preserve">
-    <value>de Ventas.</value>
+    <value>System</value>
     <comment>Login</comment>
   </data>
   <data name="lblUsuario" xml:space="preserve">
-    <value>Usuario:</value>
+    <value>User:</value>
     <comment>Login</comment>
   </data>
   <data name="Usuarios" xml:space="preserve">
-    <value>Usuarios</value>
-    <comment>Usuario</comment>
+    <value>Users</value>
   </data>
   <data name="Ventas" xml:space="preserve">
-    <value>Ventas</value>
-    <comment>Usuario</comment>
+    <value>Sales</value>
   </data>
   <data name="Compras" xml:space="preserve">
-    <value>Compras</value>
-    <comment>Usuario</comment>
+    <value>Shopping</value>
   </data>
   <data name="Clientes" xml:space="preserve">
-    <value>Clientes</value>
-    <comment>Usuario</comment>
+    <value>Customers</value>
   </data>
   <data name="Proveedores" xml:space="preserve">
-    <value>Proveedores</value>
-    <comment>Usuario</comment>
+    <value>Suppliers</value>
   </data>
   <data name="Reportes" xml:space="preserve">
-    <value>Reportes</value>
-    <comment>Usuario</comment>
+    <value>Reports</value>
   </data>
   <data name="Mantenedor" xml:space="preserve">
-    <value>Mantenedor</value>
-    <comment>Usuario</comment>
+    <value>Maintainer</value>
   </data>
   <data name="Acerca De" xml:space="preserve">
-    <value>Acerca De</value>
-    <comment>Usuario</comment>
+    <value>About</value>
   </data>
   <data name="Stock" xml:space="preserve">
     <value>Stock</value>
-    <comment>Usuario</comment>
   </data>
   <data name="btnRegistrarVenta" xml:space="preserve">
-    <value>Registrar Venta</value>
-    <comment>Usuario</comment>
+    <value>Register Sale</value>
   </data>
   <data name="btnVerDetalleVenta" xml:space="preserve">
-    <value>Ver Detalle</value>
-    <comment>Usuario</comment>
+    <value>See detail</value>
   </data>
   <data name="btnRegistrarCompra" xml:space="preserve">
-    <value>Registar Compra</value>
-    <comment>Usuario</comment>
+    <value>Register Purchase</value>
   </data>
   <data name="btnVerDetalle" xml:space="preserve">
-    <value>Ver Detalle Compra</value>
-    <comment>Usuario</comment>
+    <value>See detail Purchase</value>
   </data>
   <data name="SubMenuReporteCompras" xml:space="preserve">
-    <value>Reporte Compras</value>
-    <comment>Usuario</comment>
+    <value>Report Purchase</value>
   </data>
   <data name="SubMenuReporteVentas" xml:space="preserve">
-    <value>Reporte Ventas</value>
-    <comment>Usuario</comment>
+    <value>Report Sale</value>
   </data>
   <data name="btnCategoria" xml:space="preserve">
-    <value>Categoria</value>
-    <comment>Usuario</comment>
+    <value>Category</value>
   </data>
   <data name="btnProductos" xml:space="preserve">
-    <value>Productos</value>
-    <comment>Usuario</comment>
+    <value>Products</value>
   </data>
   <data name="btnNegocio" xml:space="preserve">
-    <value>Negocio</value>
-    <comment>Usuario</comment>
+    <value>Business</value>
   </data>
   <data name="txtNUsuario" xml:space="preserve">
-    <value>Usuario:</value>
-    <comment>Usuario</comment>
-  </data>
-  <data name="lblRegistrar" xml:space="preserve">
-    <value>Registrar Venta</value>
-    <comment>Registrar Venta</comment>
-  </data>
-  <data name="gbInfo" xml:space="preserve">
-    <value>Información Venta</value>
-    <comment>Registrar Venta</comment>
+    <value>User:</value>
   </data>
   <data name="lblFecha" xml:space="preserve">
-    <value>Fecha:</value>
-    <comment>Registrar Venta</comment>
+    <value>Date:</value>
+  </data>
+  <data name="lblRegistrar" xml:space="preserve">
+    <value>Register Sale</value>
+  </data>
+  <data name="gbInfo" xml:space="preserve">
+    <value>Sale Information</value>
   </data>
   <data name="lblDoc" xml:space="preserve">
-    <value>Tipo Documento</value>
-    <comment>Registrar Venta</comment>
+    <value>Document type:</value>
   </data>
   <data name="gbInfoCliente" xml:space="preserve">
-    <value>Información Cliente</value>
-    <comment>Registrar Venta</comment>
+    <value>Customer information</value>
   </data>
   <data name="lblNroDoc" xml:space="preserve">
-    <value>Número Documento:</value>
-    <comment>Registrar Venta</comment>
+    <value>Document number:</value>
   </data>
   <data name="lblNombreCliente" xml:space="preserve">
-    <value>Nombre Completo:</value>
-    <comment>Registrar Venta</comment>
+    <value>Full Name:</value>
   </data>
   <data name="gbInfoProducto" xml:space="preserve">
-    <value>Información Producto:</value>
-    <comment>Registrar Venta</comment>
+    <value>Product information</value>
   </data>
   <data name="lblCodProducto" xml:space="preserve">
-    <value>Cód. Producto:</value>
-    <comment>Registrar Venta</comment>
+    <value>Product code</value>
   </data>
   <data name="lblProducto" xml:space="preserve">
-    <value>Producto:</value>
-    <comment>Registrar Venta</comment>
+    <value>Product</value>
   </data>
   <data name="lblPrecio" xml:space="preserve">
-    <value>Precio:</value>
-    <comment>Registrar Venta</comment>
+    <value>Price</value>
   </data>
   <data name="lblStock" xml:space="preserve">
-    <value>Stock:</value>
-    <comment>Registrar Venta</comment>
+    <value>Stock</value>
   </data>
   <data name="lblCantidad" xml:space="preserve">
-    <value>Cantidad:</value>
-    <comment>Registrar Venta</comment>
+    <value>Amount</value>
   </data>
   <data name="btnAgregar" xml:space="preserve">
-    <value>Agregar:</value>
-    <comment>Registrar Venta</comment>
+    <value>Add</value>
   </data>
   <data name="lblTotalPagar" xml:space="preserve">
-    <value>Total a Pagar:</value>
-    <comment>Registrar Venta</comment>
+    <value>Total to pay</value>
   </data>
   <data name="lblPagaCon" xml:space="preserve">
-    <value>Paga Con:</value>
-    <comment>Registrar Venta</comment>
+    <value>Pay with</value>
   </data>
   <data name="lblCambio" xml:space="preserve">
-    <value>Cambio:</value>
-    <comment>Registrar Venta</comment>
+    <value>Change</value>
   </data>
   <data name="btnCrearVenta" xml:space="preserve">
-    <value>Crear Venta:</value>
-    <comment>Registrar Venta</comment>
+    <value>Create Sale</value>
   </data>
   <data name="btnBackup" xml:space="preserve">
-    <value>BackUp</value>
+    <value>Backup</value>
   </data>
   <data name="lblNombreUsuario" xml:space="preserve">
-    <value>Nombre de Usuario:</value>
+    <value>User Name:</value>
   </data>
   <data name="lblEmail" xml:space="preserve">
     <value>Email:</value>
   </data>
   <data name="lblConfContraseña" xml:space="preserve">
-    <value>Confirmar Contraseña:</value>
+    <value>Confirm Password:</value>
   </data>
   <data name="lblRol" xml:space="preserve">
-    <value>Rol:</value>
+    <value>Role:</value>
   </data>
   <data name="lblEstado" xml:space="preserve">
-    <value>Estado:</value>
+    <value>Status:</value>
   </data>
   <data name="btnGuardar" xml:space="preserve">
-    <value>Guardar/Editar</value>
+    <value>Save/Edit</value>
   </data>
   <data name="btnLimpiarForm" xml:space="preserve">
-    <value>Limpiar</value>
+    <value>Clean</value>
   </data>
   <data name="btnEliminar" xml:space="preserve">
-    <value>Eliminar</value>
+    <value>Delete</value>
   </data>
   <data name="lblTituloUsuario" xml:space="preserve">
-    <value>Lista Usuario:</value>
+    <value>User list:</value>
   </data>
   <data name="lblBuscar" xml:space="preserve">
-    <value>Buscar por:</value>
+    <value>Look for:</value>
   </data>
   <data name="lblUsuarios" xml:space="preserve">
-    <value>Usuarios</value>
+    <value>Users</value>
   </data>
   <data name="lblRegistrarVenta" xml:space="preserve">
-    <value>Registrar Venta</value>
+    <value>Register Sale</value>
   </data>
   <data name="lblFechaInicio" xml:space="preserve">
-    <value>Fecha Inicio</value>
+    <value>Start Date</value>
   </data>
   <data name="lblFechaFin" xml:space="preserve">
-    <value>Fecha Fin</value>
+    <value>End Date</value>
   </data>
   <data name="btnBuscarS" xml:space="preserve">
-    <value>Buscar</value>
+    <value>Look For</value>
   </data>
   <data name="btnExcel" xml:space="preserve">
-    <value>Descargar Excel</value>
+    <value>Download Excel</value>
   </data>
   <data name="lblReporteCompra" xml:space="preserve">
-    <value>Reporte de compras</value>
+    <value>Report  Purchase</value>
   </data>
   <data name="lblProveedor" xml:space="preserve">
-    <value>Proveedor</value>
+    <value>Suplier</value>
   </data>
   <data name="lblRazonSocial" xml:space="preserve">
-    <value>Razon Social</value>
+    <value>Business name</value>
   </data>
   <data name="lblTelefono" xml:space="preserve">
-    <value>Telefono</value>
+    <value>Phone</value>
   </data>
   <data name="lblListaProveedores" xml:space="preserve">
-    <value>Lista Proveedores</value>
+    <value>Supplier List</value>
   </data>
   <data name="lblDetalleCompra" xml:space="preserve">
-    <value>Detalle de compras</value>
+    <value>Buy Detail</value>
   </data>
   <data name="gboInfoCompra" xml:space="preserve">
-    <value>Información Compra</value>
+    <value>Sales Detail</value>
   </data>
   <data name="gbInfoProveedor" xml:space="preserve">
-    <value>Información Proveedor</value>
+    <value>Suplier Detail</value>
   </data>
   <data name="lblMontoTotal" xml:space="preserve">
-    <value>MontoTotal</value>
+    <value>Total</value>
   </data>
   <data name="btnDescargarPdf" xml:space="preserve">
-    <value>Descargar Pdf</value>
+    <value>Download Pdf</value>
   </data>
   <data name="lblDetalleVenta" xml:space="preserve">
-    <value>Detalle de Venta</value>
+    <value>Sales Detail</value>
   </data>
   <data name="lblMontoPago" xml:space="preserve">
-    <value>Monto Pago</value>
+    <value>Payment Amount</value>
   </data>
   <data name="lblMontoCambio" xml:space="preserve">
-    <value>Monto Cambio</value>
+    <value>Payment Exchange</value>
   </data>
   <data name="lblPrecioCompra" xml:space="preserve">
-    <value>Precio Compra:</value>
+    <value>Purchase price</value>
   </data>
   <data name="btnRegistrar" xml:space="preserve">
-    <value>Registrar</value>
+    <value>Register</value>
   </data>
   <data name="lblPrecioVenta" xml:space="preserve">
-    <value>Precio Venta:</value>
+    <value>Sale Price</value>
   </data>
   <data name="gbInfoCompra" xml:space="preserve">
-    <value>Información Compra</value>
+    <value>Purchase information</value>
   </data>
   <data name="lblClientes" xml:space="preserve">
-    <value>Clientes</value>
+    <value>Customers</value>
   </data>
   <data name="lblListaClientes" xml:space="preserve">
-    <value>Lista Clientes:</value>
+    <value>Customers List:</value>
   </data>
   <data name="lblProductos" xml:space="preserve">
-    <value>Productos</value>
+    <value>Products</value>
   </data>
   <data name="lblCodigo" xml:space="preserve">
-    <value>Código</value>
+    <value>Code</value>
   </data>
   <data name="lblNombre" xml:space="preserve">
-    <value>Nombre</value>
+    <value>Name</value>
   </data>
   <data name="lblDescripcion" xml:space="preserve">
-    <value>Descripción</value>
-  </data>
-  <data name="lblListaProducto" xml:space="preserve">
-    <value>Lista de Productos:</value>
-  </data>
-  <data name="lblCategoria" xml:space="preserve">
-    <value>Categoria</value>
+    <value>Description</value>
   </data>
   <data name="lblDetalle2" xml:space="preserve">
-    <value>Detalle</value>
+    <value>Details</value>
+  </data>
+  <data name="lblCategoria" xml:space="preserve">
+    <value>Category</value>
   </data>
   <data name="lblListaCategorias" xml:space="preserve">
-    <value>Lista Categorias:</value>
+    <value>Category List:</value>
   </data>
   <data name="lblLogo" xml:space="preserve">
     <value>Logo</value>
   </data>
+  <data name="lblListaProducto" xml:space="preserve">
+    <value>Product List:</value>
+  </data>
   <data name="lblNombreNegocio" xml:space="preserve">
-    <value>Nombre Negocio</value>
+    <value>Name Business</value>
   </data>
   <data name="lblCuit" xml:space="preserve">
     <value>CUIT:</value>
   </data>
   <data name="lblDireccion" xml:space="preserve">
-    <value>Dirección:</value>
+    <value>Adress:</value>
   </data>
 </root>

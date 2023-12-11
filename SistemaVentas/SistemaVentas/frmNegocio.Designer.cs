@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label11 = new Label();
+            lblMantenedor = new Label();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             groupBox1 = new GroupBox();
             btnGuardarCambios = new FontAwesome.Sharp.IconButton();
             txtDireccion = new TextBox();
-            label4 = new Label();
+            lblDireccion = new Label();
             txtCuit = new TextBox();
-            label3 = new Label();
+            lblCuit = new Label();
             txtNombreNegocio = new TextBox();
-            label2 = new Label();
+            lblNombreNegocio = new Label();
             btnSubir = new FontAwesome.Sharp.IconButton();
-            Logo = new Label();
+            lblLogo = new Label();
             picLogo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             SuspendLayout();
             // 
-            // label11
+            // lblMantenedor
             // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.White;
-            label11.Font = new Font("Segoe UI", 14.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(65, 31);
-            label11.Name = "label11";
-            label11.Size = new Size(155, 32);
-            label11.TabIndex = 34;
-            label11.Text = "Mantenedor";
+            lblMantenedor.AutoSize = true;
+            lblMantenedor.BackColor = Color.White;
+            lblMantenedor.Font = new Font("Segoe UI", 14.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMantenedor.Location = new Point(65, 31);
+            lblMantenedor.Name = "lblMantenedor";
+            lblMantenedor.Size = new Size(155, 32);
+            lblMantenedor.TabIndex = 34;
+            lblMantenedor.Text = "Mantenedor";
             // 
             // iconPictureBox1
             // 
@@ -91,13 +91,13 @@
             groupBox1.BackColor = Color.White;
             groupBox1.Controls.Add(btnGuardarCambios);
             groupBox1.Controls.Add(txtDireccion);
-            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(lblDireccion);
             groupBox1.Controls.Add(txtCuit);
-            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(lblCuit);
             groupBox1.Controls.Add(txtNombreNegocio);
-            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(lblNombreNegocio);
             groupBox1.Controls.Add(btnSubir);
-            groupBox1.Controls.Add(Logo);
+            groupBox1.Controls.Add(lblLogo);
             groupBox1.Controls.Add(picLogo);
             groupBox1.Location = new Point(22, 106);
             groupBox1.Name = "groupBox1";
@@ -128,14 +128,14 @@
             txtDireccion.Size = new Size(219, 27);
             txtDireccion.TabIndex = 8;
             // 
-            // label4
+            // lblDireccion
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(184, 171);
-            label4.Name = "label4";
-            label4.Size = new Size(75, 20);
-            label4.TabIndex = 7;
-            label4.Text = "Dirección:";
+            lblDireccion.AutoSize = true;
+            lblDireccion.Location = new Point(184, 171);
+            lblDireccion.Name = "lblDireccion";
+            lblDireccion.Size = new Size(75, 20);
+            lblDireccion.TabIndex = 7;
+            lblDireccion.Text = "Dirección:";
             // 
             // txtCuit
             // 
@@ -144,14 +144,14 @@
             txtCuit.Size = new Size(219, 27);
             txtCuit.TabIndex = 6;
             // 
-            // label3
+            // lblCuit
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(184, 111);
-            label3.Name = "label3";
-            label3.Size = new Size(43, 20);
-            label3.TabIndex = 5;
-            label3.Text = "CUIT:";
+            lblCuit.AutoSize = true;
+            lblCuit.Location = new Point(184, 111);
+            lblCuit.Name = "lblCuit";
+            lblCuit.Size = new Size(43, 20);
+            lblCuit.TabIndex = 5;
+            lblCuit.Text = "CUIT:";
             // 
             // txtNombreNegocio
             // 
@@ -160,14 +160,14 @@
             txtNombreNegocio.Size = new Size(219, 27);
             txtNombreNegocio.TabIndex = 4;
             // 
-            // label2
+            // lblNombreNegocio
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(184, 50);
-            label2.Name = "label2";
-            label2.Size = new Size(128, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Nombre Negocio:";
+            lblNombreNegocio.AutoSize = true;
+            lblNombreNegocio.Location = new Point(184, 50);
+            lblNombreNegocio.Name = "lblNombreNegocio";
+            lblNombreNegocio.Size = new Size(128, 20);
+            lblNombreNegocio.TabIndex = 3;
+            lblNombreNegocio.Text = "Nombre Negocio:";
             // 
             // btnSubir
             // 
@@ -185,14 +185,14 @@
             btnSubir.UseVisualStyleBackColor = true;
             btnSubir.Click += btnSubir_Click;
             // 
-            // Logo
+            // lblLogo
             // 
-            Logo.AutoSize = true;
-            Logo.Location = new Point(16, 50);
-            Logo.Name = "Logo";
-            Logo.Size = new Size(43, 20);
-            Logo.TabIndex = 1;
-            Logo.Text = "Logo";
+            lblLogo.AutoSize = true;
+            lblLogo.Location = new Point(16, 50);
+            lblLogo.Name = "lblLogo";
+            lblLogo.Size = new Size(43, 20);
+            lblLogo.TabIndex = 1;
+            lblLogo.Text = "Logo";
             // 
             // picLogo
             // 
@@ -210,7 +210,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1456, 589);
             Controls.Add(groupBox1);
-            Controls.Add(label11);
+            Controls.Add(lblMantenedor);
             Controls.Add(iconPictureBox1);
             Controls.Add(label1);
             Name = "frmNegocio";
@@ -226,19 +226,19 @@
 
         #endregion
 
-        private Label label11;
+        private Label lblMantenedor;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Label label1;
         private GroupBox groupBox1;
         private FontAwesome.Sharp.IconButton btnSubir;
-        private Label Logo;
+        private Label lblLogo;
         private PictureBox picLogo;
         private FontAwesome.Sharp.IconButton btnGuardarCambios;
         private TextBox txtDireccion;
-        private Label label4;
+        private Label lblDireccion;
         private TextBox txtCuit;
-        private Label label3;
+        private Label lblCuit;
         private TextBox txtNombreNegocio;
-        private Label label2;
+        private Label lblNombreNegocio;
     }
 }

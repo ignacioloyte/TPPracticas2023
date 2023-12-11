@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             label1 = new Label();
-            label5 = new Label();
+            lblDescripcion = new Label();
             txtDescripcion = new TextBox();
             cbEstado = new ComboBox();
-            label8 = new Label();
+            lblEstado = new Label();
             btnEliminar = new FontAwesome.Sharp.IconButton();
             btnGuardar = new FontAwesome.Sharp.IconButton();
-            btnLimpiarF = new FontAwesome.Sharp.IconButton();
+            btnLimpiarForm = new FontAwesome.Sharp.IconButton();
             dgvData = new DataGridView();
             btnSeleccionar = new DataGridViewButtonColumn();
             Id = new DataGridViewTextBoxColumn();
             Descripcion = new DataGridViewTextBoxColumn();
             EstadoValor = new DataGridViewTextBoxColumn();
             Estado = new DataGridViewTextBoxColumn();
-            label9 = new Label();
+            lblListaCategorias = new Label();
             txtId = new TextBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
             lblBuscar = new Label();
@@ -55,10 +55,10 @@
             btnLimpiar = new FontAwesome.Sharp.IconButton();
             iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            label11 = new Label();
+            lblDetalle2 = new Label();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             txtIndice = new TextBox();
-            label2 = new Label();
+            lblCategoria = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
@@ -75,15 +75,15 @@
             label1.TabIndex = 0;
             label1.Text = "label1";
             // 
-            // label5
+            // lblDescripcion
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.White;
-            label5.Location = new Point(27, 198);
-            label5.Name = "label5";
-            label5.Size = new Size(90, 20);
-            label5.TabIndex = 4;
-            label5.Text = "Descripción:";
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.BackColor = Color.White;
+            lblDescripcion.Location = new Point(27, 198);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(90, 20);
+            lblDescripcion.TabIndex = 4;
+            lblDescripcion.Text = "Descripción:";
             // 
             // txtDescripcion
             // 
@@ -101,15 +101,15 @@
             cbEstado.Size = new Size(194, 28);
             cbEstado.TabIndex = 16;
             // 
-            // label8
+            // lblEstado
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.White;
-            label8.Location = new Point(27, 260);
-            label8.Name = "label8";
-            label8.Size = new Size(57, 20);
-            label8.TabIndex = 15;
-            label8.Text = "Estado:";
+            lblEstado.AutoSize = true;
+            lblEstado.BackColor = Color.White;
+            lblEstado.Location = new Point(27, 260);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(57, 20);
+            lblEstado.TabIndex = 15;
+            lblEstado.Text = "Estado:";
             // 
             // btnEliminar
             // 
@@ -151,52 +151,52 @@
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
             // 
-            // btnLimpiarF
+            // btnLimpiarForm
             // 
-            btnLimpiarF.BackColor = SystemColors.Highlight;
-            btnLimpiarF.Cursor = Cursors.Hand;
-            btnLimpiarF.FlatAppearance.BorderColor = Color.Black;
-            btnLimpiarF.FlatStyle = FlatStyle.Flat;
-            btnLimpiarF.ForeColor = Color.White;
-            btnLimpiarF.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            btnLimpiarF.IconColor = Color.White;
-            btnLimpiarF.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnLimpiarF.IconSize = 20;
-            btnLimpiarF.Location = new Point(29, 366);
-            btnLimpiarF.Name = "btnLimpiarF";
-            btnLimpiarF.Size = new Size(94, 29);
-            btnLimpiarF.TabIndex = 19;
-            btnLimpiarF.Text = "Limpiar";
-            btnLimpiarF.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnLimpiarF.UseMnemonic = false;
-            btnLimpiarF.UseVisualStyleBackColor = false;
+            btnLimpiarForm.BackColor = SystemColors.Highlight;
+            btnLimpiarForm.Cursor = Cursors.Hand;
+            btnLimpiarForm.FlatAppearance.BorderColor = Color.Black;
+            btnLimpiarForm.FlatStyle = FlatStyle.Flat;
+            btnLimpiarForm.ForeColor = Color.White;
+            btnLimpiarForm.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            btnLimpiarForm.IconColor = Color.White;
+            btnLimpiarForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnLimpiarForm.IconSize = 20;
+            btnLimpiarForm.Location = new Point(29, 366);
+            btnLimpiarForm.Name = "btnLimpiarForm";
+            btnLimpiarForm.Size = new Size(94, 29);
+            btnLimpiarForm.TabIndex = 19;
+            btnLimpiarForm.Text = "Limpiar";
+            btnLimpiarForm.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnLimpiarForm.UseMnemonic = false;
+            btnLimpiarForm.UseVisualStyleBackColor = false;
             // 
             // dgvData
             // 
             dgvData.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvData.Columns.AddRange(new DataGridViewColumn[] { btnSeleccionar, Id, Descripcion, EstadoValor, Estado });
             dgvData.Location = new Point(292, 94);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvData.RowHeadersWidth = 51;
             dgvData.RowTemplate.Height = 28;
             dgvData.Size = new Size(945, 641);
@@ -247,17 +247,17 @@
             Estado.ReadOnly = true;
             Estado.Width = 125;
             // 
-            // label9
+            // lblListaCategorias
             // 
-            label9.BackColor = Color.White;
-            label9.BorderStyle = BorderStyle.FixedSingle;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(292, 35);
-            label9.Name = "label9";
-            label9.Padding = new Padding(8);
-            label9.Size = new Size(945, 49);
-            label9.TabIndex = 21;
-            label9.Text = "Lista Categorias:";
+            lblListaCategorias.BackColor = Color.White;
+            lblListaCategorias.BorderStyle = BorderStyle.FixedSingle;
+            lblListaCategorias.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblListaCategorias.Location = new Point(292, 35);
+            lblListaCategorias.Name = "lblListaCategorias";
+            lblListaCategorias.Padding = new Padding(8);
+            lblListaCategorias.Size = new Size(945, 49);
+            lblListaCategorias.TabIndex = 21;
+            lblListaCategorias.Text = "Lista Categorias:";
             // 
             // txtId
             // 
@@ -360,16 +360,16 @@
             iconPictureBox1.TabIndex = 30;
             iconPictureBox1.TabStop = false;
             // 
-            // label11
+            // lblDetalle2
             // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.White;
-            label11.Font = new Font("Segoe UI", 13.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(64, 28);
-            label11.Name = "label11";
-            label11.Size = new Size(92, 30);
-            label11.TabIndex = 31;
-            label11.Text = "Detalle ";
+            lblDetalle2.AutoSize = true;
+            lblDetalle2.BackColor = Color.White;
+            lblDetalle2.Font = new Font("Segoe UI", 13.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDetalle2.Location = new Point(64, 28);
+            lblDetalle2.Name = "lblDetalle2";
+            lblDetalle2.Size = new Size(92, 30);
+            lblDetalle2.TabIndex = 31;
+            lblDetalle2.Text = "Detalle ";
             // 
             // iconButton1
             // 
@@ -391,16 +391,16 @@
             txtIndice.TabIndex = 33;
             txtIndice.Text = "-1";
             // 
-            // label2
+            // lblCategoria
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Font = new Font("Segoe UI", 13.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(65, 53);
-            label2.Name = "label2";
-            label2.Size = new Size(114, 30);
-            label2.TabIndex = 34;
-            label2.Text = "Categoría";
+            lblCategoria.AutoSize = true;
+            lblCategoria.BackColor = Color.White;
+            lblCategoria.Font = new Font("Segoe UI", 13.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCategoria.Location = new Point(65, 53);
+            lblCategoria.Name = "lblCategoria";
+            lblCategoria.Size = new Size(114, 30);
+            lblCategoria.TabIndex = 34;
+            lblCategoria.Text = "Categoría";
             // 
             // frmCategoria
             // 
@@ -408,10 +408,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1570, 694);
-            Controls.Add(label2);
+            Controls.Add(lblCategoria);
             Controls.Add(txtIndice);
             Controls.Add(iconButton1);
-            Controls.Add(label11);
+            Controls.Add(lblDetalle2);
             Controls.Add(iconPictureBox1);
             Controls.Add(btnLimpiar);
             Controls.Add(btnBusqueda);
@@ -419,15 +419,15 @@
             Controls.Add(cbBusqueda);
             Controls.Add(lblBuscar);
             Controls.Add(txtId);
-            Controls.Add(label9);
+            Controls.Add(lblListaCategorias);
             Controls.Add(dgvData);
-            Controls.Add(btnLimpiarF);
+            Controls.Add(btnLimpiarForm);
             Controls.Add(btnGuardar);
             Controls.Add(btnEliminar);
             Controls.Add(cbEstado);
-            Controls.Add(label8);
+            Controls.Add(lblEstado);
             Controls.Add(txtDescripcion);
-            Controls.Add(label5);
+            Controls.Add(lblDescripcion);
             Controls.Add(label1);
             Name = "frmCategoria";
             Text = "frmUsuario";
@@ -441,10 +441,10 @@
         #endregion
 
         private Label label1;
-        private Label label2;
+        private Label lblCategoria;
         private Label label3;
         private Label label4;
-        private Label label5;
+        private Label lblDescripcion;
         private TextBox txtNroDoc;
         private TextBox txtDescripcion;
         private TextBox txtEmail;
@@ -454,12 +454,12 @@
         private Label label6;
         private ComboBox cbRol;
         private ComboBox cbEstado;
-        private Label label8;
+        private Label lblEstado;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnGuardar;
-        private FontAwesome.Sharp.IconButton btnLimpiarF;
+        private FontAwesome.Sharp.IconButton btnLimpiarForm;
         private DataGridView dgvData;
-        private Label label9;
+        private Label lblListaCategorias;
         private TextBox txtId;
         private ContextMenuStrip contextMenuStrip1;
         private Label lblBuscar;
@@ -471,7 +471,7 @@
         private Label label10;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private Label label11;
+        private Label lblDetalle2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private TextBox txtIndice;
         private DataGridViewButtonColumn btnSeleccionar;

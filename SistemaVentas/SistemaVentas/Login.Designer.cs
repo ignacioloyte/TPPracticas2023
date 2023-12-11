@@ -39,6 +39,9 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             pictureBox1 = new PictureBox();
             lbltitulo2 = new Label();
+            cbIdioma = new ComboBox();
+            btnSeleccionarIdioma = new FontAwesome.Sharp.IconButton();
+            lblIdioma = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -49,41 +52,39 @@
             label1.Dock = DockStyle.Left;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(167, 244);
+            label1.Size = new Size(191, 325);
             label1.TabIndex = 0;
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(187, 69);
-            txtUsuario.Margin = new Padding(3, 2, 3, 2);
+            txtUsuario.Location = new Point(214, 92);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(225, 23);
+            txtUsuario.Size = new Size(257, 27);
             txtUsuario.TabIndex = 3;
             // 
             // txtClave
             // 
-            txtClave.Location = new Point(187, 116);
-            txtClave.Margin = new Padding(3, 2, 3, 2);
+            txtClave.Location = new Point(214, 155);
             txtClave.Name = "txtClave";
             txtClave.PasswordChar = '*';
-            txtClave.Size = new Size(225, 23);
+            txtClave.Size = new Size(257, 27);
             txtClave.TabIndex = 4;
             // 
             // lblUsuario
             // 
             lblUsuario.AutoSize = true;
-            lblUsuario.Location = new Point(187, 52);
+            lblUsuario.Location = new Point(214, 69);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(47, 15);
+            lblUsuario.Size = new Size(59, 20);
             lblUsuario.TabIndex = 5;
             lblUsuario.Text = "Usuario";
             // 
             // lblContraseña
             // 
             lblContraseña.AutoSize = true;
-            lblContraseña.Location = new Point(187, 99);
+            lblContraseña.Location = new Point(214, 132);
             lblContraseña.Name = "lblContraseña";
-            lblContraseña.Size = new Size(67, 15);
+            lblContraseña.Size = new Size(83, 20);
             lblContraseña.TabIndex = 6;
             lblContraseña.Text = "Contraseña";
             // 
@@ -98,10 +99,10 @@
             btnIngresar.IconColor = Color.White;
             btnIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnIngresar.IconSize = 20;
-            btnIngresar.Location = new Point(187, 150);
-            btnIngresar.Margin = new Padding(2);
+            btnIngresar.Location = new Point(214, 200);
+            btnIngresar.Margin = new Padding(2, 3, 2, 3);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(94, 28);
+            btnIngresar.Size = new Size(107, 37);
             btnIngresar.TabIndex = 7;
             btnIngresar.Text = "Ingresar";
             btnIngresar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -119,10 +120,10 @@
             btnCancelar.IconColor = Color.White;
             btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCancelar.IconSize = 20;
-            btnCancelar.Location = new Point(297, 150);
-            btnCancelar.Margin = new Padding(2);
+            btnCancelar.Location = new Point(339, 200);
+            btnCancelar.Margin = new Padding(2, 3, 2, 3);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(94, 28);
+            btnCancelar.Size = new Size(107, 37);
             btnCancelar.TabIndex = 8;
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -135,9 +136,9 @@
             lbltitulo.BackColor = Color.DarkOrange;
             lbltitulo.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lbltitulo.ForeColor = Color.Snow;
-            lbltitulo.Location = new Point(12, 69);
+            lbltitulo.Location = new Point(14, 92);
             lbltitulo.Name = "lbltitulo";
-            lbltitulo.Size = new Size(121, 20);
+            lbltitulo.Size = new Size(153, 25);
             lbltitulo.TabIndex = 9;
             lbltitulo.Text = "Ingreso Sistema";
             // 
@@ -147,20 +148,20 @@
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Store;
             iconPictureBox1.IconColor = Color.White;
             iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 47;
-            iconPictureBox1.Location = new Point(12, 20);
-            iconPictureBox1.Margin = new Padding(3, 2, 3, 2);
+            iconPictureBox1.IconSize = 63;
+            iconPictureBox1.Location = new Point(14, 27);
             iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(58, 47);
+            iconPictureBox1.Size = new Size(66, 63);
             iconPictureBox1.TabIndex = 2;
             iconPictureBox1.TabStop = false;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.ferre_dni_1;
-            pictureBox1.Location = new Point(345, 6);
+            pictureBox1.Location = new Point(394, 8);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.Size = new Size(114, 67);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
@@ -171,18 +172,62 @@
             lbltitulo2.BackColor = Color.DarkOrange;
             lbltitulo2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lbltitulo2.ForeColor = Color.Snow;
-            lbltitulo2.Location = new Point(12, 89);
+            lbltitulo2.Location = new Point(14, 119);
             lbltitulo2.Name = "lbltitulo2";
-            lbltitulo2.Size = new Size(76, 20);
+            lbltitulo2.Size = new Size(96, 25);
             lbltitulo2.TabIndex = 11;
             lbltitulo2.Text = "de ventas";
             // 
+            // cbIdioma
+            // 
+            cbIdioma.FormattingEnabled = true;
+            cbIdioma.Location = new Point(16, 235);
+            cbIdioma.Name = "cbIdioma";
+            cbIdioma.Size = new Size(151, 28);
+            cbIdioma.TabIndex = 12;
+            // 
+            // btnSeleccionarIdioma
+            // 
+            btnSeleccionarIdioma.BackColor = Color.DarkOrange;
+            btnSeleccionarIdioma.Cursor = Cursors.Hand;
+            btnSeleccionarIdioma.FlatStyle = FlatStyle.Flat;
+            btnSeleccionarIdioma.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSeleccionarIdioma.ForeColor = Color.White;
+            btnSeleccionarIdioma.IconChar = FontAwesome.Sharp.IconChar.Check;
+            btnSeleccionarIdioma.IconColor = Color.White;
+            btnSeleccionarIdioma.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnSeleccionarIdioma.IconSize = 20;
+            btnSeleccionarIdioma.Location = new Point(16, 269);
+            btnSeleccionarIdioma.Margin = new Padding(2, 3, 2, 3);
+            btnSeleccionarIdioma.Name = "btnSeleccionarIdioma";
+            btnSeleccionarIdioma.Size = new Size(151, 31);
+            btnSeleccionarIdioma.TabIndex = 13;
+            btnSeleccionarIdioma.Text = "Seleccionar";
+            btnSeleccionarIdioma.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnSeleccionarIdioma.UseVisualStyleBackColor = false;
+            btnSeleccionarIdioma.Click += btnSeleccionarIdioma_Click;
+            // 
+            // lblIdioma
+            // 
+            lblIdioma.AutoSize = true;
+            lblIdioma.BackColor = Color.DarkOrange;
+            lblIdioma.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblIdioma.ForeColor = SystemColors.ButtonHighlight;
+            lblIdioma.Location = new Point(21, 208);
+            lblIdioma.Name = "lblIdioma";
+            lblIdioma.Size = new Size(56, 20);
+            lblIdioma.TabIndex = 14;
+            lblIdioma.Text = "Idioma";
+            // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(456, 244);
+            ClientSize = new Size(521, 325);
+            Controls.Add(lblIdioma);
+            Controls.Add(btnSeleccionarIdioma);
+            Controls.Add(cbIdioma);
             Controls.Add(lbltitulo2);
             Controls.Add(pictureBox1);
             Controls.Add(lbltitulo);
@@ -195,7 +240,6 @@
             Controls.Add(iconPictureBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
@@ -219,7 +263,8 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private PictureBox pictureBox1;
         private Label lbltitulo2;
-
-
+        private ComboBox cbIdioma;
+        private FontAwesome.Sharp.IconButton btnSeleccionarIdioma;
+        private Label lblIdioma;
     }
 }

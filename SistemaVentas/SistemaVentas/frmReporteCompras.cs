@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using CapaPresentacion.Utilidades;
 using DocumentFormat.OpenXml.Wordprocessing;
 using ClosedXML.Excel;
+using CapaPresentacion.Idioma;
 
 namespace CapaPresentacion
 {
@@ -28,8 +29,22 @@ namespace CapaPresentacion
 
         }
 
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CapaPresentacion.Properties.Settings.Default.Idioma);
+            lblReporteCompra.Text = Textos.lblReporteCompra;
+            lblFechaInicio.Text = Textos.lblFechaInicio;
+            lblFechaFin.Text = Textos.lblFechaFin;
+            btnBuscarS.Text = Textos.btnBuscarS;
+            btnExcel.Text = Textos.btnExcel;
+            lblBuscar.Text = Textos.lblBuscar;
+
+        }
+
+
         private void frmReporteCompras_Load(object sender, EventArgs e)
         {
+            CargarIdioma();
 
             List<Proveedor> lista = new CN_Proveedor().Listar();
             cbProveedor.Items.Add(new OpcionCombo() { Valor = 0, Texto = "TODOS" });

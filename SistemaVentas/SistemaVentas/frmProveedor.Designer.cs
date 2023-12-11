@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            lblNroDoc = new Label();
+            lblEmail = new Label();
+            lblTelefono = new Label();
             txtDocumento = new TextBox();
             txtEmail = new TextBox();
             txtTelefono = new TextBox();
             label7 = new Label();
             cbEstado = new ComboBox();
-            label8 = new Label();
+            lblEstado = new Label();
             btnEliminar = new FontAwesome.Sharp.IconButton();
             btnGuardar = new FontAwesome.Sharp.IconButton();
             btnLimpiarForm = new FontAwesome.Sharp.IconButton();
@@ -52,7 +52,7 @@
             Telefono = new DataGridViewTextBoxColumn();
             EstadoValor = new DataGridViewTextBoxColumn();
             Estado = new DataGridViewTextBoxColumn();
-            label9 = new Label();
+            lblListaProveedores = new Label();
             txtId = new TextBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
             lblBuscar = new Label();
@@ -61,10 +61,10 @@
             btnBusqueda = new FontAwesome.Sharp.IconButton();
             btnLimpiar = new FontAwesome.Sharp.IconButton();
             txtRazonSocial = new TextBox();
-            label10 = new Label();
+            lblRazonSocial = new Label();
             iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            label11 = new Label();
+            lblProveedor = new Label();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             txtIndice = new TextBox();
             label1 = new Label();
@@ -72,35 +72,35 @@
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // label2
+            // lblNroDoc
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Location = new Point(18, 174);
-            label2.Name = "label2";
-            label2.Size = new Size(122, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Nro. Documento:";
+            lblNroDoc.AutoSize = true;
+            lblNroDoc.BackColor = Color.White;
+            lblNroDoc.Location = new Point(18, 174);
+            lblNroDoc.Name = "lblNroDoc";
+            lblNroDoc.Size = new Size(122, 20);
+            lblNroDoc.TabIndex = 1;
+            lblNroDoc.Text = "Nro. Documento:";
             // 
-            // label3
+            // lblEmail
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.White;
-            label3.Location = new Point(21, 298);
-            label3.Name = "label3";
-            label3.Size = new Size(49, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Email:";
+            lblEmail.AutoSize = true;
+            lblEmail.BackColor = Color.White;
+            lblEmail.Location = new Point(21, 298);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(49, 20);
+            lblEmail.TabIndex = 2;
+            lblEmail.Text = "Email:";
             // 
-            // label4
+            // lblTelefono
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.White;
-            label4.Location = new Point(24, 355);
-            label4.Name = "label4";
-            label4.Size = new Size(70, 20);
-            label4.TabIndex = 3;
-            label4.Text = "Telefono:";
+            lblTelefono.AutoSize = true;
+            lblTelefono.BackColor = Color.White;
+            lblTelefono.Location = new Point(24, 355);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(70, 20);
+            lblTelefono.TabIndex = 3;
+            lblTelefono.Text = "Telefono:";
             // 
             // txtDocumento
             // 
@@ -141,15 +141,15 @@
             cbEstado.Size = new Size(194, 28);
             cbEstado.TabIndex = 16;
             // 
-            // label8
+            // lblEstado
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.White;
-            label8.Location = new Point(26, 426);
-            label8.Name = "label8";
-            label8.Size = new Size(57, 20);
-            label8.TabIndex = 15;
-            label8.Text = "Estado:";
+            lblEstado.AutoSize = true;
+            lblEstado.BackColor = Color.White;
+            lblEstado.Location = new Point(26, 426);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(57, 20);
+            lblEstado.TabIndex = 15;
+            lblEstado.Text = "Estado:";
             // 
             // btnEliminar
             // 
@@ -215,29 +215,29 @@
             // dgvData
             // 
             dgvData.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvData.Columns.AddRange(new DataGridViewColumn[] { btnSeleccionar, Id, Documento, RazonSocial, Email, Telefono, EstadoValor, Estado });
             dgvData.Location = new Point(292, 94);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvData.RowHeadersWidth = 51;
             dgvData.RowTemplate.Height = 28;
             dgvData.Size = new Size(945, 641);
@@ -312,17 +312,17 @@
             Estado.ReadOnly = true;
             Estado.Width = 125;
             // 
-            // label9
+            // lblListaProveedores
             // 
-            label9.BackColor = Color.White;
-            label9.BorderStyle = BorderStyle.FixedSingle;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(292, 35);
-            label9.Name = "label9";
-            label9.Padding = new Padding(8);
-            label9.Size = new Size(945, 49);
-            label9.TabIndex = 21;
-            label9.Text = "Lista Proveedores:";
+            lblListaProveedores.BackColor = Color.White;
+            lblListaProveedores.BorderStyle = BorderStyle.FixedSingle;
+            lblListaProveedores.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblListaProveedores.Location = new Point(292, 35);
+            lblListaProveedores.Name = "lblListaProveedores";
+            lblListaProveedores.Padding = new Padding(8);
+            lblListaProveedores.Size = new Size(945, 49);
+            lblListaProveedores.TabIndex = 21;
+            lblListaProveedores.Text = "Lista Proveedores:";
             // 
             // txtId
             // 
@@ -407,15 +407,15 @@
             txtRazonSocial.Size = new Size(201, 27);
             txtRazonSocial.TabIndex = 29;
             // 
-            // label10
+            // lblRazonSocial
             // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.White;
-            label10.Location = new Point(18, 235);
-            label10.Name = "label10";
-            label10.Size = new Size(97, 20);
-            label10.TabIndex = 28;
-            label10.Text = "Razón Social:";
+            lblRazonSocial.AutoSize = true;
+            lblRazonSocial.BackColor = Color.White;
+            lblRazonSocial.Location = new Point(18, 235);
+            lblRazonSocial.Name = "lblRazonSocial";
+            lblRazonSocial.Size = new Size(97, 20);
+            lblRazonSocial.TabIndex = 28;
+            lblRazonSocial.Text = "Razón Social:";
             // 
             // iconMenuItem1
             // 
@@ -442,16 +442,16 @@
             iconPictureBox1.TabIndex = 30;
             iconPictureBox1.TabStop = false;
             // 
-            // label11
+            // lblProveedor
             // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.White;
-            label11.Font = new Font("Segoe UI", 14.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(64, 28);
-            label11.Name = "label11";
-            label11.Size = new Size(133, 32);
-            label11.TabIndex = 31;
-            label11.Text = "Proveedor";
+            lblProveedor.AutoSize = true;
+            lblProveedor.BackColor = Color.White;
+            lblProveedor.Font = new Font("Segoe UI", 14.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblProveedor.Location = new Point(64, 28);
+            lblProveedor.Name = "lblProveedor";
+            lblProveedor.Size = new Size(133, 32);
+            lblProveedor.TabIndex = 31;
+            lblProveedor.Text = "Proveedor";
             // 
             // iconButton1
             // 
@@ -493,30 +493,30 @@
             ClientSize = new Size(1570, 694);
             Controls.Add(txtIndice);
             Controls.Add(iconButton1);
-            Controls.Add(label11);
+            Controls.Add(lblProveedor);
             Controls.Add(iconPictureBox1);
             Controls.Add(txtRazonSocial);
-            Controls.Add(label10);
+            Controls.Add(lblRazonSocial);
             Controls.Add(btnLimpiar);
             Controls.Add(btnBusqueda);
             Controls.Add(txtBusqueda);
             Controls.Add(cbBusqueda);
             Controls.Add(lblBuscar);
             Controls.Add(txtId);
-            Controls.Add(label9);
+            Controls.Add(lblListaProveedores);
             Controls.Add(dgvData);
             Controls.Add(btnLimpiarForm);
             Controls.Add(btnGuardar);
             Controls.Add(btnEliminar);
             Controls.Add(cbEstado);
-            Controls.Add(label8);
+            Controls.Add(lblEstado);
             Controls.Add(label7);
             Controls.Add(txtTelefono);
             Controls.Add(txtEmail);
             Controls.Add(txtDocumento);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(lblTelefono);
+            Controls.Add(lblEmail);
+            Controls.Add(lblNroDoc);
             Controls.Add(label1);
             Name = "frmProveedor";
             Text = "frmUsuario";
@@ -528,9 +528,9 @@
         }
 
         #endregion
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private Label lblNroDoc;
+        private Label lblEmail;
+        private Label lblTelefono;
         private Label label5;
         private TextBox txtDocumento;
         private TextBox txtCliente;
@@ -541,12 +541,12 @@
         private Label label6;
         private ComboBox cbRol;
         private ComboBox cbEstado;
-        private Label label8;
+        private Label lblEstado;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnGuardar;
         private FontAwesome.Sharp.IconButton btnLimpiarForm;
         private DataGridView dgvData;
-        private Label label9;
+        private Label lblListaProveedores;
         private TextBox txtId;
         private ContextMenuStrip contextMenuStrip1;
         private Label lblBuscar;
@@ -555,14 +555,14 @@
         private FontAwesome.Sharp.IconButton btnBusqueda;
         private FontAwesome.Sharp.IconButton btnLimpiar;
         private TextBox txtRazonSocial;
-        private Label label10;
+        private Label lblRazonSocial;
         private DataGridViewTextBoxColumn NombreUsuario;
         private DataGridViewTextBoxColumn Clave;
         private DataGridViewTextBoxColumn IdRol;
         private DataGridViewTextBoxColumn Rol;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private Label label11;
+        private Label lblProveedor;
         private FontAwesome.Sharp.IconButton iconButton1;
         private TextBox txtIndice;
         private Label label1;

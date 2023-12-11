@@ -1,5 +1,6 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
+using CapaPresentacion.Idioma;
 using CapaPresentacion.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -20,8 +21,26 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        public void CargarIdioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CapaPresentacion.Properties.Settings.Default.Idioma);
+            lblClientes.Text = Textos.lblClientes;
+            lblNroDoc.Text = Textos.lblNroDoc;
+            lblNombreCliente.Text = Textos.lblNombreCliente;
+            lblEmail.Text = Textos.lblEmail;
+            lblTelefono.Text = Textos.lblTelefono;
+            lblEstado.Text = Textos.lblEstado;
+            btnGuardar.Text = Textos.btnGuardar;
+            btnLimpiarForm.Text = Textos.btnLimpiarForm;
+            btnEliminar.Text = Textos.btnEliminar;
+            lblListaClientes.Text = Textos.lblListaClientes;
+            lblBuscar.Text = Textos.lblBuscar;
+        }
+
+
         private void frmCliente_Load(object sender, EventArgs e)
         {
+            CargarIdioma();
             //Para darle los valores al ComboBox del estado
             cbEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
             cbEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No Activo" });
