@@ -159,6 +159,18 @@ namespace SistemaVentas
         {
             AbrirFormulario(MenuVentas, new frmDetalleVenta());
         }
+
+        private void SubMenuReporteVentas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(MenuReportes, new frmReporteVentas());
+        }
+
+        private void SubMenuReporteCompras_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(MenuReportes, new frmReporteCompras());
+        }
+
+
         // Menu reportes
 
         //Menu configuración

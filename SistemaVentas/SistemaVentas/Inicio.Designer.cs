@@ -44,6 +44,8 @@ namespace SistemaVentas
             MenuClientes = new FontAwesome.Sharp.IconMenuItem();
             MenuProveedores = new FontAwesome.Sharp.IconMenuItem();
             MenuReportes = new FontAwesome.Sharp.IconMenuItem();
+            SubMenuReporteCompras = new ToolStripMenuItem();
+            SubMenuReporteVentas = new ToolStripMenuItem();
             MenuConfiguracion = new FontAwesome.Sharp.IconMenuItem();
             subCategoria = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
@@ -107,7 +109,7 @@ namespace SistemaVentas
             btnRegistrarVenta.IconColor = Color.Black;
             btnRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnRegistrarVenta.Name = "btnRegistrarVenta";
-            btnRegistrarVenta.Size = new Size(224, 26);
+            btnRegistrarVenta.Size = new Size(192, 26);
             btnRegistrarVenta.Text = "Registrar Venta";
             btnRegistrarVenta.Click += btnRegistrarVenta_Click;
             // 
@@ -117,7 +119,7 @@ namespace SistemaVentas
             btnVerDetalleVenta.IconColor = Color.Black;
             btnVerDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnVerDetalleVenta.Name = "btnVerDetalleVenta";
-            btnVerDetalleVenta.Size = new Size(224, 26);
+            btnVerDetalleVenta.Size = new Size(192, 26);
             btnVerDetalleVenta.Text = "Ver Detalle";
             btnVerDetalleVenta.Click += btnVerDetalleVenta_Click;
             // 
@@ -186,6 +188,7 @@ namespace SistemaVentas
             // MenuReportes
             // 
             MenuReportes.AutoSize = false;
+            MenuReportes.DropDownItems.AddRange(new ToolStripItem[] { SubMenuReporteCompras, SubMenuReporteVentas });
             MenuReportes.IconChar = FontAwesome.Sharp.IconChar.BarChart;
             MenuReportes.IconColor = Color.Black;
             MenuReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -195,6 +198,20 @@ namespace SistemaVentas
             MenuReportes.Size = new Size(100, 64);
             MenuReportes.Text = "Reportes";
             MenuReportes.TextImageRelation = TextImageRelation.ImageAboveText;
+            // 
+            // SubMenuReporteCompras
+            // 
+            SubMenuReporteCompras.Name = "SubMenuReporteCompras";
+            SubMenuReporteCompras.Size = new Size(224, 26);
+            SubMenuReporteCompras.Text = "Reporte Compras";
+            SubMenuReporteCompras.Click += SubMenuReporteCompras_Click;
+            // 
+            // SubMenuReporteVentas
+            // 
+            SubMenuReporteVentas.Name = "SubMenuReporteVentas";
+            SubMenuReporteVentas.Size = new Size(224, 26);
+            SubMenuReporteVentas.Text = "Reporte Ventas";
+            SubMenuReporteVentas.Click += SubMenuReporteVentas_Click;
             // 
             // MenuConfiguracion
             // 
@@ -386,5 +403,7 @@ namespace SistemaVentas
         private FontAwesome.Sharp.IconMenuItem btnVerDetalleCompra;
         private FontAwesome.Sharp.IconMenuItem MenuMantenedor;
         private ToolStripMenuItem subNegocio;
+        private ToolStripMenuItem SubMenuReporteCompras;
+        private ToolStripMenuItem SubMenuReporteVentas;
     }
 }
