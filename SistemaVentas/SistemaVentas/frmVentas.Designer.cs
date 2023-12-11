@@ -92,6 +92,7 @@
             btnCrearVenta.Text = "Crear Venta";
             btnCrearVenta.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCrearVenta.UseVisualStyleBackColor = true;
+            btnCrearVenta.Click += btnCrearVenta_Click;
             // 
             // txtTotalPagar
             // 

@@ -154,6 +154,11 @@ namespace SistemaVentas
         {
             AbrirFormulario(MenuVentas, new frmVentas(usuarioActual));
         }
+
+        private void btnVerDetalleVenta_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(MenuVentas, new frmDetalleVenta());
+        }
         // Menu reportes
 
         //Menu configuración

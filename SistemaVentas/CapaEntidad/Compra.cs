@@ -19,9 +19,7 @@ namespace CapaEntidad
             public DateTime FechaCreacion { get; set; }
 
             public List<DetalleCompra> oDetalleCompra { get; set; }
-
-
-
+        
     }
     
 }

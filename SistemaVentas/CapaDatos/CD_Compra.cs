@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
-using CapaEntidad;
 using System.Reflection;
 using System.Linq.Expressions;
 
