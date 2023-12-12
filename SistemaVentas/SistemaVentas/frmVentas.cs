@@ -30,7 +30,7 @@ namespace CapaPresentacion
         {
             _Usuario = oUsuario;
             InitializeComponent();
-        } 
+        }
         public void CargarIdioma()
         {
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(CapaPresentacion.Properties.Settings.Default.Idioma);

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             btnCrearVenta = new FontAwesome.Sharp.IconButton();
             txtTotalPagar = new TextBox();
             btnAgregar = new FontAwesome.Sharp.IconButton();
@@ -71,6 +71,7 @@
             lblPagaCon = new Label();
             txtCambio = new TextBox();
             lblCambio = new Label();
+            btnAyuda = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtCantidad).BeginInit();
             gbInfo.SuspendLayout();
@@ -131,15 +132,15 @@
             // 
             dgvData.AllowUserToAddRows = false;
             dgvData.BackgroundColor = Color.White;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvData.Columns.AddRange(new DataGridViewColumn[] { IdProducto, Producto, Precio, Cantidad, Subtotal, btnEliminar });
             dgvData.GridColor = Color.White;
@@ -147,14 +148,14 @@
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvData.RowHeadersWidth = 51;
             dgvData.RowTemplate.Height = 28;
             dgvData.Size = new Size(807, 341);
@@ -519,11 +520,27 @@
             lblCambio.TabIndex = 50;
             lblCambio.Text = "Cambio:";
             // 
+            // btnAyuda
+            // 
+            btnAyuda.BackColor = Color.White;
+            btnAyuda.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
+            btnAyuda.ForeColor = SystemColors.ControlLightLight;
+            btnAyuda.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            btnAyuda.IconColor = Color.DarkOrange;
+            btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAyuda.IconSize = 38;
+            btnAyuda.Location = new Point(931, 31);
+            btnAyuda.Name = "btnAyuda";
+            btnAyuda.Size = new Size(52, 38);
+            btnAyuda.TabIndex = 52;
+            btnAyuda.UseVisualStyleBackColor = false;
+            // 
             // frmVentas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1102, 1189);
+            Controls.Add(btnAyuda);
             Controls.Add(txtCambio);
             Controls.Add(lblCambio);
             Controls.Add(txtPagaCon);
@@ -597,5 +614,6 @@
         private Label lblPagaCon;
         private TextBox txtCambio;
         private Label lblCambio;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

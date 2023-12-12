@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             lblNroDoc = new Label();
             lblEmail = new Label();
@@ -76,6 +76,7 @@
             lblUsuarios = new Label();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             txtIndice = new TextBox();
+            btnAyuda = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
@@ -283,32 +284,32 @@
             // 
             dgvData.AllowUserToAddRows = false;
             dgvData.BackgroundColor = Color.White;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvData.Columns.AddRange(new DataGridViewColumn[] { btnSeleccionar, Id, NombreUsuario, Documento, NombreCompleto, Email, Clave, IdRol, Rol, EstadoValor, Estado });
-            dgvData.Location = new Point(293, 93);
+            dgvData.Location = new Point(293, 113);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvData.RowHeadersWidth = 51;
             dgvData.RowTemplate.Height = 28;
-            dgvData.Size = new Size(945, 641);
+            dgvData.Size = new Size(945, 621);
             dgvData.TabIndex = 20;
             dgvData.CellContentClick += dgvData_CellContentClick;
             dgvData.CellFormatting += dgvData_CellFormatting;
@@ -412,10 +413,10 @@
             lblTituloUsuario.BackColor = Color.White;
             lblTituloUsuario.BorderStyle = BorderStyle.FixedSingle;
             lblTituloUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTituloUsuario.Location = new Point(293, 35);
+            lblTituloUsuario.Location = new Point(293, 9);
             lblTituloUsuario.Name = "lblTituloUsuario";
             lblTituloUsuario.Padding = new Padding(8);
-            lblTituloUsuario.Size = new Size(945, 49);
+            lblTituloUsuario.Size = new Size(945, 101);
             lblTituloUsuario.TabIndex = 21;
             lblTituloUsuario.Text = "Lista Usuario:";
             // 
@@ -437,7 +438,7 @@
             // 
             lblBuscar.AutoSize = true;
             lblBuscar.BackColor = Color.White;
-            lblBuscar.Location = new Point(624, 51);
+            lblBuscar.Location = new Point(624, 77);
             lblBuscar.Name = "lblBuscar";
             lblBuscar.Size = new Size(82, 20);
             lblBuscar.TabIndex = 23;
@@ -447,14 +448,14 @@
             // 
             cbBusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
             cbBusqueda.FormattingEnabled = true;
-            cbBusqueda.Location = new Point(712, 47);
+            cbBusqueda.Location = new Point(712, 73);
             cbBusqueda.Name = "cbBusqueda";
             cbBusqueda.Size = new Size(196, 28);
             cbBusqueda.TabIndex = 24;
             // 
             // txtBusqueda
             // 
-            txtBusqueda.Location = new Point(914, 47);
+            txtBusqueda.Location = new Point(914, 73);
             txtBusqueda.Name = "txtBusqueda";
             txtBusqueda.Size = new Size(201, 27);
             txtBusqueda.TabIndex = 25;
@@ -470,7 +471,7 @@
             btnBusqueda.IconColor = Color.Black;
             btnBusqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnBusqueda.IconSize = 27;
-            btnBusqueda.Location = new Point(1121, 45);
+            btnBusqueda.Location = new Point(1121, 71);
             btnBusqueda.Name = "btnBusqueda";
             btnBusqueda.Size = new Size(49, 29);
             btnBusqueda.TabIndex = 26;
@@ -488,7 +489,7 @@
             btnLimpiar.IconColor = Color.Black;
             btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnLimpiar.IconSize = 27;
-            btnLimpiar.Location = new Point(1177, 45);
+            btnLimpiar.Location = new Point(1177, 71);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(43, 29);
             btnLimpiar.TabIndex = 27;
@@ -569,12 +570,28 @@
             txtIndice.Text = "-1";
             txtIndice.TextChanged += txtIndice_TextChanged;
             // 
+            // btnAyuda
+            // 
+            btnAyuda.BackColor = Color.White;
+            btnAyuda.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
+            btnAyuda.ForeColor = SystemColors.ControlLightLight;
+            btnAyuda.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            btnAyuda.IconColor = Color.DarkOrange;
+            btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAyuda.IconSize = 38;
+            btnAyuda.Location = new Point(1177, 22);
+            btnAyuda.Name = "btnAyuda";
+            btnAyuda.Size = new Size(43, 38);
+            btnAyuda.TabIndex = 53;
+            btnAyuda.UseVisualStyleBackColor = false;
+            // 
             // frmUsuario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1570, 693);
+            Controls.Add(btnAyuda);
             Controls.Add(txtIndice);
             Controls.Add(iconButton1);
             Controls.Add(lblUsuarios);
@@ -663,5 +680,6 @@
         private Label lblUsuarios;
         private FontAwesome.Sharp.IconButton iconButton1;
         private TextBox txtIndice;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

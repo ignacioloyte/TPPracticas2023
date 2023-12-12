@@ -51,6 +51,7 @@ namespace SistemaVentas
             btnProductos = new FontAwesome.Sharp.IconMenuItem();
             MenuMantenedor = new FontAwesome.Sharp.IconMenuItem();
             btnNegocio = new ToolStripMenuItem();
+            btnBackup = new ToolStripMenuItem();
             MenuAcercaDe = new FontAwesome.Sharp.IconMenuItem();
             MenuTitulo = new MenuStrip();
             Contenedor = new Panel();
@@ -60,7 +61,6 @@ namespace SistemaVentas
             iconButton1 = new FontAwesome.Sharp.IconButton();
             lblUsuario = new Label();
             txtNUsuario = new Label();
-            btnBackup = new ToolStripMenuItem();
             Menu.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -73,7 +73,7 @@ namespace SistemaVentas
             Menu.Location = new Point(0, 52);
             Menu.Name = "Menu";
             Menu.Padding = new Padding(6, 3, 0, 3);
-            Menu.Size = new Size(922, 70);
+            Menu.Size = new Size(1072, 70);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
             // 
@@ -268,9 +268,15 @@ namespace SistemaVentas
             // btnNegocio
             // 
             btnNegocio.Name = "btnNegocio";
-            btnNegocio.Size = new Size(224, 26);
+            btnNegocio.Size = new Size(149, 26);
             btnNegocio.Text = "Negocio";
             btnNegocio.Click += subNegocio_Click;
+            // 
+            // btnBackup
+            // 
+            btnBackup.Name = "btnBackup";
+            btnBackup.Size = new Size(149, 26);
+            btnBackup.Text = "Backup";
             // 
             // MenuAcercaDe
             // 
@@ -376,12 +382,6 @@ namespace SistemaVentas
             txtNUsuario.Size = new Size(82, 25);
             txtNUsuario.TabIndex = 2;
             txtNUsuario.Text = "Usuario:";
-            // 
-            // btnBackup
-            // 
-            btnBackup.Name = "btnBackup";
-            btnBackup.Size = new Size(224, 26);
-            btnBackup.Text = "Backup";
             // 
             // Inicio
             // 

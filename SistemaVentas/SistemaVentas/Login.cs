@@ -17,6 +17,7 @@ using CapaPresentacion.Modales;
 using System.Threading;
 using CapaPresentacion.Properties;
 
+
 namespace CapaPresentacion
 {
     public partial class Login : Form
@@ -53,6 +54,9 @@ namespace CapaPresentacion
             CargarIdioma();
             LlenarIdiomaComboBox();
         }
+
+        
+
 
 
         private void btnCancelar_Click(object sender, EventArgs e)
