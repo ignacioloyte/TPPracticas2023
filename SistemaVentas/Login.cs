@@ -79,11 +79,12 @@ namespace CapaPresentacion
                 // Le pasamos el usuario que usamos en la consulta de la linea 35
                 Inicio form = new Inicio(ousuario);
 
-                string connectionString = Conexion.cadena;
-                CN_Log Log = new CN_Log(connectionString);
 
-                // Ejemplo de registro de una acción
-                Log.LogAction(txtUsuario.Text, "Login", "Autentificado correctamente");
+
+
+                // Registro Login OK en Bitacora
+                CN_Log Log = new CN_Log();
+                Log.LogAction(Convert.ToString(ousuario.IdUsuario), "Login", "Autentificado correctamente");
 
 
                 form.Show();
@@ -95,6 +96,12 @@ namespace CapaPresentacion
             else
             {
                 MessageBox.Show("No se encontro el usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                // Registro Login Fallido en Bitacora
+                CN_Log Log = new CN_Log();
+                Log.LogAction(txtUsuario.Text, "Login Fallido", "No se ha podido autentificar");
+
+
             }
         }
         //Evento para que al cerrarse el form de inicio se abra el login
@@ -112,6 +119,7 @@ namespace CapaPresentacion
         {
             Settings.Default.Idioma = cbIdioma.SelectedValue.ToString();
             CargarIdioma();
+          
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)

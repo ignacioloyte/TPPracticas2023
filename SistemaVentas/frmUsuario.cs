@@ -129,6 +129,11 @@ namespace CapaPresentacion
 
                 if (idusuariogenerado != 0)
                 {
+                    // Registro Crear Usuario
+
+                    CN_Log Log = new CN_Log();
+                    Log.LogAction(Convert.ToString(objusuario.IdUsuario), "Se ha creado el usuario", txtId.Text);
+
 
                     dgvData.Rows.Add(new object[] { "",
                         txtId.Text,
@@ -160,6 +165,11 @@ namespace CapaPresentacion
                 bool resultado = new CN_Usuario().Editar(objusuario, out mensaje);
                 if (resultado)
                 {
+                    // Registro Editar Usuario
+
+                    CN_Log Log = new CN_Log();
+                    Log.LogAction(Convert.ToString(objusuario.IdUsuario), "Se ha editado el usuario", txtId.Text);
+
                     DataGridViewRow row = dgvData.Rows[Convert.ToInt32(txtIndice.Text)];
                     row.Cells["Id"].Value = txtId.Text;
                     row.Cells["NombreUsuario"].Value = txtNUsuario.Text;
@@ -302,6 +312,11 @@ namespace CapaPresentacion
                     if (respuesta)
                     {
                         dgvData.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+                        // Registro Eliminar Usuario
+
+                        CN_Log Log = new CN_Log();
+                        Log.LogAction(Convert.ToString(objusuario.IdUsuario), "Se ha eliminado el usuario", txtId.Text);
+
                         Limpiar();
                     }
                     else

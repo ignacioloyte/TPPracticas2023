@@ -13,13 +13,11 @@ namespace CapaNegocio
     {
         private LogData logData;
 
-        public CN_Log(string connectionString)
-        {
-            logData = new LogData(connectionString);
-        }
 
         public void LogAction(string user, string action, string details)
         {
+
+            logData = new LogData(Conexion.cadena);
             LogEntry logEntry = new LogEntry
             {
                 Timestamp = DateTime.Now,

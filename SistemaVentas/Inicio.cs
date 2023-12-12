@@ -225,6 +225,16 @@ namespace SistemaVentas
             AbrirFormulario(MenuMantenedor, new frmBackUp());
         }
 
+        private void MenuTitulo_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void txtNUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         // Menu reportes
 

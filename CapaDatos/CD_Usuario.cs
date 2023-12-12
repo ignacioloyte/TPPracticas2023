@@ -21,15 +21,15 @@ namespace CapaDatos
 
             using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
             {
-                
+
                 try
                 {
 
                     StringBuilder query = new StringBuilder();
                     query.AppendLine("select u.IdUsuario, u.NUsuario, u.NroDocumento, u.NombreCompleto, u.Email, u.FechaAlta, u.FechaBaja, u.Clave, u.Estado, r.IdRol, r.Descripcion ");
                     query.AppendLine("from Usuario u inner join rol r on r.IdRol = u.IdRol");
-                        
-                        
+
+
                     //Conectamos a la base de datos
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.CommandType = CommandType.Text;
@@ -53,13 +53,14 @@ namespace CapaDatos
                                 FechaBaja = dr["FechaBaja"] != DBNull.Value ? Convert.ToDateTime(dr["FechaBaja"]) : (DateTime?)null,
                                 Clave = dr["Clave"].ToString(),
                                 Estado = Convert.ToBoolean(dr["Estado"]),
-                                oRol = new Rol() { IdRol = Convert.ToInt32(dr["IdRol"]), Descripcion  = dr["Descripcion"].ToString() }
-                            
+                                oRol = new Rol() { IdRol = Convert.ToInt32(dr["IdRol"]), Descripcion = dr["Descripcion"].ToString() }
+
                             });
                         }
                     }
 
-                }catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     throw;
                 }
@@ -73,7 +74,7 @@ namespace CapaDatos
         public int Registrar(Usuario obj, out string Mensaje)
         {
             int idUsuarioGenerado = 0;
-            Mensaje =string.Empty;
+            Mensaje = string.Empty;
 
 
             try
@@ -93,7 +94,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdRol", obj.oRol.IdRol);
                     cmd.Parameters.AddWithValue("Estado", obj.Estado);
                     cmd.Parameters.Add("IdUsuarioResultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     oconexion.Open();
@@ -142,7 +143,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdRol", obj.oRol.IdRol);
                     cmd.Parameters.AddWithValue("Estado", obj.Estado);
                     cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     oconexion.Open();
@@ -157,7 +158,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                Respuesta = false; 
+                Respuesta = false;
                 Mensaje = ex.Message;
             }
 
@@ -182,7 +183,7 @@ namespace CapaDatos
                     SqlCommand cmd = new SqlCommand("SP_ELIMINARUSUARIO", oconexion);
                     cmd.Parameters.AddWithValue("IdUsuario", obj.IdUsuario);
                     cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     oconexion.Open();
