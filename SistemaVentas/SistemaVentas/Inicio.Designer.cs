@@ -268,15 +268,16 @@ namespace SistemaVentas
             // btnNegocio
             // 
             btnNegocio.Name = "btnNegocio";
-            btnNegocio.Size = new Size(149, 26);
+            btnNegocio.Size = new Size(224, 26);
             btnNegocio.Text = "Negocio";
             btnNegocio.Click += subNegocio_Click;
             // 
             // btnBackup
             // 
             btnBackup.Name = "btnBackup";
-            btnBackup.Size = new Size(149, 26);
+            btnBackup.Size = new Size(224, 26);
             btnBackup.Text = "Backup";
+            btnBackup.Click += btnBackup_Click;
             // 
             // MenuAcercaDe
             // 

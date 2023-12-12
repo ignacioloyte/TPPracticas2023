@@ -26,7 +26,7 @@ namespace CapaDatos
                 {
 
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("select u.IdUsuario, u.NUsuario, u.NroDocumento, u.NombreCompleto, u.Email, u.Clave, u.Estado, r.IdRol, r.Descripcion ");
+                    query.AppendLine("select u.IdUsuario, u.NUsuario, u.NroDocumento, u.NombreCompleto, u.Email, u.FechaAlta, u.FechaBaja, u.Clave, u.Estado, r.IdRol, r.Descripcion ");
                     query.AppendLine("from Usuario u inner join rol r on r.IdRol = u.IdRol");
                         
                         
@@ -49,6 +49,8 @@ namespace CapaDatos
                                 Documento = dr["NroDocumento"].ToString(),
                                 NombreCompleto = dr["NombreCompleto"].ToString(),
                                 Email = dr["Email"] != DBNull.Value ? dr["Email"].ToString() : null,
+                                FechaAlta = Convert.ToDateTime(dr["FechaAlta"]),
+                                FechaBaja = dr["FechaBaja"] != DBNull.Value ? Convert.ToDateTime(dr["FechaBaja"]) : (DateTime?)null,
                                 Clave = dr["Clave"].ToString(),
                                 Estado = Convert.ToBoolean(dr["Estado"]),
                                 oRol = new Rol() { IdRol = Convert.ToInt32(dr["IdRol"]), Descripcion  = dr["Descripcion"].ToString() }
@@ -85,6 +87,8 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("NroDocumento", obj.Documento);
                     cmd.Parameters.AddWithValue("NombreCompleto", obj.NombreCompleto);
                     cmd.Parameters.AddWithValue("Email", obj.Email);
+                    cmd.Parameters.AddWithValue("FechaAlta", obj.FechaAlta);
+                    cmd.Parameters.AddWithValue("FechaBaja", obj.FechaBaja);
                     cmd.Parameters.AddWithValue("Clave", obj.Clave);
                     cmd.Parameters.AddWithValue("IdRol", obj.oRol.IdRol);
                     cmd.Parameters.AddWithValue("Estado", obj.Estado);
@@ -132,6 +136,8 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("NroDocumento", obj.Documento);
                     cmd.Parameters.AddWithValue("NombreCompleto", obj.NombreCompleto);
                     cmd.Parameters.AddWithValue("Email", obj.Email);
+                    cmd.Parameters.AddWithValue("FechaAlta", obj.FechaAlta);
+                    cmd.Parameters.AddWithValue("FechaBaja", obj.FechaBaja);
                     cmd.Parameters.AddWithValue("Clave", obj.Clave);
                     cmd.Parameters.AddWithValue("IdRol", obj.oRol.IdRol);
                     cmd.Parameters.AddWithValue("Estado", obj.Estado);

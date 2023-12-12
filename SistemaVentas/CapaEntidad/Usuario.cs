@@ -16,7 +16,7 @@ namespace CapaEntidad
         public string Email { get; set; }
         public string Clave { get; set; }
         public DateTime FechaAlta { get; set; }
-        public DateTime FechaBaja { get; set; }
+        public DateTime? FechaBaja { get; set; }
         public Rol oRol { get; set; }
         public bool Estado {  get; set; }
     }

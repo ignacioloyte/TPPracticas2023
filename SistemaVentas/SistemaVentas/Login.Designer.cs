@@ -43,6 +43,8 @@
             btnSeleccionarIdioma = new FontAwesome.Sharp.IconButton();
             lblIdioma = new Label();
             btnAyuda = new FontAwesome.Sharp.IconButton();
+            btnRegistrarUsuario = new Button();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -53,28 +55,28 @@
             label1.Dock = DockStyle.Left;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(191, 325);
+            label1.Size = new Size(191, 375);
             label1.TabIndex = 0;
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(218, 162);
+            txtUsuario.Location = new Point(218, 135);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(257, 27);
+            txtUsuario.Size = new Size(374, 27);
             txtUsuario.TabIndex = 3;
             // 
             // txtClave
             // 
-            txtClave.Location = new Point(218, 225);
+            txtClave.Location = new Point(218, 198);
             txtClave.Name = "txtClave";
             txtClave.PasswordChar = '*';
-            txtClave.Size = new Size(257, 27);
+            txtClave.Size = new Size(374, 27);
             txtClave.TabIndex = 4;
             // 
             // lblUsuario
             // 
             lblUsuario.AutoSize = true;
-            lblUsuario.Location = new Point(218, 139);
+            lblUsuario.Location = new Point(218, 112);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(59, 20);
             lblUsuario.TabIndex = 5;
@@ -83,7 +85,7 @@
             // lblContraseña
             // 
             lblContraseña.AutoSize = true;
-            lblContraseña.Location = new Point(218, 202);
+            lblContraseña.Location = new Point(218, 175);
             lblContraseña.Name = "lblContraseña";
             lblContraseña.Size = new Size(83, 20);
             lblContraseña.TabIndex = 6;
@@ -100,7 +102,7 @@
             btnIngresar.IconColor = Color.White;
             btnIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnIngresar.IconSize = 25;
-            btnIngresar.Location = new Point(218, 270);
+            btnIngresar.Location = new Point(291, 244);
             btnIngresar.Margin = new Padding(2, 3, 2, 3);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(107, 37);
@@ -121,7 +123,7 @@
             btnCancelar.IconColor = Color.White;
             btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCancelar.IconSize = 25;
-            btnCancelar.Location = new Point(335, 270);
+            btnCancelar.Location = new Point(411, 244);
             btnCancelar.Margin = new Padding(2, 3, 2, 3);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(107, 37);
@@ -229,18 +231,46 @@
             btnAyuda.IconColor = Color.DarkOrange;
             btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAyuda.IconSize = 38;
-            btnAyuda.Location = new Point(456, 269);
+            btnAyuda.Location = new Point(561, 325);
             btnAyuda.Name = "btnAyuda";
             btnAyuda.Size = new Size(52, 38);
             btnAyuda.TabIndex = 15;
             btnAyuda.UseVisualStyleBackColor = false;
+            btnAyuda.Click += btnAyuda_Click;
+            // 
+            // btnRegistrarUsuario
+            // 
+            btnRegistrarUsuario.Location = new Point(302, 330);
+            btnRegistrarUsuario.Name = "btnRegistrarUsuario";
+            btnRegistrarUsuario.Size = new Size(94, 29);
+            btnRegistrarUsuario.TabIndex = 16;
+            btnRegistrarUsuario.Text = "Registrar Usuario";
+            btnRegistrarUsuario.UseVisualStyleBackColor = true;
+            // 
+            // iconButton1
+            // 
+            iconButton1.BackColor = Color.FromArgb(255, 128, 0);
+            iconButton1.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
+            iconButton1.FlatStyle = FlatStyle.Popup;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            iconButton1.IconColor = Color.Snow;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 30;
+            iconButton1.Location = new Point(561, 13);
+            iconButton1.Margin = new Padding(3, 4, 3, 4);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Size = new Size(52, 43);
+            iconButton1.TabIndex = 17;
+            iconButton1.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(521, 325);
+            ClientSize = new Size(625, 375);
+            Controls.Add(iconButton1);
+            Controls.Add(btnRegistrarUsuario);
             Controls.Add(btnAyuda);
             Controls.Add(lblIdioma);
             Controls.Add(btnSeleccionarIdioma);
@@ -284,5 +314,7 @@
         private FontAwesome.Sharp.IconButton btnSeleccionarIdioma;
         private Label lblIdioma;
         private FontAwesome.Sharp.IconButton btnAyuda;
+        private Button btnRegistrarUsuario;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

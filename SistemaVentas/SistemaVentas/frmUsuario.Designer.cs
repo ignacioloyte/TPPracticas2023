@@ -50,17 +50,6 @@
             btnGuardar = new FontAwesome.Sharp.IconButton();
             btnLimpiarForm = new FontAwesome.Sharp.IconButton();
             dgvData = new DataGridView();
-            btnSeleccionar = new DataGridViewButtonColumn();
-            Id = new DataGridViewTextBoxColumn();
-            NombreUsuario = new DataGridViewTextBoxColumn();
-            Documento = new DataGridViewTextBoxColumn();
-            NombreCompleto = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
-            Clave = new DataGridViewTextBoxColumn();
-            IdRol = new DataGridViewTextBoxColumn();
-            Rol = new DataGridViewTextBoxColumn();
-            EstadoValor = new DataGridViewTextBoxColumn();
-            Estado = new DataGridViewTextBoxColumn();
             lblTituloUsuario = new Label();
             txtId = new TextBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
@@ -74,9 +63,25 @@
             iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             lblUsuarios = new Label();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
             txtIndice = new TextBox();
             btnAyuda = new FontAwesome.Sharp.IconButton();
+            dtInicio = new DateTimePicker();
+            lblFechaAlta = new Label();
+            lblFechaBaja = new Label();
+            txtFechaBaja = new TextBox();
+            btnSeleccionar = new DataGridViewButtonColumn();
+            Id = new DataGridViewTextBoxColumn();
+            NombreUsuario = new DataGridViewTextBoxColumn();
+            Documento = new DataGridViewTextBoxColumn();
+            NombreCompleto = new DataGridViewTextBoxColumn();
+            Email = new DataGridViewTextBoxColumn();
+            Clave = new DataGridViewTextBoxColumn();
+            IdRol = new DataGridViewTextBoxColumn();
+            FechaAlta = new DataGridViewTextBoxColumn();
+            FechaBAja = new DataGridViewTextBoxColumn();
+            Rol = new DataGridViewTextBoxColumn();
+            EstadoValor = new DataGridViewTextBoxColumn();
+            Estado = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
@@ -89,7 +94,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(271, 693);
+            label1.Size = new Size(271, 799);
             label1.TabIndex = 0;
             label1.Text = "label1";
             // 
@@ -184,7 +189,7 @@
             // 
             lblRol.AutoSize = true;
             lblRol.BackColor = Color.White;
-            lblRol.Location = new Point(27, 475);
+            lblRol.Location = new Point(27, 590);
             lblRol.Name = "lblRol";
             lblRol.Size = new Size(34, 20);
             lblRol.TabIndex = 13;
@@ -194,7 +199,7 @@
             // 
             cbRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cbRol.FormattingEnabled = true;
-            cbRol.Location = new Point(29, 497);
+            cbRol.Location = new Point(29, 612);
             cbRol.Name = "cbRol";
             cbRol.Size = new Size(196, 28);
             cbRol.TabIndex = 14;
@@ -203,7 +208,7 @@
             // 
             cbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
             cbEstado.FormattingEnabled = true;
-            cbEstado.Location = new Point(31, 557);
+            cbEstado.Location = new Point(31, 672);
             cbEstado.Name = "cbEstado";
             cbEstado.Size = new Size(194, 28);
             cbEstado.TabIndex = 16;
@@ -212,7 +217,7 @@
             // 
             lblEstado.AutoSize = true;
             lblEstado.BackColor = Color.White;
-            lblEstado.Location = new Point(31, 533);
+            lblEstado.Location = new Point(31, 648);
             lblEstado.Name = "lblEstado";
             lblEstado.Size = new Size(57, 20);
             lblEstado.TabIndex = 15;
@@ -230,7 +235,7 @@
             btnEliminar.IconColor = Color.White;
             btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnEliminar.IconSize = 20;
-            btnEliminar.Location = new Point(133, 640);
+            btnEliminar.Location = new Point(133, 755);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(94, 29);
             btnEliminar.TabIndex = 17;
@@ -250,7 +255,7 @@
             btnGuardar.IconColor = Color.White;
             btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnGuardar.IconSize = 20;
-            btnGuardar.Location = new Point(31, 605);
+            btnGuardar.Location = new Point(31, 720);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(197, 29);
             btnGuardar.TabIndex = 18;
@@ -270,7 +275,7 @@
             btnLimpiarForm.IconColor = Color.White;
             btnLimpiarForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnLimpiarForm.IconSize = 20;
-            btnLimpiarForm.Location = new Point(33, 640);
+            btnLimpiarForm.Location = new Point(33, 755);
             btnLimpiarForm.Name = "btnLimpiarForm";
             btnLimpiarForm.Size = new Size(94, 29);
             btnLimpiarForm.TabIndex = 19;
@@ -294,7 +299,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Columns.AddRange(new DataGridViewColumn[] { btnSeleccionar, Id, NombreUsuario, Documento, NombreCompleto, Email, Clave, IdRol, Rol, EstadoValor, Estado });
+            dgvData.Columns.AddRange(new DataGridViewColumn[] { btnSeleccionar, Id, NombreUsuario, Documento, NombreCompleto, Email, Clave, IdRol, FechaAlta, FechaBAja, Rol, EstadoValor, Estado });
             dgvData.Location = new Point(293, 113);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
@@ -309,11 +314,217 @@
             dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvData.RowHeadersWidth = 51;
             dgvData.RowTemplate.Height = 28;
-            dgvData.Size = new Size(945, 621);
+            dgvData.Size = new Size(1205, 674);
             dgvData.TabIndex = 20;
             dgvData.CellContentClick += dgvData_CellContentClick;
             dgvData.CellFormatting += dgvData_CellFormatting;
             dgvData.CellPainting += dgvData_CellPainting;
+            // 
+            // lblTituloUsuario
+            // 
+            lblTituloUsuario.BackColor = Color.White;
+            lblTituloUsuario.BorderStyle = BorderStyle.FixedSingle;
+            lblTituloUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTituloUsuario.Location = new Point(293, 9);
+            lblTituloUsuario.Name = "lblTituloUsuario";
+            lblTituloUsuario.Padding = new Padding(8);
+            lblTituloUsuario.Size = new Size(1205, 101);
+            lblTituloUsuario.TabIndex = 21;
+            lblTituloUsuario.Text = "Lista Usuario:";
+            // 
+            // txtId
+            // 
+            txtId.Location = new Point(183, 83);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(41, 27);
+            txtId.TabIndex = 22;
+            txtId.Text = "0";
+            txtId.Visible = false;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // lblBuscar
+            // 
+            lblBuscar.AutoSize = true;
+            lblBuscar.BackColor = Color.White;
+            lblBuscar.Location = new Point(706, 71);
+            lblBuscar.Name = "lblBuscar";
+            lblBuscar.Size = new Size(82, 20);
+            lblBuscar.TabIndex = 23;
+            lblBuscar.Text = "Buscar por:";
+            // 
+            // cbBusqueda
+            // 
+            cbBusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbBusqueda.FormattingEnabled = true;
+            cbBusqueda.Location = new Point(794, 67);
+            cbBusqueda.Name = "cbBusqueda";
+            cbBusqueda.Size = new Size(254, 28);
+            cbBusqueda.TabIndex = 24;
+            // 
+            // txtBusqueda
+            // 
+            txtBusqueda.Location = new Point(1061, 68);
+            txtBusqueda.Name = "txtBusqueda";
+            txtBusqueda.Size = new Size(319, 27);
+            txtBusqueda.TabIndex = 25;
+            // 
+            // btnBusqueda
+            // 
+            btnBusqueda.BackColor = Color.White;
+            btnBusqueda.Cursor = Cursors.Hand;
+            btnBusqueda.FlatAppearance.BorderColor = Color.Black;
+            btnBusqueda.FlatStyle = FlatStyle.Flat;
+            btnBusqueda.ForeColor = Color.White;
+            btnBusqueda.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            btnBusqueda.IconColor = Color.Black;
+            btnBusqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnBusqueda.IconSize = 27;
+            btnBusqueda.Location = new Point(1386, 66);
+            btnBusqueda.Name = "btnBusqueda";
+            btnBusqueda.Size = new Size(49, 29);
+            btnBusqueda.TabIndex = 26;
+            btnBusqueda.UseVisualStyleBackColor = false;
+            btnBusqueda.Click += btnBusqueda_Click;
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.BackColor = Color.White;
+            btnLimpiar.Cursor = Cursors.Hand;
+            btnLimpiar.FlatAppearance.BorderColor = Color.Black;
+            btnLimpiar.FlatStyle = FlatStyle.Flat;
+            btnLimpiar.ForeColor = Color.White;
+            btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            btnLimpiar.IconColor = Color.Black;
+            btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnLimpiar.IconSize = 27;
+            btnLimpiar.Location = new Point(1442, 66);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(43, 29);
+            btnLimpiar.TabIndex = 27;
+            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
+            // 
+            // txtNombreCompleto
+            // 
+            txtNombreCompleto.Location = new Point(22, 259);
+            txtNombreCompleto.Name = "txtNombreCompleto";
+            txtNombreCompleto.Size = new Size(201, 27);
+            txtNombreCompleto.TabIndex = 29;
+            // 
+            // lblNombreCliente
+            // 
+            lblNombreCliente.AutoSize = true;
+            lblNombreCliente.BackColor = Color.White;
+            lblNombreCliente.Location = new Point(18, 235);
+            lblNombreCliente.Name = "lblNombreCliente";
+            lblNombreCliente.Size = new Size(135, 20);
+            lblNombreCliente.TabIndex = 28;
+            lblNombreCliente.Text = "Nombre completo:";
+            // 
+            // iconMenuItem1
+            // 
+            iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconMenuItem1.IconColor = Color.Black;
+            iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMenuItem1.Name = "iconMenuItem1";
+            iconMenuItem1.Size = new Size(32, 19);
+            iconMenuItem1.Text = "iconMenuItem1";
+            // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.BackColor = Color.White;
+            iconPictureBox1.BackgroundImageLayout = ImageLayout.None;
+            iconPictureBox1.Cursor = Cursors.Cross;
+            iconPictureBox1.ForeColor = Color.DarkOrange;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Users;
+            iconPictureBox1.IconColor = Color.DarkOrange;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.IconSize = 40;
+            iconPictureBox1.Location = new Point(21, 23);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(40, 40);
+            iconPictureBox1.TabIndex = 30;
+            iconPictureBox1.TabStop = false;
+            // 
+            // lblUsuarios
+            // 
+            lblUsuarios.AutoSize = true;
+            lblUsuarios.BackColor = Color.White;
+            lblUsuarios.Font = new Font("Segoe UI", 14.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblUsuarios.Location = new Point(64, 28);
+            lblUsuarios.Name = "lblUsuarios";
+            lblUsuarios.Size = new Size(113, 32);
+            lblUsuarios.TabIndex = 31;
+            lblUsuarios.Text = "Usuarios";
+            // 
+            // txtIndice
+            // 
+            txtIndice.Location = new Point(133, 83);
+            txtIndice.Name = "txtIndice";
+            txtIndice.Size = new Size(41, 27);
+            txtIndice.TabIndex = 33;
+            txtIndice.Text = "-1";
+            txtIndice.Visible = false;
+            txtIndice.TextChanged += txtIndice_TextChanged;
+            // 
+            // btnAyuda
+            // 
+            btnAyuda.BackColor = Color.White;
+            btnAyuda.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
+            btnAyuda.ForeColor = SystemColors.ControlLightLight;
+            btnAyuda.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            btnAyuda.IconColor = Color.DarkOrange;
+            btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAyuda.IconSize = 38;
+            btnAyuda.Location = new Point(1442, 22);
+            btnAyuda.Name = "btnAyuda";
+            btnAyuda.Size = new Size(43, 38);
+            btnAyuda.TabIndex = 53;
+            btnAyuda.UseVisualStyleBackColor = false;
+            // 
+            // dtInicio
+            // 
+            dtInicio.CustomFormat = "dd/MM/yyyy";
+            dtInicio.Enabled = false;
+            dtInicio.Format = DateTimePickerFormat.Short;
+            dtInicio.Location = new Point(27, 498);
+            dtInicio.Margin = new Padding(3, 4, 3, 4);
+            dtInicio.Name = "dtInicio";
+            dtInicio.Size = new Size(201, 27);
+            dtInicio.TabIndex = 54;
+            dtInicio.Value = new DateTime(2023, 12, 12, 8, 45, 38, 0);
+            // 
+            // lblFechaAlta
+            // 
+            lblFechaAlta.AutoSize = true;
+            lblFechaAlta.BackColor = Color.White;
+            lblFechaAlta.Location = new Point(27, 474);
+            lblFechaAlta.Name = "lblFechaAlta";
+            lblFechaAlta.Size = new Size(81, 20);
+            lblFechaAlta.TabIndex = 55;
+            lblFechaAlta.Text = "Fecha Alta:";
+            // 
+            // lblFechaBaja
+            // 
+            lblFechaBaja.AutoSize = true;
+            lblFechaBaja.BackColor = Color.White;
+            lblFechaBaja.Location = new Point(29, 535);
+            lblFechaBaja.Name = "lblFechaBaja";
+            lblFechaBaja.Size = new Size(83, 20);
+            lblFechaBaja.TabIndex = 57;
+            lblFechaBaja.Text = "Fecha Baja:";
+            // 
+            // txtFechaBaja
+            // 
+            txtFechaBaja.Location = new Point(29, 558);
+            txtFechaBaja.Name = "txtFechaBaja";
+            txtFechaBaja.Size = new Size(199, 27);
+            txtFechaBaja.TabIndex = 58;
             // 
             // btnSeleccionar
             // 
@@ -383,6 +594,22 @@
             IdRol.Visible = false;
             IdRol.Width = 125;
             // 
+            // FechaAlta
+            // 
+            FechaAlta.HeaderText = "Fecha Alta";
+            FechaAlta.MinimumWidth = 6;
+            FechaAlta.Name = "FechaAlta";
+            FechaAlta.ReadOnly = true;
+            FechaAlta.Width = 125;
+            // 
+            // FechaBAja
+            // 
+            FechaBAja.HeaderText = "FechaBaja";
+            FechaBAja.MinimumWidth = 6;
+            FechaBAja.Name = "FechaBAja";
+            FechaBAja.ReadOnly = true;
+            FechaBAja.Width = 125;
+            // 
             // Rol
             // 
             Rol.HeaderText = "Rol";
@@ -408,192 +635,18 @@
             Estado.ReadOnly = true;
             Estado.Width = 125;
             // 
-            // lblTituloUsuario
-            // 
-            lblTituloUsuario.BackColor = Color.White;
-            lblTituloUsuario.BorderStyle = BorderStyle.FixedSingle;
-            lblTituloUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTituloUsuario.Location = new Point(293, 9);
-            lblTituloUsuario.Name = "lblTituloUsuario";
-            lblTituloUsuario.Padding = new Padding(8);
-            lblTituloUsuario.Size = new Size(945, 101);
-            lblTituloUsuario.TabIndex = 21;
-            lblTituloUsuario.Text = "Lista Usuario:";
-            // 
-            // txtId
-            // 
-            txtId.Location = new Point(183, 83);
-            txtId.Name = "txtId";
-            txtId.Size = new Size(41, 27);
-            txtId.TabIndex = 22;
-            txtId.Text = "0";
-            // 
-            // contextMenuStrip1
-            // 
-            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
-            // 
-            // lblBuscar
-            // 
-            lblBuscar.AutoSize = true;
-            lblBuscar.BackColor = Color.White;
-            lblBuscar.Location = new Point(624, 77);
-            lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(82, 20);
-            lblBuscar.TabIndex = 23;
-            lblBuscar.Text = "Buscar por:";
-            // 
-            // cbBusqueda
-            // 
-            cbBusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbBusqueda.FormattingEnabled = true;
-            cbBusqueda.Location = new Point(712, 73);
-            cbBusqueda.Name = "cbBusqueda";
-            cbBusqueda.Size = new Size(196, 28);
-            cbBusqueda.TabIndex = 24;
-            // 
-            // txtBusqueda
-            // 
-            txtBusqueda.Location = new Point(914, 73);
-            txtBusqueda.Name = "txtBusqueda";
-            txtBusqueda.Size = new Size(201, 27);
-            txtBusqueda.TabIndex = 25;
-            // 
-            // btnBusqueda
-            // 
-            btnBusqueda.BackColor = Color.White;
-            btnBusqueda.Cursor = Cursors.Hand;
-            btnBusqueda.FlatAppearance.BorderColor = Color.Black;
-            btnBusqueda.FlatStyle = FlatStyle.Flat;
-            btnBusqueda.ForeColor = Color.White;
-            btnBusqueda.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            btnBusqueda.IconColor = Color.Black;
-            btnBusqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnBusqueda.IconSize = 27;
-            btnBusqueda.Location = new Point(1121, 71);
-            btnBusqueda.Name = "btnBusqueda";
-            btnBusqueda.Size = new Size(49, 29);
-            btnBusqueda.TabIndex = 26;
-            btnBusqueda.UseVisualStyleBackColor = false;
-            btnBusqueda.Click += btnBusqueda_Click;
-            // 
-            // btnLimpiar
-            // 
-            btnLimpiar.BackColor = Color.White;
-            btnLimpiar.Cursor = Cursors.Hand;
-            btnLimpiar.FlatAppearance.BorderColor = Color.Black;
-            btnLimpiar.FlatStyle = FlatStyle.Flat;
-            btnLimpiar.ForeColor = Color.White;
-            btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            btnLimpiar.IconColor = Color.Black;
-            btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnLimpiar.IconSize = 27;
-            btnLimpiar.Location = new Point(1177, 71);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(43, 29);
-            btnLimpiar.TabIndex = 27;
-            btnLimpiar.UseVisualStyleBackColor = false;
-            btnLimpiar.Click += btnLimpiar_Click;
-            // 
-            // txtNombreCompleto
-            // 
-            txtNombreCompleto.Location = new Point(22, 259);
-            txtNombreCompleto.Name = "txtNombreCompleto";
-            txtNombreCompleto.Size = new Size(201, 27);
-            txtNombreCompleto.TabIndex = 29;
-            // 
-            // lblNombreCliente
-            // 
-            lblNombreCliente.AutoSize = true;
-            lblNombreCliente.BackColor = Color.White;
-            lblNombreCliente.Location = new Point(18, 235);
-            lblNombreCliente.Name = "lblNombreCliente";
-            lblNombreCliente.Size = new Size(135, 20);
-            lblNombreCliente.TabIndex = 28;
-            lblNombreCliente.Text = "Nombre completo:";
-            // 
-            // iconMenuItem1
-            // 
-            iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconMenuItem1.IconColor = Color.Black;
-            iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem1.Name = "iconMenuItem1";
-            iconMenuItem1.Size = new Size(32, 19);
-            iconMenuItem1.Text = "iconMenuItem1";
-            // 
-            // iconPictureBox1
-            // 
-            iconPictureBox1.BackColor = Color.White;
-            iconPictureBox1.BackgroundImageLayout = ImageLayout.None;
-            iconPictureBox1.Cursor = Cursors.Cross;
-            iconPictureBox1.ForeColor = Color.DarkOrange;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Users;
-            iconPictureBox1.IconColor = Color.DarkOrange;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 40;
-            iconPictureBox1.Location = new Point(21, 23);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(40, 40);
-            iconPictureBox1.TabIndex = 30;
-            iconPictureBox1.TabStop = false;
-            // 
-            // lblUsuarios
-            // 
-            lblUsuarios.AutoSize = true;
-            lblUsuarios.BackColor = Color.White;
-            lblUsuarios.Font = new Font("Segoe UI", 14.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lblUsuarios.Location = new Point(64, 28);
-            lblUsuarios.Name = "lblUsuarios";
-            lblUsuarios.Size = new Size(113, 32);
-            lblUsuarios.TabIndex = 31;
-            lblUsuarios.Text = "Usuarios";
-            // 
-            // iconButton1
-            // 
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(381, 753);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(94, 29);
-            iconButton1.TabIndex = 32;
-            iconButton1.Text = "iconButton1";
-            iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // txtIndice
-            // 
-            txtIndice.Location = new Point(133, 83);
-            txtIndice.Name = "txtIndice";
-            txtIndice.Size = new Size(41, 27);
-            txtIndice.TabIndex = 33;
-            txtIndice.Text = "-1";
-            txtIndice.TextChanged += txtIndice_TextChanged;
-            // 
-            // btnAyuda
-            // 
-            btnAyuda.BackColor = Color.White;
-            btnAyuda.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
-            btnAyuda.ForeColor = SystemColors.ControlLightLight;
-            btnAyuda.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
-            btnAyuda.IconColor = Color.DarkOrange;
-            btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnAyuda.IconSize = 38;
-            btnAyuda.Location = new Point(1177, 22);
-            btnAyuda.Name = "btnAyuda";
-            btnAyuda.Size = new Size(43, 38);
-            btnAyuda.TabIndex = 53;
-            btnAyuda.UseVisualStyleBackColor = false;
-            // 
             // frmUsuario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1570, 693);
+            ClientSize = new Size(1570, 799);
+            Controls.Add(txtFechaBaja);
+            Controls.Add(lblFechaBaja);
+            Controls.Add(lblFechaAlta);
+            Controls.Add(dtInicio);
             Controls.Add(btnAyuda);
             Controls.Add(txtIndice);
-            Controls.Add(iconButton1);
             Controls.Add(lblUsuarios);
             Controls.Add(iconPictureBox1);
             Controls.Add(txtNombreCompleto);
@@ -664,6 +717,15 @@
         private FontAwesome.Sharp.IconButton btnLimpiar;
         private TextBox txtNombreCompleto;
         private Label lblNombreCliente;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Label lblUsuarios;
+        private TextBox txtIndice;
+        private FontAwesome.Sharp.IconButton btnAyuda;
+        private DateTimePicker dtInicio;
+        private Label lblFechaAlta;
+        private Label lblFechaBaja;
+        private TextBox txtFechaBaja;
         private DataGridViewButtonColumn btnSeleccionar;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn NombreUsuario;
@@ -672,14 +734,10 @@
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn Clave;
         private DataGridViewTextBoxColumn IdRol;
+        private DataGridViewTextBoxColumn FechaAlta;
+        private DataGridViewTextBoxColumn FechaBAja;
         private DataGridViewTextBoxColumn Rol;
         private DataGridViewTextBoxColumn EstadoValor;
         private DataGridViewTextBoxColumn Estado;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private Label lblUsuarios;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private TextBox txtIndice;
-        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

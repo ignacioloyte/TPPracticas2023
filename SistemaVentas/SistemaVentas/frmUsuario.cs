@@ -14,14 +14,17 @@ using CapaDatos;
 using CapaPresentacion.Idioma;
 using CapaPresentacion.Modales;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System.Globalization;
 
 namespace CapaPresentacion
 {
     public partial class frmUsuario : Form
     {
+
         public frmUsuario()
         {
             InitializeComponent();
+
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -102,6 +105,8 @@ namespace CapaPresentacion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string mensaje = string.Empty;
+            // Crear una instancia de la clase externa que contiene Encriptacion
+            Encriptado encriptador = new Encriptado();
 
             Usuario objusuario = new Usuario()
             {
@@ -110,7 +115,9 @@ namespace CapaPresentacion
                 Documento = txtNroDoc.Text,
                 NombreCompleto = txtNombreCompleto.Text,
                 Email = txtEmail.Text,
-                Clave = txtClave.Text,
+                Clave = encriptador.Encrypt(txtClave.Text),
+                FechaAlta = dtInicio.Value,
+                FechaBaja = string.IsNullOrEmpty(txtFechaBaja.Text) ? (DateTime?)null : DateTime.ParseExact(txtFechaBaja.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                 oRol = new Rol() { IdRol = Convert.ToInt32(((OpcionCombo)cbRol.SelectedItem).Valor) },
                 Estado = Convert.ToInt32(((OpcionCombo)cbEstado.SelectedItem).Valor) == 1 ? true : false
             };
@@ -127,9 +134,12 @@ namespace CapaPresentacion
                         txtId.Text,
                         txtNUsuario.Text,
                         txtNroDoc.Text,
+                        txtNombreCompleto.Text,
                         txtEmail.Text,
-                        txtClave.Text,
-                        txtConfClave.Text,
+                        dtInicio,
+                        txtFechaBaja,
+                        //"********", //Clave encriptada
+                        //"********", //ConfCalave encriptada
                         ((OpcionCombo)cbRol.SelectedItem).Valor.ToString(),
                         ((OpcionCombo)cbRol.SelectedItem).Texto.ToString(),
                         ((OpcionCombo)cbEstado.SelectedItem).Valor.ToString(),
@@ -156,6 +166,8 @@ namespace CapaPresentacion
                     row.Cells["Documento"].Value = txtNroDoc.Text;
                     row.Cells["NombreCompleto"].Value = txtNombreCompleto.Text;
                     row.Cells["Email"].Value = txtEmail.Text;
+                    row.Cells["FechaAlta"].Value = dtInicio.Value;
+                    row.Cells["FechaBaja"].Value = txtFechaBaja.Text;
                     row.Cells["Clave"].Value = txtClave.Text;
                     row.Cells["IdRol"].Value = ((OpcionCombo)cbRol.SelectedItem).Valor.ToString();
                     row.Cells["Rol"].Value = ((OpcionCombo)cbRol.SelectedItem).Texto.ToString();
@@ -187,6 +199,8 @@ namespace CapaPresentacion
             txtEmail.Text = "";
             txtClave.Text = "";
             txtConfClave.Text = "";
+            dtInicio.Value = DateTime.Now;
+            txtFechaBaja.Text = "";
             cbRol.SelectedIndex = 0;
             cbEstado.SelectedIndex = 0;
 
@@ -236,6 +250,8 @@ namespace CapaPresentacion
                     txtNroDoc.Text = dgvData.Rows[indice].Cells["Documento"].Value.ToString();
                     txtNombreCompleto.Text = dgvData.Rows[indice].Cells["NombreCompleto"].Value.ToString();
                     txtEmail.Text = dgvData.Rows[indice].Cells["Email"].Value.ToString();
+                  
+                    txtFechaBaja.Text =  dgvData.Rows[indice].Cells["Clave"].Value.ToString();
                     txtClave.Text = dgvData.Rows[indice].Cells["Clave"].Value.ToString();
                     txtConfClave.Text = dgvData.Rows[indice].Cells["Clave"].Value.ToString();
 

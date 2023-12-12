@@ -55,9 +55,6 @@ namespace CapaPresentacion
             LlenarIdiomaComboBox();
         }
 
-        
-
-
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -108,6 +105,11 @@ namespace CapaPresentacion
         {
             Settings.Default.Idioma = cbIdioma.SelectedValue.ToString();
             CargarIdioma();
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
